@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.navbar {
+  font-family: 'Inknut Antiqua', serif;
+  font-weight: 400;
+}
+.nav-link {
+  color: #0a0909;
+}
+.nav-header {
+  padding: 0;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link.active {
+  color: #3a0ca3 !important;
+}
+.nav-header-container,
+.footer-container {
+  font-family: 'Song Myung';
+  font-weight: 400;
+  display: flex;
+  text-align: end;
+  line-height: 1;
+  margin-top: 15px;
+  span {
+    font-size: 1em;
+    color: #3c3b3b;
+  }
+}
+u {
+  color: #4b494f;
+}
+.footer-main-wrapper {
+  /* background-color: #eae9e9; */
+  color: #45494c;
+}
+.footer-ul {
+  padding-left: 10px;
+}
+.footer-content {
+  font-family: 'Inknut Antiqua', sans-serif;
+  div {
+    font-weight: 600;
+  }
+  span {
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+.footer-company {
+  font-family: 'Inknut Antiqua', sans-serif;
+  font-weight: 700;
+}
+.footer-about,
+.footer-blog {
+  font-weight: 400;
+  font-size: 1em;
+}
+.border-color-custom {
+  font-family: 'Inknut Antiqua', sans-serif;
+  border: 1px solid #0178be;
+  width: 30px;
+  height: 30px;
+}
+.bottom-container {
+  font-family: 'Inknut Antiqua', sans-serif;
+  font-weight: 400;
+  background-color: #eae9e9;
+  padding: 25px;
+}
+
+.footer-middle-container,
+.footer-contact {
+  font-family: 'Inknut Antiqua';
+}
+.and-symbol {
+  font-family: Arial, sans-serif;
+}
+.instagram-icon {
+  background: linear-gradient(
+    30deg,
+    #fec053 13.39%,
+    #f2203e 37.33%,
+    #b729a8 60.83%,
+    #5342d6 86.61%
+  );
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facebook-footer {
+  background-color: #3b5998;
+}
+.linkedin-footer {
+  background-color: #007bb6;
+}
+
+.next-gen {
+  display: block;
+  margin-left: auto;
+  /* padding-top: 100px; */
+  font-family: 'Epilogue', sans-serif;
+}
+.next-gen-content-container {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-right: 5em;
+  height: 38rem;
+  padding-bottom: 4.5em;
+  border-radius: 10px;
+}
+
+.next-gen-content {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-image-source: linear-gradient(116.38deg, #0f0e0e 0%, #e5e5e5 100%);
+  border-image-slice: 1;
+  border-radius: 10px;
+  padding: 2em 4em;
+}
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000000;
+  font-weight: 620;
+}
+.custom-font-75 {
+  font-size: 3.6rem;
+}
+.custom-font-60 {
+  font-size: 2.8rem;
+}
+.custom-font-28 {
+  font-size: 1.2rem;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: 'Epilogue', sans-serif;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.custom-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+.content-header {
+  font-size: 1.6em;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #017abe, #03517f);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: 'Book Antiqua', serif;
+}
+.content-container2,
+.content-container,
+.content-para {
+  font-family: 'Book Antiqua', serif;
+  color: #2a2a2c;
+  font-size: 1.1rem;
+}
+.content-container2 {
+  background: linear-gradient(to bottom, #0eceea 0%, #6a5c88 100%);
+  border-radius: 10px;
+}
+
+.content-container-p {
+  max-width: 38vw;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  line-height: 1.4;
+  color: #2a2a2c;
+  margin: 0 auto;
+}
+.slider-container {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  animation: slideImages 4s infinite;
+  border-radius: 10px;
+  margin-top: 65px;
+}
+
+@keyframes slideImages {
+  0% {
+    background-position: right;
+  }
+  25% {
+    background-position: left;
+  }
+  50% {
+    background-position: left;
+  }
+  75% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+.about-container {
+  margin-top: 3em;
+  width: 90vw;
+
+  font-family: 'Book Antiqua', serif;
+}
+.about-p {
+  width: 55vw;
+  font-size: 1.1rem;
+  font-family: 'Book Antiqua';
+  color: #2a2a2c;
+}
+
+/*  carousel*/
+.scroll-container {
+  width: 100%;
+  font-family: 'Book Antiqua', serif;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.custom-cards {
+  display: flex;
+  padding-left: 10px;
+}
+
+.custom-card {
+  flex: 0 0 auto;
+  width: 309px;
+  height: 357px; /* Adjusted height to accommodate for padding and border */
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #93eaf6;
+  margin: 0 10px;
+  transition: transform 0.3s;
+  transform-origin: center;
+  box-sizing: border-box; /* Include padding and border in the total height */
+}
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap; /* Prevent line breaks */
+  padding-bottom: 20px; /* Add some bottom padding for better visibility */
+}
+.custom-card:hover {
+  background-color: rgb(68, 234, 249);
+  transform: scale(1.1);
+}
+.card-img {
+  width: 182px;
+  height: 182px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px auto;
+  display: block;
+}
+
+.card-header {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333; /* Change color as needed */
+}
+.scroll-container p {
+  font-family: 'Book Antiqua', serif;
+  font-size: 14px;
+}
+.custom-corousel-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #757879b0;
+}
+/* general styles */
+
+.scroller[data-animated='true'] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 80s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+.scroller__inner > img {
+  mix-blend-mode: multiply;
+}
+
+.scroller[data-direction='right'] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction='left'] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed='fast'] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed='slow'] {
+  --_animation-duration: 50s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+.custom-infyscroll-img {
+  aspect-ratio: 3/2;
+}
+.review-header {
+  color: #036198;
+  font-size: 1.5rem;
+}
+.review-header span {
+  color: #f38320;
+}
+
+.custom-tech > img {
+  width: 90px;
+  margin: 8px 40px;
+  mix-blend-mode: multiply;
+}
+.service-headers {
+  font-family: 'Aref Ruqaa Ink';
+  font-weight: 700;
+  font-size: 2rem;
+}
+.service-paras {
+  font-size: 1.5rem;
+  font-family: 'Aref Ruqaa Ink';
+  font-weight: 400;
+  line-height: 42px;
+  color: #4b494f;
+  flex: 1;
+}
+.custom-service-img {
+  flex: 0 0 auto;
+}
+.custom-contact {
+  font-family: Aref Ruqaa Ink;
+  color: #ffffff;
+}
+.custom-contact p {
+  font-size: 2rem;
+  color: 'red';
+}
+.custom-icon-contact {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 23px;
+}
+.custom-contact input {
+  width: 750px;
+
+  font-size: 1.5rem;
+}
+.text-area-contact {
+  height: 180px;
+  resize: none;
+  font-family: Aref Ruqaa Ink;
+  font-size: 1.5rem;
+}
+
+.contact-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.custom-contact button {
+  font-size: 1.4rem;
+}
+.custom-contact-container {
+  opacity: 1;
+  max-height: 1000px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  overflow-y: auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.nav-item {
+  cursor: pointer;
+}
+.custom-learnmore-btn {
+  background-image: linear-gradient(
+    to right,
+    rgba(30, 138, 200, 0.8) 0%,
+    #02598c 100%
+  );
+  height: 38px;
+  font-size: 0.9rem;
+  width: 150px;
+  padding-top: 2px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  align-items: center;
+}
+.custom-home-services {
+  background-color: #e5edf1;
+}
+.service-paras-home {
+  font-size: 1.2rem;
+  font-family: 'Aref Ruqaa Ink';
+  font-weight: 400;
+  line-height: 30px;
+  color: #4b494f;
+  text-align: left;
+}
+.custom-service-home {
+  background-color: #e5edf1;
+}
+.custom-services {
+  background-color: #f2f3f4;
+  margin-top: 80px;
+}
+.custom-technologies {
+  background-color: #eae9e9;
+}
