@@ -35,19 +35,18 @@ const CarouselContainer = () => {
 
   return (
     <div
-      className={`slide-carousel container-fluid d-flex align-items-center justify-content-center slide-${direction}`}
+      className={`slide-carousel container-fluid d-flex align-items-center justify-content-center slide-${direction} text-left`}
       style={{ display: 'flex', alignItems: 'center' }}
     >
-      {index !== 0 && (
-        <button
-          className="custom-corousel-btn"
-          onClick={handlePrev}
-          style={{ marginRight: '60px' }}
-          disabled={index === 0}
-        >
-          <FaArrowLeft />
-        </button>
-      )}
+      <button
+        className={`custom-corousel-btn text-center ${
+          index === 0 && 'carousel-btns'
+        }`}
+        onClick={handlePrev}
+        style={{ marginRight: '60px' }}
+      >
+        <FaArrowLeft />
+      </button>
 
       <div
         className="row"
@@ -73,8 +72,12 @@ const CarouselContainer = () => {
         ) : isHovering && images[index].title === 'UI/UX' ? (
           <HoverContainer title={{ title: images[index].title }} />
         ) : null}
-        <div className="col-3 d-flex align-items-center justify-content-center">
-          <h3 className={`${index === images.length - 1 && 'text-white'} ps-4`}>
+        <div className="col-3 d-flex align-items-center">
+          <h3
+            className={`text-start ${
+              index === images.length - 1 && 'text-white'
+            } ps-4 `}
+          >
             {!isHovering && images[index].title}
           </h3>
         </div>
@@ -106,16 +109,16 @@ const CarouselContainer = () => {
           )}
         </div>
       </div>
-      {index !== images.length - 1 && (
-        <button
-          className="custom-corousel-btn text-center"
-          onClick={handleNext}
-          style={{ marginLeft: '50px' }}
-          disabled={index === images.length - 1}
-        >
-          <FaArrowRight />
-        </button>
-      )}
+
+      <button
+        className={`custom-corousel-btn text-center ${
+          index === images.length - 1 && 'carousel-btns'
+        }`}
+        onClick={handleNext}
+        style={{ marginLeft: '50px' }}
+      >
+        <FaArrowRight />
+      </button>
     </div>
   )
 }

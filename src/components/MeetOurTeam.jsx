@@ -1,15 +1,15 @@
-import mathan from "../assets/images/mathan.jpg";
-import raja from "../assets/images/raja.jpg";
-import rajeswari from "../assets/images/rajeshwari.jpg";
-import mithun from "../assets/images/mithun.jpg";
-import sowmiya from "../assets/images/sowmiya.jpg";
-import hari from "../assets/images/hari.jpg";
-import vaisak from "../assets/images/vaisak.jpg";
-import jaya from "../assets/images/jaya.jpg";
-import venkatesh from "../assets/images/venkatesh.jpg";
-import soundarya from "../assets/images/soundarya.jpg";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
+import mathan from '../assets/images/mathan.jpg'
+import raja from '../assets/images/raja.jpg'
+import rajeswari from '../assets/images/rajeshwari.jpg'
+import mithun from '../assets/images/mithun.jpg'
+import sowmiya from '../assets/images/sowmiya.jpg'
+import hari from '../assets/images/hari.jpg'
+import vaisak from '../assets/images/vaisak.jpg'
+import jaya from '../assets/images/jaya.jpg'
+import venkatesh from '../assets/images/venkatesh.jpg'
+import soundarya from '../assets/images/soundarya.jpg'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF } from 'react-icons/fa6'
 
 const MeetOurTeam = () => {
   return (
@@ -17,8 +17,8 @@ const MeetOurTeam = () => {
       <h3 className="content-header text-center py-3">Meet Our Team</h3>
       <div className="scroll-container pt-5">
         <div
-          className="d-flex custom-cards gap-3"
-          style={{ marginRight: "20px" }}
+          className="d-flex custom-cards gap-5"
+          style={{ marginRight: '20px' }}
         >
           <div className="mx-2 custom-card text-center">
             <img src={rajeswari} alt="Rajeswari" className="card-img" />
@@ -115,7 +115,7 @@ const MeetOurTeam = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default MeetOurTeam;
+export default MeetOurTeam
