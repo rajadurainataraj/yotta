@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
-import { motion } from 'framer-motion'
-import { FaArrowRightLong } from 'react-icons/fa6'
-import { allData } from './datas'
+import { motion } from "framer-motion";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { allData } from "./datas";
 const HoverContainer = ({ title }) => {
-  const propsData = title.title
-  const propsValue = title.title.trim().toLowerCase().replace(/ +/g, '')
-  console.log(propsData)
+  const propsData = title.title;
+  const propsValue = title.title.trim().toLowerCase().replace(/ +/g, "");
+  console.log(propsData);
 
-  const data = allData.find((item) => item.id === propsValue)
+  const data = allData.find((item) => item.id === propsValue);
 
   return (
     <section className="container-fluid pe-5 custom-service-home">
@@ -16,7 +16,7 @@ const HoverContainer = ({ title }) => {
         // initial={{ y: '100%', opacity: 0 }}
         // animate={{ y: 0, opacity: 1 }}
         // transition={{ duration: 0.5 }}
-        style={{ width: '600px', height: '370px' }}
+        style={{ width: "600px", height: "390px" }}
       >
         <div className="service-headers text-black p-4 "> {propsData}</div>
         <section className="">
@@ -29,7 +29,7 @@ const HoverContainer = ({ title }) => {
         </section>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default HoverContainer
+export default HoverContainer;

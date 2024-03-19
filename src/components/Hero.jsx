@@ -1,20 +1,21 @@
-import tech from '../assets/images/tech-img.jpg'
+// import tech from '../assets/images/tech-img.jpg'
+import hero from "../assets/images/hero.png";
 
 const Hero = () => {
   return (
     <section
       className="container-fluid tech-container element-with-border "
       style={{
-        backgroundImage: `url(${tech})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundImage: `url(${hero})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       <div className="container-fluid next-gen-content-container">
         <div className="next-gen-content">
           <h2 className="white custom-font-75">
-            The <span className="black fw-bold h1 custom-font-75">Next</span>{' '}
+            The <span className="black fw-bold h1 custom-font-75">Next</span>{" "}
             Gen
           </h2>
           <h2 className="custom-font-60">
@@ -30,7 +31,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

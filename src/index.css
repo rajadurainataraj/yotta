@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ a {
 }
 
 .navbar {
-  font-family: 'Inknut Antiqua', serif;
+  font-family: "Inknut Antiqua", serif;
   font-weight: 400;
 }
 .nav-link {
@@ -25,7 +25,7 @@ a {
 }
 .nav-header-container,
 .footer-container {
-  font-family: 'Song Myung';
+  font-family: "Song Myung";
   font-weight: 400;
   display: flex;
   text-align: end;
@@ -47,7 +47,7 @@ u {
   padding-left: 10px;
 }
 .footer-content {
-  font-family: 'Inknut Antiqua', sans-serif;
+  font-family: "Inknut Antiqua";
   div {
     font-weight: 600;
   }
@@ -57,7 +57,7 @@ u {
   }
 }
 .footer-company {
-  font-family: 'Inknut Antiqua', sans-serif;
+  font-family: "Inknut Antiqua";
   font-weight: 700;
 }
 .footer-about,
@@ -66,13 +66,13 @@ u {
   font-size: 1em;
 }
 .border-color-custom {
-  font-family: 'Inknut Antiqua', sans-serif;
+  font-family: "Inknut Antiqua";
   border: 1px solid #0178be;
   width: 30px;
   height: 30px;
 }
 .bottom-container {
-  font-family: 'Inknut Antiqua';
+  font-family: "Inknut Antiqua";
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
@@ -80,7 +80,7 @@ u {
 
 .footer-middle-container,
 .footer-contact {
-  font-family: 'Inknut Antiqua';
+  font-family: "Inknut Antiqua";
 }
 .and-symbol {
   font-family: Arial, sans-serif;
@@ -111,7 +111,7 @@ u {
   display: block;
   margin-left: auto;
   /* padding-top: 100px; */
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
 }
 .next-gen-content-container {
   display: flex;
@@ -153,7 +153,7 @@ u {
   background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -175,12 +175,12 @@ u {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: 'Book Antiqua', serif;
+  font-family: "Book Antiqua", serif;
 }
 .content-container2,
 .content-container,
 .content-para {
-  font-family: 'Book Antiqua', serif;
+  font-family: "Book Antiqua", serif;
   color: #2a2a2c;
 }
 .content-container2 {
@@ -199,7 +199,7 @@ u {
 }
 .slider-container {
   width: 400px;
-  height: 250px;
+  height: 300px;
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -227,22 +227,25 @@ u {
   }
 }
 .about-container {
-  margin-top: 3em;
+  margin-top: 4em;
   width: 90vw;
 
-  font-family: 'Book Antiqua', serif;
+  font-family: "Book Antiqua", serif;
+}
+.custom-carousel-heading {
+  font-family: Book Antiqua;
 }
 .about-p {
   width: 55vw;
   font-size: 1.1rem;
-  font-family: 'Book Antiqua';
+  font-family: "Book Antiqua";
   color: #2a2a2c;
 }
 
 /*  carousel*/
 .scroll-container {
   width: 100%;
-  font-family: 'Book Antiqua', serif;
+  font-family: "Book Antiqua", serif;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -293,7 +296,7 @@ u {
   color: #333; /* Change color as needed */
 }
 .scroll-container p {
-  font-family: 'Book Antiqua', serif;
+  font-family: "Book Antiqua", serif;
   font-size: 14px;
 }
 .custom-corousel-btn {
@@ -309,7 +312,7 @@ u {
 }
 /* general styles */
 
-.scroller[data-animated='true'] .scroller__inner {
+.scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 80s)
@@ -319,22 +322,24 @@ u {
   mix-blend-mode: multiply;
 }
 
-.scroller[data-direction='right'] {
+.scroller[data-direction="right"] {
   --_animation-direction: reverse;
 }
 
-.scroller[data-direction='left'] {
+.scroller[data-direction="left"] {
   --_animation-direction: forwards;
 }
 
-.scroller[data-speed='fast'] {
+.scroller[data-speed="fast"] {
   --_animation-duration: 20s;
 }
 
-.scroller[data-speed='slow'] {
+.scroller[data-speed="slow"] {
   --_animation-duration: 50s;
 }
-
+.scroller {
+  overflow: hidden;
+}
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 0.5rem));
@@ -357,13 +362,13 @@ u {
   mix-blend-mode: multiply;
 }
 .service-headers {
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Book Antiqua";
   font-weight: 700;
   font-size: 1.5rem;
 }
 .service-paras {
   font-size: 1.1rem;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Aref Ruqaa Ink";
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
@@ -373,12 +378,16 @@ u {
   flex: 0 0 auto;
 }
 .custom-contact {
-  font-family: Aref Ruqaa Ink;
+  margin-top: 5rem;
+  font-family: "Aref Ruqaa Ink";
   color: #ffffff;
 }
 .custom-contact p {
+  font-size: 1.5rem;
+  color: "red";
+}
+.contact-heading {
   font-size: 2rem;
-  color: 'red';
 }
 .custom-icon-contact {
   width: 50px;
@@ -397,9 +406,9 @@ u {
   font-size: 1.5rem;
 }
 .text-area-contact {
-  height: 180px;
+  height: 150px;
   resize: none;
-  font-family: Aref Ruqaa Ink;
+  font-family: "Aref Ruqaa Ink";
   font-size: 1.5rem;
 }
 
@@ -470,7 +479,7 @@ u {
 }
 .service-paras-home {
   font-size: 1.2rem;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Book Antiqua";
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
