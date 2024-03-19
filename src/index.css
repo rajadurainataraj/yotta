@@ -106,7 +106,9 @@ u {
 .linkedin-footer {
   background-color: #007bb6;
 }
-
+.tech-container {
+  height: 85vh;
+}
 .next-gen {
   display: block;
   margin-left: auto;
@@ -117,7 +119,7 @@ u {
   display: flex;
   justify-content: end;
   align-items: end;
-  padding-right: 5em;
+  padding-right: 9em;
   height: 38rem;
   padding-bottom: 4.5em;
   border-radius: 10px;

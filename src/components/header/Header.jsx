@@ -1,37 +1,38 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import logo from '../../assets/logo/yws-logo.png'
-import Contact from '../Contact'
-import { IoCloseSharp } from 'react-icons/io5'
+import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "../../assets/logo/yws-logo.png";
+import Contact from "../Contact";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Header = () => {
-  const [selectedNavItem, setSelectedNavItem] = useState('Home')
-  const [isContactOpen, setIsContactOpen] = useState(false)
-  const location = useLocation()
-
+  const [selectedNavItem, setSelectedNavItem] = useState("Home");
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleNavItemSelect = (item) => {
-    setSelectedNavItem(item)
-  }
+    setSelectedNavItem(item);
+  };
 
   const handleContactOpen = () => {
-    setIsContactOpen(true)
-  }
+    setIsContactOpen(true);
+  };
 
   const handleContactClose = () => {
-    setIsContactOpen(false)
-  }
+    setIsContactOpen(false);
+  };
 
   const handleNavItemSelects = (item) => {
-    setSelectedNavItem(item)
+    setSelectedNavItem(item);
 
-    if (item === 'About') {
-      const scrollPosition = window.innerHeight * 0.84
+    if (item === "About") {
+      navigate("/");
+      const scrollPosition = window.innerHeight * 0.84;
       window.scrollTo({
         top: scrollPosition,
-        behavior: 'smooth',
-      })
+        behavior: "smooth",
+      });
     }
-  }
+  };
 
   return (
     <>
@@ -70,15 +71,15 @@ const Header = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li
                   className={`nav-item ${
-                    selectedNavItem === 'Home' ? 'active' : ''
+                    selectedNavItem === "Home" ? "active" : ""
                   }`}
                 >
                   <a
                     className="nav-link mx-3"
                     href="/"
-                    onClick={() => handleNavItemSelect('Home')}
+                    onClick={() => handleNavItemSelect("Home")}
                     style={{
-                      color: location.pathname === '/' ? 'blue !important' : '',
+                      color: location.pathname === "/" ? "blue !important" : "",
                     }}
                   >
                     Home
@@ -86,7 +87,7 @@ const Header = () => {
                 </li>
                 <li
                   className={`nav-item dropdown mx-2 ${
-                    selectedNavItem === 'Services' ? 'active' : ''
+                    selectedNavItem === "Services" ? "active" : ""
                   }`}
                 >
                   <a
@@ -94,7 +95,7 @@ const Header = () => {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    onClick={() => handleNavItemSelect('Services')}
+                    onClick={() => handleNavItemSelect("Services")}
                     // style={{
                     //   color: selectedNavItem === 'Services' ? 'blue' : '',
                     // }}
@@ -103,34 +104,34 @@ const Header = () => {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link to={'services' + '/customsoftware'}>
+                      <Link to={"services" + "/customsoftware"}>
                         <a className="dropdown-item">Custom Software</a>
                       </Link>
                     </li>
                     <li>
-                      <Link to={'services' + '/digitalmarketing'}>
+                      <Link to={"services" + "/digitalmarketing"}>
                         <a className="dropdown-item">Digital Marketing</a>
                       </Link>
                     </li>
                     <li>
                       <a className="dropdown-item">
-                        <Link to={'services' + '/mobileapplication'}>
+                        <Link to={"services" + "/mobileapplication"}>
                           Mobile Application
                         </Link>
                       </a>
                     </li>
                     <li>
-                      <Link to={'services' + '/website'}>
+                      <Link to={"services" + "/website"}>
                         <a className="dropdown-item">Website</a>
                       </Link>
                     </li>
                     <li>
-                      <Link to={'services' + '/trainingandinternships'}>
+                      <Link to={"services" + "/trainingandinternships"}>
                         <a className="dropdown-item">Training & Internships</a>
                       </Link>
                     </li>
                     <li>
-                      <Link to={'services' + '/uiuxdesign'}>
+                      <Link to={"services" + "/uiuxdesign"}>
                         <a className="dropdown-item">UI/UX design</a>
                       </Link>
                     </li>
@@ -139,15 +140,15 @@ const Header = () => {
 
                 <li
                   className={`nav-item mx-2 ${
-                    selectedNavItem === 'Careers' ? 'active' : ''
+                    selectedNavItem === "Careers" ? "active" : ""
                   }`}
                 >
                   <a
                     className="nav-link"
                     href="#"
-                    onClick={() => handleNavItemSelect('Careers')}
+                    onClick={() => handleNavItemSelect("Careers")}
                     style={{
-                      color: selectedNavItem === 'Careers' ? 'blue' : '',
+                      color: selectedNavItem === "Careers" ? "blue" : "",
                     }}
                   >
                     Careers
@@ -155,14 +156,14 @@ const Header = () => {
                 </li>
                 <li
                   className={`nav-item mx-2 ${
-                    selectedNavItem === 'About' ? 'active' : ''
+                    selectedNavItem === "About" ? "active" : ""
                   }`}
                 >
                   <a
                     className="nav-link"
                     href="#"
-                    onClick={() => handleNavItemSelects('About')}
-                    style={{ color: selectedNavItem === 'About' ? 'blue' : '' }}
+                    onClick={() => handleNavItemSelects("About")}
+                    style={{ color: selectedNavItem === "About" ? "blue" : "" }}
                   >
                     About
                   </a>
@@ -170,7 +171,7 @@ const Header = () => {
 
                 <li
                   className={`nav-item mx-2 ${
-                    selectedNavItem === 'Contact Us' ? 'active' : ''
+                    selectedNavItem === "Contact Us" ? "active" : ""
                   }`}
                   onClick={handleContactOpen}
                 >
@@ -196,7 +197,7 @@ const Header = () => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
