@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="container-fluid next-gen-content-container">
         <div className="next-gen-content">
           <h2 className="white custom-font-75">
-            The <span className="black fw-bold h1 custom-font-75">Next</span>{" "}
+            The <span className="black fw-bold h1 custom-font-75">Next</span>
             Gen
           </h2>
           <h2 className="custom-font-60">

@@ -16,12 +16,13 @@ const HoverContainer = ({ title }) => {
         // initial={{ y: '100%', opacity: 0 }}
         // animate={{ y: 0, opacity: 1 }}
         // transition={{ duration: 0.5 }}
-        style={{ width: "600px", height: "390px" }}
+
+        // style={{ width: "600px", height: "390px" }}
       >
         <div className="service-headers text-black p-4 "> {propsData}</div>
         <section className="">
-          <div className="px-4">
-            <p className="service-paras-home p ">{data?.content}</p>
+          <div className="">
+            <p className="service-paras-home p px-4">{data?.content}</p>
           </div>
           <div className="text-white custom-learnmore-btn my-5 ms-4">
             <span>Learn More</span> <FaArrowRightLong color="white" />

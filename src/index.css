@@ -120,7 +120,7 @@ u {
   justify-content: end;
   align-items: end;
   padding-right: 9em;
-  height: 38rem;
+  min-height: 38rem;
   padding-bottom: 4.5em;
   border-radius: 10px;
 }
@@ -231,7 +231,6 @@ u {
 .about-container {
   margin-top: 4em;
   width: 90vw;
-
   font-family: "Book Antiqua", serif;
 }
 .custom-carousel-heading {
@@ -242,6 +241,7 @@ u {
   font-size: 1.1rem;
   font-family: "Book Antiqua";
   color: #2a2a2c;
+  text-align: start;
 }
 
 /*  carousel*/
@@ -249,6 +249,7 @@ u {
   width: 100%;
   font-family: "Book Antiqua", serif;
   overflow-x: auto;
+
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
@@ -488,6 +489,7 @@ u {
   text-align: left;
 }
 .custom-service-home {
+  border-radius: 18px;
   background-color: #e5edf1;
 }
 .custom-services {
@@ -500,4 +502,152 @@ u {
 
 .carousel-btns {
   visibility: hidden;
+}
+.custom-img-slider {
+  max-width: 600px;
+  height: 390px;
+  border-radius: 20px;
+}
+.custom-sliding-img {
+  width: 300px;
+  height: 300px;
+}
+.custom-carousel-nothover {
+  width: 469px;
+  height: 297px;
+}
+.hover-info {
+  width: 600px;
+  height: 390px;
+}
+.custom-about-header2 {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .custom-about-header3 {
+    display: none;
+  }
+  .custom-about-header2 {
+    display: block;
+  }
+  .custom-main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .custom-about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-p {
+    width: 90vw;
+    text-align: center;
+  }
+  .content-container-p {
+    max-width: 95vw;
+  }
+  .footer {
+    width: 100vw;
+  }
+  .footer-main-wrapper {
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+  }
+  .custom-footer-menus {
+    flex-direction: column;
+    text-align: left;
+    margin: 0 0;
+  }
+  .custom-img-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 40vw;
+  }
+  .custom-carousel-heading {
+    font-size: 0.7rem;
+  }
+  .custom-sliding-img {
+    width: 120px;
+    height: 120px;
+  }
+  .custom-carousel-nothover {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hover-info {
+    width: 240px;
+    height: 200px;
+  }
+  .service-headers {
+    font-size: 0.8rem;
+  }
+  .service-paras-home {
+    font-size: 0.6rem;
+    line-height: 10px;
+    padding: 0 !important;
+  }
+  .custom-learnmore-btn {
+    height: 18px;
+    font-size: 0.5rem;
+    width: 90px;
+    padding-top: 1px;
+    border-radius: 30px;
+    margin: 30px 0 !important;
+  }
+  .custom-corousel-btn {
+    height: 30px;
+    width: 30px;
+  }
+  .next-gen-content-container {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .custom-font-75 {
+    font-size: 2rem;
+  }
+  .custom-font-60 {
+    font-size: 1.5rem;
+  }
+  .custom-font-28 {
+    font-size: 0.6rem;
+  }
+  .content-container2 {
+    width: 90vw;
+    text-align: start;
+  }
+  .content-container-p {
+    width: 100%;
+  }
+  .custom-img-slider {
+    border-radius: 20px;
+  }
+  .custom-service-home {
+    border-radius: 18px;
+  }
+  .slider-container {
+    width: 90vw;
+    align-items: center;
+  }
+  .scroller__inner {
+    overflow: hidden;
+  }
+  .scroll-container {
+    overflow-x: hidden;
+  }
+  .custom-cards {
+    min-width: 100vw;
+  }
 }

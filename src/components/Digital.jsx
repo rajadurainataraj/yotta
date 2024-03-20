@@ -20,7 +20,7 @@ const Digital = () => {
         </p>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Digital
+export default Digital;

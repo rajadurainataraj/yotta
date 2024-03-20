@@ -49,10 +49,8 @@ const CarouselContainer = () => {
       </button>
 
       <div
-        className="row"
+        className="row custom-img-slider"
         style={{
-          width: "600px",
-          height: "390px",
           backgroundColor: images[index].bgColor,
           position: "relative",
         }}
@@ -72,7 +70,7 @@ const CarouselContainer = () => {
         ) : isHovering && images[index].title === "UI/UX" ? (
           <HoverContainer title={{ title: images[index].title }} />
         ) : null}
-        <div className="col-3 d-flex align-items-center">
+        <div className="col-3 d-flex align-items-center justify-content-center ">
           <h3
             className={`text-start custom-carousel-heading fw-bolder  ${
               index === images.length - 1 && "text-white"
@@ -81,7 +79,7 @@ const CarouselContainer = () => {
             {!isHovering && images[index].title}
           </h3>
         </div>
-        <div className="col-9 d-flex align-items-center justify-content-start">
+        <div className="col-9 d-flex align-items-center justify-content-center">
           {!isHovering && (
             <Carousel
               activeIndex={index}
@@ -89,17 +87,15 @@ const CarouselContainer = () => {
               interval={null}
               controls={false}
               indicators={false}
-              style={{ width: "469px", height: "297px" }}
+              className="custom-carousel-nothover"
             >
               {images.map((image, idx) => (
                 <Carousel.Item key={idx}>
                   <img
-                    className="d-block w-100"
+                    className="d-block w-100 custom-sliding-img"
                     src={image.src}
                     alt={`Slide ${idx}`}
                     style={{
-                      width: "300px",
-                      height: "300px",
                       objectFit: "contain",
                     }}
                   />

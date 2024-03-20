@@ -1,10 +1,10 @@
-import logo from '../../assets/logo/yws-logo.png'
-import { TfiEmail } from 'react-icons/tfi'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { FaPhone } from 'react-icons/fa6'
-import { FaXTwitter } from 'react-icons/fa6'
-import { GrFacebookOption } from 'react-icons/gr'
-import { TbWorld } from 'react-icons/tb'
+import logo from "../../assets/logo/yws-logo.png";
+import { TfiEmail } from "react-icons/tfi";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { GrFacebookOption } from "react-icons/gr";
+import { TbWorld } from "react-icons/tb";
 
 const Footer = () => {
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
             <span className="fs-6">We deliver the best web products</span>
           </div>
         </section>
-        <section className="d-flex mx-5">
+        <section className="d-flex d-b-mx-5 custom-footer-menus ">
           {/* <section className="d-sm-flex flex-column mx-5"> */}
           <section>
             <div className="footer-middle-container pb-2">
@@ -56,7 +56,7 @@ const Footer = () => {
               <div className="footer-blog">Privacy policy</div>
             </div>
           </section>
-          <section className="px-5">
+          <section className="d-b-px-5">
             <div className="footer-company py-1">Contact Us</div>
             <div className="d-flex flex-column  justify-content-between align-items-start py-3 footer-contact">
               <div className="d-flex align-items-center justify-content-center text-center">
@@ -82,26 +82,26 @@ const Footer = () => {
                 <div>
                   <div
                     className="d-flex justify-content-around align-items-center"
-                    style={{ width: '200px' }}
+                    style={{ width: "200px" }}
                   >
                     <div className="instagram-icon">
                       <FaInstagram color="#fff" size={17} />
                     </div>
                     <div
                       className="rounded-circle facebook-footer d-inline-flex justify-content-center align-items-center"
-                      style={{ width: '35px', height: '35px' }}
+                      style={{ width: "35px", height: "35px" }}
                     >
                       <GrFacebookOption color="#fff" size={17} />
                     </div>
                     <div
                       className="rounded-circle bg-dark d-inline-flex justify-content-center align-items-center"
-                      style={{ width: '35px', height: '35px' }}
+                      style={{ width: "35px", height: "35px" }}
                     >
                       <FaXTwitter color="#fff" size={17} />
                     </div>
                     <div
                       className="rounded-circle linkedin-footer d-inline-flex justify-content-center align-items-center"
-                      style={{ width: '35px', height: '35px' }}
+                      style={{ width: "35px", height: "35px" }}
                     >
                       <FaLinkedin color="#fff" size={17} />
                     </div>
@@ -122,7 +122,7 @@ const Footer = () => {
         </span>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
