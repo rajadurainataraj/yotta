@@ -547,7 +547,7 @@ u {
   }
   .about-p {
     width: 90vw;
-    text-align: center;
+    /* text-align: center; */
   }
   .content-container-p {
     max-width: 95vw;
@@ -647,7 +647,8 @@ u {
   .scroll-container {
     overflow-x: hidden;
   }
-  .custom-cards {
+  .custom-card {
+    overflow-x: hidden;
     min-width: 100vw;
   }
 }
