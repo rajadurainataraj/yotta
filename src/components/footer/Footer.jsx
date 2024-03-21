@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className=" container-fluid footer mt-auto">
       <section className="d-flex justify-content-between footer-main-wrapper px-5 mb-2 pt-5 d-sm  ">
-        <section>
+        <section className="footer-sub-wrapper">
           <div className="d-flex custom-head">
             <a href="#">
               <img src={logo} width="72vw" alt="" />
@@ -33,7 +33,7 @@ const Footer = () => {
             <span className="fs-6">We deliver the best web products</span>
           </div>
         </section>
-        <section className="d-flex d-b-mx-5 custom-footer-menus ">
+        <section className="d-flex d-b-mx-5 custom-footer-menus gap-5">
           {/* <section className="d-sm-flex flex-column mx-5"> */}
           <section>
             <div className="footer-middle-container pb-2">

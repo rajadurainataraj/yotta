@@ -1,13 +1,13 @@
 /* eslint-disable no-irregular-whitespace */
-import { serviceData } from './datas'
-import { useParams } from 'react-router-dom'
+import { serviceData } from "./datas";
+import { useParams } from "react-router-dom";
 
 const Services = () => {
-  const { id } = useParams()
-  console.log(id)
+  const { id } = useParams();
+  console.log(id);
 
-  const data = serviceData.find((item) => item.id === id)
-  console.log(data)
+  const data = serviceData.find((item) => item.id === id);
+  console.log(data);
 
   return (
     <div>
@@ -16,10 +16,12 @@ const Services = () => {
         key={data.heading}
         className="container-fluid pe-5 custom-services p-5"
       >
-        <div className="service-headers text-black p-4">{data.heading}</div>
+        <div className="service-headers service-headers1 text-black p-4">
+          {data.heading}
+        </div>
 
-        <section className="d-flex">
-          <img src={data.imgUrl} alt="" width="500px" className="p-5" />
+        <section className="d-flex service-container">
+          <img src={data.imgUrl} alt="" className="p-5 service-img" />
 
           {/* <span>{item.content}</span> */}
           <div className="ps-3">
@@ -45,7 +47,7 @@ const Services = () => {
       </div>
       {/* ))} */}
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

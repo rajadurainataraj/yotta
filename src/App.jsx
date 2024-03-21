@@ -1,21 +1,21 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import Services from './components/Services'
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Services from "./components/Services";
 // import CarouselContainer from './components/CarouselContainer'
-import Body from './components/Body'
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
+import Body from "./components/Body";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/services/:id" element={<Services />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

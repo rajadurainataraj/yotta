@@ -36,20 +36,18 @@ const CarouselContainer = () => {
   return (
     <div
       className={`slide-carousel container-fluid d-flex align-items-center justify-content-center slide-${direction} text-left`}
-      style={{ display: "flex", alignItems: "center" }}
     >
       <button
-        className={`custom-corousel-btn text-center ${
+        className={`custom-corousel-btn carousel-btn-left text-center ${
           index === 0 && "carousel-btns"
         }`}
         onClick={handlePrev}
-        style={{ marginRight: "60px" }}
       >
         <FaArrowLeft />
       </button>
 
       <div
-        className="row custom-img-slider"
+        className="row custom-img-slider justify-content-center align-items-center"
         style={{
           backgroundColor: images[index].bgColor,
           position: "relative",
@@ -107,11 +105,11 @@ const CarouselContainer = () => {
       </div>
 
       <button
-        className={`custom-corousel-btn text-center ${
+        className={`custom-corousel-btn carousel-btn-right text-center ${
           index === images.length - 1 && "carousel-btns"
         }`}
         onClick={handleNext}
-        style={{ marginLeft: "50px" }}
+        // style={{ marginLeft: "50px" }}
       >
         <FaArrowRight />
       </button>

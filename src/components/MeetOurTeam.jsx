@@ -3,7 +3,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { team } from "./datas";
 const MeetOurTeam = () => {
   return (
-    <section className="py-5 ">
+    <section className="py-5 container-fluid">
       <h3 className="content-header text-center py-3">Meet Our Team</h3>
       <div className="scroll-container pt-5">
         <div

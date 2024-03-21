@@ -48,14 +48,14 @@ export const team = [
     role: "UI/UX Designer",
     image: sowmiya,
     fbLink: "",
-    liLink: "",
+    liLink: "www.linkedin.com/in/sowmiya-mahesh-b77a8223a",
   },
   {
     name: "Jaya Pandey",
     role: "UI/UX Designer",
     image: jaya,
-    fbLink: "",
-    liLink: "",
+    fbLink: "https://www.facebook.com/profile.php?id=100094008424723",
+    liLink: "https://www.linkedin.com/in/jayapandey10/",
   },
   {
     name: "Hari",
@@ -65,11 +65,11 @@ export const team = [
     liLink: "",
   },
   {
-    name: "Mithun",
+    name: "Jaya Mithun",
     role: "Intern",
     image: mithun,
     fbLink: "",
-    liLink: "",
+    liLink: "https://www.linkedin.com/in/jayamithun-m-",
   },
   {
     name: "Venkatesan",
@@ -82,8 +82,8 @@ export const team = [
     name: "Soundarya",
     role: "Intern",
     image: soundarya,
-    fbLink: "",
-    liLink: "",
+    fbLink: "https://www.facebook.com/soundarya.srss/about/",
+    liLink: "https://www.linkedin.com/in/soundarya-rajan-89502a270/",
   },
 ];
 export const serviceData = [
