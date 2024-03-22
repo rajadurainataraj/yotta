@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import contactbg from "../assets/images/bg-contact.png";
 import footercontact from "../assets/images/footercontact.png";
+import { IoClose } from "react-icons/io5";
 
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -18,6 +19,9 @@ const ContactInfo = () => {
   return (
     <section className="custom-contact-main">
       <section className="custom-contact-info d-flex justify-content-between p-3">
+        <div className="contact-close">
+          <IoClose />
+        </div>
         <section className="w-50">
           <h3 className="h3 fw-bold">
             We'd <span className="h3 love-text fw-bolder ">love</span> to hear
@@ -117,12 +121,15 @@ const ContactInfo = () => {
             </Formik>
           </div>
         </section>
+
         <section
           className="customImg"
           style={{
+            marginTop: "80px",
             backgroundImage: `url(${contactbg})`,
-            backgroundSize: "cover",
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
+            marginLeft: "10vw",
             width: "40vw",
           }}
         ></section>

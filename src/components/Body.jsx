@@ -33,7 +33,7 @@ const Body = () => {
   ];
   return (
     <div className="custom-main-div">
-      <ContactInfo />
+      {/* <ContactInfo /> */}
       {/* <div>
         {data.map((item, index) => (
           <Card
@@ -52,6 +52,7 @@ const Body = () => {
       <MeetOurTeam />
       <OurClients />
       <Technologies /> */}
+      <Technologies />
     </div>
   );
 };

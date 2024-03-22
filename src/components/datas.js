@@ -14,6 +14,24 @@ import digitalMarketing from "../assets/images/digital-marketing.png";
 import mobileApplication from "../assets/images/mobile-application.png";
 import uiuxdesign from "../assets/images/uiux1.jpg";
 import websites from "../assets/images/websites.png";
+import aws from "../assets/images/AWS.jpg";
+import Angular from "../assets/images/Angular.jpg";
+import Bootstrap5 from "../assets/images/Bootstrap5.jpg";
+import Expo from "../assets/images/Expo.jpg";
+import ExpressJS from "../assets/images/ExpressJS.jpg";
+import Flutter from "../assets/images/Flutter.jpg";
+import Hostinger from "../assets/images/Hostinger.jpg";
+import Java from "../assets/images/Java.jpg";
+import Magento from "../assets/images/Magento.jpg";
+import MongoDB from "../assets/images/MongoDB.jpg";
+import NodeJS from "../assets/images/NodeJS.jpg";
+import OracleDB from "../assets/images/OracleDB.jpg";
+import PostgreSQL from "../assets/images/PostgreSQL.jpg";
+import Python from "../assets/images/Python.jpg";
+import React from "../assets/images/React.jpg";
+import SpringBoot from "../assets/images/SpringBoot.jpg";
+import ReactNative from "../assets/images/ReactNative.jpg";
+import WordPress from "../assets/images/WordPress .jpg";
 export const team = [
   {
     name: "Rajeswari",
@@ -304,4 +322,24 @@ export const allData = [
       software for a specific set of users, functions or organizations.`,
     link: "",
   },
+];
+export const tech = [
+  aws,
+  Angular,
+  Bootstrap5,
+  ExpressJS,
+  Flutter,
+  Hostinger,
+  Expo,
+  Java,
+  Magento,
+  MongoDB,
+  NodeJS,
+  OracleDB,
+  PostgreSQL,
+  Python,
+  React,
+  SpringBoot,
+  ReactNative,
+  WordPress,
 ];
