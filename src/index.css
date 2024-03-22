@@ -546,6 +546,81 @@ u {
 .service-img {
   width: 31.25em;
 }
+.custom-contact-main {
+  font-family: Montserrat;
+}
+
+.custom-contact-main label {
+  font-family: Montserrat;
+  font-size: 0.9rem;
+}
+.custom-contact-info input {
+  height: 45px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+  border-bottom: 2px solid #eaeaea;
+  outline: none;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  font-family: Lato;
+}
+.custom-contact-info input::placeholder {
+  font-size: 13px;
+}
+.custom-contact-info textarea {
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+  outline: none;
+  resize: none;
+  border-bottom: 2px solid #eaeaea;
+  font-size: 13px;
+  padding-left: 10px;
+}
+.custom-btn-contactinfo {
+  letter-spacing: 5px;
+  height: 2.5em;
+  font-family: montserrat !important;
+  border-radius: 5px;
+  background-color: #42a8f1;
+}
+.custom-error-contact {
+  font-size: 0.7rem;
+}
+.footer-contact {
+  width: 100vw;
+  height: 40vh;
+
+  text-align: center;
+}
+.footer-contact p {
+  color: #889198;
+  max-width: 50vw;
+}
+.footer-contact-btn {
+  border-radius: 20px;
+  border: 1px solid #00aeef;
+}
+.love-text {
+  color: #00aeef;
+}
+.errdiv {
+  height: 15px;
+  font-family: Lato;
+}
+.respect-span {
+  color: #6f7a82;
+  font-size: 0.9rem;
+}
+.lato {
+  font-family: Lato;
+}
+.mont {
+  font-family: Montserrat;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     overflow-x: hidden;

@@ -9,6 +9,7 @@ import Reviews from "./Reviews";
 // import Slider from "./Slider";
 import Carousel from "./Carousel";
 import Card from "./Card";
+import ContactInfo from "./ContactInfo";
 const Body = () => {
   const data = [
     {
@@ -32,7 +33,8 @@ const Body = () => {
   ];
   return (
     <div className="custom-main-div">
-      <div>
+      <ContactInfo />
+      {/* <div>
         {data.map((item, index) => (
           <Card
             key={index}
@@ -41,7 +43,7 @@ const Body = () => {
             review={item.review}
           />
         ))}
-      </div>
+      </div> */}
       {/* <Carousel /> */}
       {/* <Hero />
       <AboutUs />
