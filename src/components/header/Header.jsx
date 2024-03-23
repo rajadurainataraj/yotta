@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/yws-logo.png";
-import Contact from "../Contact";
+import ContactInfo from "../ContactInfo";
 import { IoCloseSharp } from "react-icons/io5";
 
 const Header = () => {
@@ -45,7 +45,7 @@ const Header = () => {
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item nav-header-container d-sm-block d-xl-block ">
               <a
-                className="nav-link fs-3 nav-header text-dark fw-bolder"
+                className="nav-link fs-4 nav-header text-dark fw-bolder"
                 href="/"
               >
                 Yotta Web Services
@@ -69,7 +69,7 @@ const Header = () => {
           className="collapse navbar-collapse custom-navv me-auto"
           id="navbarSupportedContent"
         >
-          <div className="d-flex fs-6">
+          <div className="d-flex">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li
                 className={`nav-item ${
@@ -103,8 +103,11 @@ const Header = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to={"services" + "/customsoftware"}>
-                      <a className="dropdown-item">Custom Software</a>
+                    <Link
+                      className="dropdown-item"
+                      to={"services" + "/customsoftware"}
+                    >
+                      Custom Software
                     </Link>
                   </li>
                   <li>
@@ -113,11 +116,9 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item">
-                      <Link to={"services" + "/mobileapplication"}>
-                        Mobile Application
-                      </Link>
-                    </a>
+                    <Link to={"services" + "/mobileapplication"}>
+                      <a className="dropdown-item">Mobile Application</a>
+                    </Link>
                   </li>
                   <li>
                     <Link to={"services" + "/website"}>
@@ -126,7 +127,13 @@ const Header = () => {
                   </li>
                   <li>
                     <Link to={"services" + "/trainingandinternships"}>
-                      <a className="dropdown-item">Training & Internships</a>
+                      <a className="dropdown-item">
+                        Training
+                        <span span className="and-symbol">
+                          &
+                        </span>
+                        Internships
+                      </a>
                     </Link>
                   </li>
                   <li>
@@ -184,7 +191,7 @@ const Header = () => {
       {isContactOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <Contact />
+            <ContactInfo />
 
             <div
               className="contact-close custom-icon-contact fw-bolder border-2"

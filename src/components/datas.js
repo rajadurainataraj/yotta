@@ -38,7 +38,7 @@ export const team = [
     role: "Business Analyst",
     image: rajeswari,
     fbLink: "",
-    liLink: "",
+    liLink: "https://www.linkedin.com/in/jayalakshmi-l-44a580243/",
   },
   {
     name: "Vaisak",

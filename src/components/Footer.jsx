@@ -1,4 +1,4 @@
-import logo from "../../assets/logo/yws-logo.png";
+import logo from "../assets/logo/yws-logo.png";
 import { TfiEmail } from "react-icons/tfi";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
@@ -8,9 +8,9 @@ import { TbWorld } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <footer className="container-fluid footer mt-auto">
-      <section className="d-flex justify-content-between footer-main-wrapper px-5 mb-2 pt-5 d-sm">
-        <section className="footer-sub-wrapper">
+    <footer className=" container-fluid footer mt-auto">
+      <section className="d-flex justify-content-between footer-main-wrapper px-5 mb-2 pt-5 d-sm  ">
+        <section>
           <div className="d-flex custom-head">
             <a href="#">
               <img src={logo} width="72vw" alt="" />
@@ -33,7 +33,7 @@ const Footer = () => {
             <span className="fs-6">We deliver the best web products</span>
           </div>
         </section>
-        <section className="d-flex d-b-mx-5 custom-footer-menus gap-5">
+        <section className="d-flex mx-5">
           {/* <section className="d-sm-flex flex-column mx-5"> */}
           <section>
             <div className="footer-middle-container pb-2">
@@ -48,7 +48,7 @@ const Footer = () => {
               <div className="footer-about">Contact Us</div>
               <div className="footer-blog">Custom Developement</div>
             </div>
-            <div className="footer-middle-container pb-2">
+            <div className="footer-middle-container  pb-2">
               <div className="footer-company py-1">Legal</div>
               <div className="footer-about">
                 Terms <span className="and-symbol"> & </span>Conditions
@@ -56,9 +56,9 @@ const Footer = () => {
               <div className="footer-blog">Privacy policy</div>
             </div>
           </section>
-          <section className="d-b-px-5">
+          <section className="px-5">
             <div className="footer-company py-1">Contact Us</div>
-            <div className="d-flex flex-column align-items-start py-3 footer-contact">
+            <div className="d-flex flex-column  justify-content-between align-items-start py-3 footer-contact">
               <div className="d-flex align-items-center justify-content-center text-center">
                 <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
                   <TfiEmail size={15} color="#0178BE" />
@@ -77,7 +77,7 @@ const Footer = () => {
                 </div>
                 <span>+91 99444 58897</span>
               </div>
-              <div className="mt-3">
+              <div className="mt-4">
                 <h6 className="f-5  fw-bold py-2">Find us on</h6>
                 <div>
                   <div

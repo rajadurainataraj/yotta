@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import contactbg from "../assets/images/bg-contact.png";
 import footercontact from "../assets/images/footercontact.png";
 import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -16,8 +17,18 @@ const contactSchema = Yup.object().shape({
 });
 
 const ContactInfo = () => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: "-100vh" },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
   return (
-    <section className="custom-contact-main">
+    <motion.section
+      className="container-fluid custom-contact-main my-5"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <section className="custom-contact-info d-flex justify-content-between p-3">
         <div className="contact-close">
           <IoClose />
@@ -155,7 +166,7 @@ const ContactInfo = () => {
           Contact us now for a free quote!
         </button>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

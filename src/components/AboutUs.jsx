@@ -3,13 +3,13 @@ import ImageSlider from "./ImageSlider";
 const AboutUs = () => {
   return (
     <section className="container-fluid about-container py-4">
-      <div className="content-header text-center mb-3  custom-about-header2">
+      <div className="content-header text-center mb-3 custom-about-header2">
         About Us
       </div>
       <section className="d-flex custom-about justify-content-evenly gap-5">
         <ImageSlider />
         <section>
-          <div className="content-header text-center mb-3 d-sm-table  custom-about-header3">
+          <div className="content-header text-center mb-3 d-sm-table d-md-none  custom-about-header3">
             About Us
           </div>
           <p className="about-p my-5">

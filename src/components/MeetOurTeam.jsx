@@ -1,6 +1,7 @@
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { team } from "./datas";
+
 const MeetOurTeam = () => {
   return (
     <section className="py-5 container-fluid">
@@ -15,13 +16,22 @@ const MeetOurTeam = () => {
               <img src={profile?.image} alt="Rajeswari" className="card-img" />
               <h5 className="card-header text-center mt-3">{profile?.name}</h5>
               <p>{profile?.role}</p>
-              <div className="d-flex text-center justify-content-center gap-3">
-                <a target="_blank" src={profile?.fbLink}>
+              <div className="d-flex text-center justify-content-center gap-3 align-items-center ">
+                {profile.liLink ? (
+                  <a target="_blank" href={profile?.liLink}>
+                    <FaLinkedinIn />
+                  </a>
+                ) : (
                   <FaLinkedinIn />
-                </a>
-                <a target="_blank" src={profile?.liLink}>
+                )}
+
+                {profile.fbLink ? (
+                  <a target="_blank" href={profile?.fbLink}>
+                    <FaFacebookF />
+                  </a>
+                ) : (
                   <FaFacebookF />
-                </a>
+                )}
               </div>
             </div>
           ))}

@@ -8,12 +8,12 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/services/:id" element={<Services />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };
