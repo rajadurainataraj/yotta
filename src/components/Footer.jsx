@@ -85,7 +85,12 @@ const Footer = () => {
                     style={{ width: "200px" }}
                   >
                     <div className="instagram-icon">
-                      <FaInstagram color="#fff" size={17} />
+                      <a
+                        href="https://www.instagram.com/yottawebservices"
+                        target="_blank"
+                      >
+                        <FaInstagram color="#fff" size={17} />
+                      </a>
                     </div>
                     <div
                       className="rounded-circle facebook-footer d-inline-flex justify-content-center align-items-center"

@@ -30,9 +30,9 @@ const ContactInfo = () => {
       variants={containerVariants}
     >
       <section className="custom-contact-info d-flex justify-content-between p-3">
-        <div className="contact-close">
+        {/* <div className="contact-close">
           <IoClose />
-        </div>
+        </div> */}
         <section className="w-50">
           <h3 className="h3 fw-bold">
             We'd <span className="h3 love-text fw-bolder ">love</span> to hear

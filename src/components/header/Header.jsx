@@ -50,7 +50,7 @@ const Header = () => {
               >
                 Yotta Web Services
               </a>
-              <p>Enlighten the Dark Data</p>
+              <p className="sub-logo-title">Enlighten the Dark Data</p>
             </li>
           </ul>
         </div>

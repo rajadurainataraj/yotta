@@ -10,21 +10,30 @@ import Reviews from "./Reviews";
 import Carousel from "./Carousel";
 import Card from "./Card";
 import ContactInfo from "./ContactInfo";
+import Technologies2 from "./Technologies2";
+import CarouselSwip from "./CarouselSwip";
+import GetQuote from "./GetQuote";
+
+import GetQuoteService from "./GetQuoteServiceModal";
 const Body = () => {
   return (
     <div className="custom-main-div">
       {/* <ContactInfo /> */}
 
-      <Hero />
+      {/* <Hero />
       <AboutUs />
       <WhatWeDo />
       <Digital />
       <MeetOurTeam />
       <OurClients />
-      <Technologies />
+      <Technologies2 /> */}
+      {/* <GetQuote /> */}
+
+      <GetQuoteService />
       {/* <ContactInfo /> */}
       {/*   
       <MeetOurTeam /> */}
+      {/* <CarouselSwip /> */}
     </div>
   );
 };

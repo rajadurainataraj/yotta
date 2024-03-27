@@ -32,6 +32,8 @@ import React from "../assets/images/React.jpg";
 import SpringBoot from "../assets/images/SpringBoot.jpg";
 import ReactNative from "../assets/images/ReactNative.jpg";
 import WordPress from "../assets/images/WordPress .jpg";
+import NextJS from "../assets/images/nextjs.png";
+import DigitalOcean from "../assets/images/digitalocean.png";
 export const team = [
   {
     name: "Rajeswari",
@@ -342,4 +344,69 @@ export const tech = [
   SpringBoot,
   ReactNative,
   WordPress,
+];
+
+export const frontEnd = [
+  {
+    title: "React",
+    icon: React,
+  },
+  {
+    title: "Angular",
+    icon: Angular,
+  },
+  {
+    title: "Nextjs",
+    icon: NextJS,
+  },
+];
+export const backend = [
+  {
+    title: "Java",
+    icon: Java,
+  },
+  {
+    title: "Node.js",
+    icon: NodeJS,
+  },
+  {
+    title: "Python",
+    icon: Python,
+  },
+];
+export const databases = [
+  {
+    title: "PostgreSQL",
+    icon: PostgreSQL,
+  },
+  {
+    title: "OracleDB",
+    icon: OracleDB,
+  },
+  {
+    title: "MongoDB",
+    icon: MongoDB,
+  },
+];
+export const deployment = [
+  {
+    title: "Hostinger",
+    icon: Hostinger,
+  },
+  {
+    title: "AWS",
+    icon: aws,
+  },
+  {
+    title: "DigitalOcean",
+    icon: DigitalOcean,
+  },
+];
+export const serviceOptions = [
+  "Custom Software",
+  "Digital Marketing",
+  "Logo Design",
+  "Mobile Application",
+  "Website",
+  "Training & Internship",
 ];

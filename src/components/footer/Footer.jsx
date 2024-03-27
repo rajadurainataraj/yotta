@@ -5,13 +5,14 @@ import { FaPhone } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { GrFacebookOption } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="container-fluid footer mt-auto">
       <section className="d-flex justify-content-between footer-main-wrapper px-5 mb-2 pt-5 d-sm">
         <section className="footer-sub-wrapper">
-          <div className="d-flex custom-head">
+          {/* <div className="d-flex custom-head">
             <a href="#">
               <img src={logo} width="72vw" alt="" />
             </a>
@@ -25,6 +26,22 @@ const Footer = () => {
                   Yotta Web Services
                 </a>
                 <span>Enlighten the Dark Data</span>
+              </li>
+            </ul>
+          </div> */}
+          <div className="d-flex">
+            <Link to="/">
+              <img src={logo} width="72vw" alt="" className="me-1" />
+            </Link>
+            <ul className="navbar-nav mb-2 mb-lg-0">
+              <li className="nav-item nav-header-container d-sm-block d-xl-block ">
+                <a
+                  className="nav-link fs-4 nav-header text-dark fw-bolder"
+                  href="/"
+                >
+                  Yotta Web Services
+                </a>
+                <p className="sub-logo-title">Enlighten the Dark Data</p>
               </li>
             </ul>
           </div>
@@ -84,27 +101,42 @@ const Footer = () => {
                     className="d-flex justify-content-around align-items-center"
                     style={{ width: "200px" }}
                   >
-                    <div className="instagram-icon">
-                      <FaInstagram color="#fff" size={17} />
-                    </div>
-                    <div
-                      className="rounded-circle facebook-footer d-inline-flex justify-content-center align-items-center"
-                      style={{ width: "35px", height: "35px" }}
+                    <a
+                      href="https://www.instagram.com/yottawebservices"
+                      target="_blank"
                     >
-                      <GrFacebookOption color="#fff" size={17} />
-                    </div>
+                      <div className="instagram-icon">
+                        <FaInstagram color="#fff" size={17} />
+                      </div>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100083235555354"
+                      target="_blank"
+                    >
+                      <div
+                        className="rounded-circle facebook-footer d-inline-flex justify-content-center align-items-center"
+                        style={{ width: "35px", height: "35px" }}
+                      >
+                        <GrFacebookOption color="#fff" size={17} />
+                      </div>
+                    </a>
                     <div
                       className="rounded-circle bg-dark d-inline-flex justify-content-center align-items-center"
                       style={{ width: "35px", height: "35px" }}
                     >
                       <FaXTwitter color="#fff" size={17} />
                     </div>
-                    <div
-                      className="rounded-circle linkedin-footer d-inline-flex justify-content-center align-items-center"
-                      style={{ width: "35px", height: "35px" }}
+                    <a
+                      href="https://www.linkedin.com/company/yotta-web-services/"
+                      target="_blank"
                     >
-                      <FaLinkedin color="#fff" size={17} />
-                    </div>
+                      <div
+                        className="rounded-circle linkedin-footer d-inline-flex justify-content-center align-items-center"
+                        style={{ width: "35px", height: "35px" }}
+                      >
+                        <FaLinkedin color="#fff" size={17} />
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -16,7 +16,7 @@ a {
 }
 
 .navbar {
-  font-family: "Inknut Antiqua", serif;
+  font-family: Lato;
   font-weight: 400;
   justify-content: space-between;
 }
@@ -25,6 +25,13 @@ a {
 }
 .nav-header {
   padding: 0;
+}
+.sub-logo-title {
+  background: linear-gradient(to right, #f3831f, #0079ba);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  font-family: Song Myung;
 }
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item .nav-link.active {
@@ -38,6 +45,10 @@ a {
 }
 .dropdown-item:hover {
   color: #047dd4 !important;
+}
+.dropdown-item:active,
+.dropdown-item.active {
+  background-color: transparent !important;
 }
 
 .nav-header-container,
@@ -122,8 +133,22 @@ u {
 .linkedin-footer {
   background-color: #007bb6;
 }
+
 .tech-container {
   height: 85vh;
+}
+.tech-title {
+  font-size: 1.2rem;
+  color: #e58931 !important;
+  font-family: Montserrat;
+  margin: 20px 0;
+}
+.custom-tech2 img {
+  width: 20px;
+  height: 20px;
+}
+.custom-tech2-container {
+  padding: 20px;
 }
 .next-gen {
   display: block;
@@ -135,7 +160,7 @@ u {
   justify-content: end;
   align-items: end;
   padding-right: 9em;
-  min-height: 38rem;
+  min-height: 82vh;
   padding-bottom: 4.5em;
   border-radius: 10px;
 }
@@ -184,24 +209,46 @@ u {
 }
 .custom-build {
   font-size: 1.5rem;
+  color: white;
+}
+.custom-clients {
+  width: 100vw;
+}
+.box-tech {
+  border-radius: 10px;
+  width: 12em;
+  height: 9em;
+  font-family: Montserrat;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.custom-clients p {
+  color: #036198;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.custom-clients span {
+  color: #f38320;
+  font-family: Montserrat;
+
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .content-header {
   font-size: 1.5rem;
   font-weight: bold;
-  background-image: linear-gradient(to right, #017abe, #03517f);
+  background-image: linear-gradient(to right, #017abe, #044b75);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: "Book Antiqua", serif;
+  font-family: Montserrat;
 }
 .content-container2,
 .content-container,
 .content-para {
-  font-family: "Book Antiqua", serif;
+  font-family: Lato;
   color: #2a2a2c;
 }
 .content-container2 {
-  background: linear-gradient(to bottom, #0eceea 0%, #6a5c88 100%);
+  background: linear-gradient(to bottom, #3d1478, #850c90);
   border-radius: 10px;
 }
 
@@ -246,23 +293,24 @@ u {
 .about-container {
   margin-top: 4em;
   width: 90vw;
-  font-family: "Book Antiqua", serif;
+  font-family: Book Antiqua;
 }
 .custom-carousel-heading {
-  font-family: Book Antiqua;
+  font-family: Lato;
 }
 .about-p {
   width: 55vw;
   font-size: 1.1rem;
-  font-family: "Book Antiqua";
+  font-family: Lato;
   color: #2a2a2c;
   text-align: start;
+  padding-top: 20px;
 }
 
 /*  carousel*/
 .scroll-container {
   width: 100%;
-  font-family: "Book Antiqua", serif;
+  font-family: Lato;
   overflow-x: auto;
 
   scrollbar-width: none; /* Firefox */
@@ -311,10 +359,11 @@ u {
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
+
   color: #333; /* Change color as needed */
 }
 .scroll-container p {
-  font-family: "Book Antiqua", serif;
+  font-family: Lato;
   font-size: 14px;
 }
 .carousel-btn-right {
@@ -387,7 +436,7 @@ u {
   mix-blend-mode: multiply;
 }
 .service-headers {
-  font-family: "Book Antiqua";
+  font-family: Montserrat;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -451,6 +500,7 @@ u {
   height: 30px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
   border-radius: 50%;
 }
 .custom-contact button {
@@ -548,7 +598,7 @@ u {
 }
 .service-paras-home {
   font-size: 1.2rem;
-  font-family: "Book Antiqua";
+  font-family: Lato;
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
@@ -672,7 +722,76 @@ u {
 .mont {
   font-family: Montserrat;
 }
+.quote-container p {
+  color: #889198;
+}
+/* .design-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+} */
+.water-fill-btn {
+  position: relative;
+  width: 290px;
+  height: 50px;
+  background-color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: bold;
+  transition: color 0.5s ease-out;
+  cursor: pointer;
+  /* padding: 0 !important;
+  margin: 0 !important; */
+}
 
+.water-fill-btn::before {
+  content: "Design A Quote";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.water-fill-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #0077b6;
+  transition: height 0.5s ease-out;
+  overflow: hidden;
+}
+
+.water-fill-btn:hover {
+  color: white;
+}
+
+.water-fill-btn:hover::after {
+  height: 100%;
+}
+
+.water-fill-btn::after::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  animation: waves 1s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate3d(-25%, 0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(25%, 0, 0) rotate(360deg);
+  }
+}
 @media only screen and (max-width: 600px) {
   body {
     overflow-x: hidden;
@@ -774,6 +893,7 @@ u {
     padding-top: 1px;
     border-radius: 30px;
     margin: 30px 0 !important;
+    font-family: Lato;
   }
   .custom-corousel-btn {
     height: 30px;
@@ -866,6 +986,7 @@ u {
     margin-top: 15px;
     p {
       font-size: 0.4em;
+      color: linear-gradient(to right, #f3831f, #43a4af, #007ab9) !important;
     }
   }
   nav {

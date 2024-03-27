@@ -19,7 +19,7 @@ const HoverContainer = ({ title }) => {
 
         // style={{ width: "600px", height: "390px" }}
       >
-        <div className="service-headers text-black p-4 "> {propsData}</div>
+        <div className="service-headers text-black p-4"> {propsData}</div>
         <section className="">
           <div className="">
             <p className="service-paras-home p px-4">{data?.content}</p>
