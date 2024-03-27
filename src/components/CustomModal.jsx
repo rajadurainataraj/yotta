@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import "./CustomModal.css"; // Assuming you have a CSS file for styling the modal
 import { MdClose } from "react-icons/md";
 import ChooseServices from "./ChooseServices";
