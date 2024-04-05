@@ -1,6 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import footercontact from "../assets/images/footercontact.png";
+import { useState } from "react";
+import CustomModal from "./CustomModal";
 const GetQuote = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div
       className="container-fluid d-flex justify-content-center flex-column align-items-center quote-container  "
@@ -27,7 +38,7 @@ const GetQuote = () => {
         {/* <button type="submit" className="design-btn fw-bolder mont">
           Design A Quote
         </button> */}
-        <div className="water-fill-btn my-4"></div>
+        <div className="water-fill-btn my-4" onClick={openModal}></div>
       </div>
     </div>
   );

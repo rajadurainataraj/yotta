@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CustomModal from "./CustomModal";
 
-const GetQuoteService = () => {
+const GetQuoteServiceModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -20,4 +20,4 @@ const GetQuoteService = () => {
   );
 };
 
-export default GetQuoteService;
+export default GetQuoteServiceModal;
