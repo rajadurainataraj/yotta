@@ -14,13 +14,13 @@
   background-color: #fff;
   width: 100vw;
   height: 90vh;
-  max-width: 80vw; /* Added to ensure modal doesn't exceed viewport width */
+  max-width: 80vw;
   max-height: 100vh; /* Added to ensure modal doesn't exceed viewport height */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   overflow: auto;
-  position: relative; /* Ensure z-index works */
+  /* position: relative;  */
   z-index: 1; /* Ensure modal is above overlay */
 }
 

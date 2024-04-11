@@ -792,6 +792,30 @@ u {
     transform: translate3d(25%, 0, 0) rotate(360deg);
   }
 }
+.custom-modal h2 {
+  margin-left: 40px;
+}
+.custom-reference-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  margin-top: 4em;
+  margin-bottom: 2em;
+  overflow-wrap: break-word; /* Allow text to break onto the next line */
+}
+.exclamation-modal2,
+.exclamation-modal1 {
+  max-width: 300px;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+}
+.satisfaction {
+  background-color: #e2e6eb;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     overflow-x: hidden;

@@ -410,3 +410,9 @@ export const serviceOptions = [
   "Website",
   "Training & Internship",
 ];
+export const websiteTypes = [
+  "Static Website",
+  "Dynamic Website",
+  "E-Commerce Website",
+];
+export const projectType = ["Project", "Retainer"];

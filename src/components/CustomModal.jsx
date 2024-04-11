@@ -3,6 +3,14 @@
 import "./CustomModal.css"; // Assuming you have a CSS file for styling the modal
 import { MdClose } from "react-icons/md";
 import ChooseServices from "./ChooseServices";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import WebsiteType from "./WebsiteType";
+import ReferenceWebsite from "./ReferenceWebsite";
+import ProjectType from "./ProjectType";
+import ProjectDescription from "./ProjectDescription";
+import EstimatedBudget from "./EstimatedBudget";
+import CustomerDetails from "./CustomerDetails";
+
 const CustomModal = ({ isOpen, onClose }) => {
   return (
     <>
@@ -12,11 +20,14 @@ const CustomModal = ({ isOpen, onClose }) => {
           // onClick={onClose}
         >
           <div
-            className="custom-modal d-flex align-items-center flex-column "
+            className="custom-modal custom-modal d-flex flex-column align-items-center "
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="d-flex justify-content-center align-items-center">
-              <h2 className=" ">
+            <div className="d-flex justify-content-between w-100 px-3">
+              <div>
+                <FaArrowLeftLong className="fs-5" />
+              </div>
+              <h2 className="h3 px-3 ">
                 Design A <span className="text-primary">Quote</span>
               </h2>
 
@@ -26,7 +37,7 @@ const CustomModal = ({ isOpen, onClose }) => {
                 onClick={onClose}
               />
             </div>
-            <ChooseServices />
+            <CustomerDetails />
           </div>
         </div>
       )}

@@ -12,10 +12,11 @@ const GetQuoteServiceModal = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  console.log(isModalOpen);
+  // console.log(isModalOpen);
   return (
     <div className="container-fluid">
       <button onClick={openModal}>Open Modal</button>
+      <CustomModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
