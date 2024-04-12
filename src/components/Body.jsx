@@ -15,6 +15,7 @@ import CarouselSwip from "./CarouselSwip";
 import GetQuote from "./GetQuote";
 
 import GetQuoteService from "./GetQuoteServiceModal";
+import ThankYou from "./ThankYou";
 const Body = () => {
   return (
     <div className="custom-main-div">
@@ -30,6 +31,7 @@ const Body = () => {
       {/* <GetQuote /> */}
 
       <GetQuoteService />
+      {/* <ThankYou /> */}
       {/* <ContactInfo /> */}
       {/*   
       <MeetOurTeam /> */}

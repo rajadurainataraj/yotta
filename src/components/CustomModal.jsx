@@ -10,6 +10,7 @@ import ProjectType from "./ProjectType";
 import ProjectDescription from "./ProjectDescription";
 import EstimatedBudget from "./EstimatedBudget";
 import CustomerDetails from "./CustomerDetails";
+import SocialServices from "./SocialServices";
 
 const CustomModal = ({ isOpen, onClose }) => {
   return (
@@ -37,7 +38,7 @@ const CustomModal = ({ isOpen, onClose }) => {
                 onClick={onClose}
               />
             </div>
-            <CustomerDetails />
+            <SocialServices />
           </div>
         </div>
       )}

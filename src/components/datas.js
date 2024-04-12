@@ -416,3 +416,9 @@ export const websiteTypes = [
   "E-Commerce Website",
 ];
 export const projectType = ["Project", "Retainer"];
+export const socialServices = [
+  "Instagram",
+  "Facebook",
+  "X (Twitter)",
+  "Linkedin",
+];
