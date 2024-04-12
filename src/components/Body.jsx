@@ -30,9 +30,9 @@ const Body = () => {
       <Technologies2 /> */}
       {/* <GetQuote /> */}
 
-      <GetQuoteService />
+      {/* <GetQuoteService /> */}
       {/* <ThankYou /> */}
-      {/* <ContactInfo /> */}
+      <ContactInfo />
       {/*   
       <MeetOurTeam /> */}
       {/* <CarouselSwip /> */}

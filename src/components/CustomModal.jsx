@@ -2,17 +2,18 @@
 
 import "./CustomModal.css"; // Assuming you have a CSS file for styling the modal
 import { MdClose } from "react-icons/md";
-import ChooseServices from "./ChooseServices";
+import ChooseServices from "./serviceModals/ChooseServices.jsx";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import WebsiteType from "./WebsiteType";
-import ReferenceWebsite from "./ReferenceWebsite";
-import ProjectType from "./ProjectType";
-import ProjectDescription from "./ProjectDescription";
-import EstimatedBudget from "./EstimatedBudget";
-import CustomerDetails from "./CustomerDetails";
-import SocialServices from "./SocialServices";
-
+import ProjectType from "./serviceModals/ProjectType.jsx";
+import ProjectDescription from "./serviceModals/ProjectDescription.jsx";
+import EstimatedBudget from "./serviceModals/EstimatedBudget.jsx";
+import CustomerDetails from "./serviceModals/CustomerDetails.jsx";
+import ThankYou from "./serviceModals/ThankYou.jsx";
+import { count } from "../components/utils/globalState.js";
+import { useRecoilState } from "recoil";
 const CustomModal = ({ isOpen, onClose }) => {
+  const [counts] = useRecoilState(count);
+  console.log(counts);
   return (
     <>
       {isOpen && (
@@ -38,7 +39,21 @@ const CustomModal = ({ isOpen, onClose }) => {
                 onClick={onClose}
               />
             </div>
-            <SocialServices />
+            {counts === 1 ? (
+              <ChooseServices />
+            ) : counts === 2 ? (
+              <ProjectType />
+            ) : counts === 3 ? (
+              <ProjectDescription />
+            ) : counts === 4 ? (
+              <EstimatedBudget />
+            ) : counts === 5 ? (
+              <CustomerDetails />
+            ) : counts === 6 ? (
+              <ThankYou onClose={onClose} />
+            ) : (
+              ""
+            )}
           </div>
         </div>
       )}

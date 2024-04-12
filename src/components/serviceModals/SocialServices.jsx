@@ -1,9 +1,17 @@
 import { useState } from "react";
-import { socialServices } from "./datas";
-import Buttons from "./Buttons";
+import { socialServices } from "../datas.js";
+import Buttons from "../Buttons.jsx";
+import { useRecoilState } from "recoil";
+import { serviceDatas } from "../utils/globalState.js";
 const SocialServices = () => {
   const [selectedServices, setSelectedServices] = useState([]);
-
+  const [serviceData, setServiceData] = useRecoilState(serviceDatas);
+  console.log(serviceData, "service");
+  if (!serviceData.includes("hi")) {
+    setServiceData([...serviceData, "hi"]);
+  }
+  console.log(serviceData, "service");
+  console.log(serviceData, "service update");
   const toggleService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));

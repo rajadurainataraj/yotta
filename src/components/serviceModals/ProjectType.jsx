@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { projectType } from "./datas";
-import Buttons from "./Buttons";
+import { projectType } from "../datas.js";
+import Buttons from "../Buttons.jsx";
 import { HiOutlineExclamationCircle } from "react-icons/hi2";
-
+import { count } from "../utils/globalState.js";
+import { useRecoilState } from "recoil";
 const ProjectType = () => {
+  const [counts, setCounts] = useRecoilState(count);
   const [selectedServices, setSelectedServices] = useState([]);
   const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
   const [selectedModal, setSelectedModal] = useState(null);
@@ -29,10 +32,15 @@ const ProjectType = () => {
     }
   };
 
+  const nextPage = () => {
+    setCounts(3);
+  };
   return (
     <section style={{}}>
       <section style={{ display: "flex", flexDirection: "column" }}>
-        <section className="lato">What services would you like to opt?</section>
+        <section className="lato fs-4">
+          What services would you like to opt?
+        </section>
         {projectType.map((item) => (
           <div
             key={item}
@@ -103,7 +111,7 @@ const ProjectType = () => {
           </div>
         ))}
         <section className="d-flex justify-content-center align-items-center ">
-          <Buttons />
+          <Buttons onClick={() => nextPage()} />
         </section>
       </section>
     </section>

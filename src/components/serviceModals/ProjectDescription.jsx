@@ -1,8 +1,16 @@
-import Buttons from "./Buttons";
+/* eslint-disable no-unused-vars */
+import Buttons from "../Buttons.jsx";
+import { count } from "../utils/globalState.js";
+import { useRecoilState } from "recoil";
 const ProjectDescription = () => {
+  const [counts, setCounts] = useRecoilState(count);
+  const nextPage = () => {
+    console.log(4);
+    setCounts(4);
+  };
   return (
     <section style={{ width: "50vw" }} className="">
-      <section className="lato fw-bold text-left h5">
+      <section className="lato fw-bold text-left fs-4 h5">
         Project Description
       </section>
       <section>
@@ -14,7 +22,7 @@ const ProjectDescription = () => {
         <p className="p mt-3">100% Custom made</p>
       </section>
       <section className="d-flex justify-content-center align-items-center ">
-        <Buttons />
+        <Buttons onClick={() => nextPage()} />
       </section>
     </section>
   );

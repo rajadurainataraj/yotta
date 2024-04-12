@@ -1,4 +1,11 @@
+/* eslint-disable no-unused-vars */
+import { count } from "../utils/globalState.js";
+import { useRecoilState } from "recoil";
 const CustomerDetails = () => {
+  const [counts, setCounts] = useRecoilState(count);
+  const nextPage = () => {
+    setCounts(6);
+  };
   return (
     <section className="d-flex flex-column gap-5 text-left my-4">
       <div className="d-flex align-items-center gap-3 fs-5 ">
@@ -38,6 +45,7 @@ const CustomerDetails = () => {
         <button
           type="button"
           className="btn btn-outline-dark custom-ouline-btn fw-bold fs-5 "
+          onClick={() => nextPage()}
         >
           send
         </button>

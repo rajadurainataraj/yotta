@@ -1,4 +1,4 @@
-import Buttons from "./Buttons";
+import Buttons from "../Buttons";
 const ReferenceWebsite = () => {
   return (
     <section>

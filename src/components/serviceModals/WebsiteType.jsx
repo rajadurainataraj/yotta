@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { serviceOptions } from "./datas";
-import Buttons from "./Buttons";
-const ChooseServices = () => {
+
+import { websiteTypes } from "../datas";
+const WebsiteType = () => {
   const [selectedServices, setSelectedServices] = useState([]);
 
   const toggleService = (service) => {
@@ -12,10 +12,11 @@ const ChooseServices = () => {
     }
   };
   console.log(selectedServices);
+
   return (
     <section>
-      <section className="lato">What services would you like to opt?</section>
-      {serviceOptions.map((item) => (
+      <section className="lato text-center">Is it going to?</section>
+      {websiteTypes.map((item) => (
         <section
           key={item}
           className={`d-flex choose-service-container fw-bolder fs-5 d-flex align-items-center justify-content-center p-2 px-5 lato my-3 ${
@@ -26,11 +27,8 @@ const ChooseServices = () => {
           {item}
         </section>
       ))}
-      <section className="d-flex justify-content-center align-items-center ">
-        <Buttons />
-      </section>
     </section>
   );
 };
 
-export default ChooseServices;
+export default WebsiteType;
