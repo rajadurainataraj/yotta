@@ -12,27 +12,24 @@ import Card from "./Card";
 import ContactInfo from "./ContactInfo";
 import Technologies2 from "./Technologies2";
 import CarouselSwip from "./CarouselSwip";
-import GetQuote from "./GetQuote";
 
-import GetQuoteService from "./GetQuoteServiceModal";
-import ThankYou from "./ThankYou";
 const Body = () => {
   return (
     <div className="custom-main-div">
       {/* <ContactInfo /> */}
 
-      {/* <Hero />
+      <Hero />
       <AboutUs />
       <WhatWeDo />
       <Digital />
       <MeetOurTeam />
       <OurClients />
-      <Technologies2 /> */}
+      <Technologies2 />
       {/* <GetQuote /> */}
 
       {/* <GetQuoteService /> */}
       {/* <ThankYou /> */}
-      <ContactInfo />
+      {/* <ContactInfo /> */}
       {/*   
       <MeetOurTeam /> */}
       {/* <CarouselSwip /> */}

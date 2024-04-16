@@ -4,8 +4,8 @@ export const darkModeState = atom({
   key: "darkModeState",
   default: false,
 });
-export const serviceDatas = atom({
-  key: "serviceDatas",
+export const serviceData = atom({
+  key: "serviceData",
   default: [],
 });
 export const count = atom({

@@ -2,22 +2,24 @@ import { useState } from "react";
 import { socialServices } from "../datas.js";
 import Buttons from "../Buttons.jsx";
 import { useRecoilState } from "recoil";
-import { serviceDatas } from "../utils/globalState.js";
+import { serviceData, count } from "../utils/globalState.js";
+
 const SocialServices = () => {
   const [selectedServices, setSelectedServices] = useState([]);
-  const [serviceData, setServiceData] = useRecoilState(serviceDatas);
-  console.log(serviceData, "service");
-  if (!serviceData.includes("hi")) {
-    setServiceData([...serviceData, "hi"]);
-  }
-  console.log(serviceData, "service");
-  console.log(serviceData, "service update");
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
+  const [counts, setCounts] = useRecoilState(count);
+  console.log(serviceDatas, "service");
+  console.log(counts, "counts");
   const toggleService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
     } else {
       setSelectedServices([...selectedServices, service]);
     }
+  };
+
+  const nextPage = () => {
+    setCounts(2);
   };
   console.log(selectedServices);
   return (
@@ -37,7 +39,7 @@ const SocialServices = () => {
         </section>
       ))}
       <section className="d-flex justify-content-center align-items-center ">
-        <Buttons />
+        <Buttons onClick={() => nextPage()} />
       </section>
     </section>
   );

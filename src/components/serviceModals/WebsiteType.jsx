@@ -1,8 +1,11 @@
 import { useState } from "react";
 
 import { websiteTypes } from "../datas";
+import { useRecoilState } from "recoil";
+import { count } from "../utils/globalState";
 const WebsiteType = () => {
   const [selectedServices, setSelectedServices] = useState([]);
+  const [counts, setCounts] = useRecoilState(count);
 
   const toggleService = (service) => {
     if (selectedServices.includes(service)) {
@@ -10,6 +13,7 @@ const WebsiteType = () => {
     } else {
       setSelectedServices([...selectedServices, service]);
     }
+    setCounts(9);
   };
   console.log(selectedServices);
 

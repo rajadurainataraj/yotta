@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 // import { useHistory } from "react-router-dom";
 import CustomModal from "./CustomModal";
 import { useState } from "react";
-import { count } from "../components/utils/globalState.js";
+import { count, serviceData } from "../components/utils/globalState.js";
 import { useRecoilState } from "recoil";
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -24,6 +24,7 @@ const contactSchema = Yup.object().shape({
 
 const ContactInfo = () => {
   const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -32,6 +33,7 @@ const ContactInfo = () => {
   };
 
   const closeModal = () => {
+    setServiceDatas([]);
     setCounts(0);
     setIsModalOpen(false);
   };

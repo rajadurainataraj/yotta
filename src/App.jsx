@@ -4,18 +4,17 @@ import Services from "./components/Services";
 import Body from "./components/Body";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import ProjectType from "./components/ProjectType";
 
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<Body />} />
-        <Route path="/project-type" element={<ProjectType />} />
+
         <Route path="/services/:id" element={<Services />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };

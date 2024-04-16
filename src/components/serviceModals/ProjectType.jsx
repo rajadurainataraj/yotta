@@ -5,6 +5,7 @@ import Buttons from "../Buttons.jsx";
 import { HiOutlineExclamationCircle } from "react-icons/hi2";
 import { count } from "../utils/globalState.js";
 import { useRecoilState } from "recoil";
+
 const ProjectType = () => {
   const [counts, setCounts] = useRecoilState(count);
   const [selectedServices, setSelectedServices] = useState([]);
@@ -60,6 +61,9 @@ const ProjectType = () => {
               onClick={() =>
                 toggleService(item, item === "Project" ? "modal1" : "modal2")
               }
+              // onMouseEnter={() =>
+              //   toggleService(item, item === "Project" ? "modal1" : "modal2")
+              // }
             >
               <div>{item}</div>
             </section>
@@ -67,7 +71,7 @@ const ProjectType = () => {
               <HiOutlineExclamationCircle
                 size={30}
                 color="red"
-                onClick={(event) => {
+                onMouseEnter={(event) => {
                   handleModalPosition(event);
                   setSelectedModal(
                     item === "Project"
@@ -111,7 +115,10 @@ const ProjectType = () => {
           </div>
         ))}
         <section className="d-flex justify-content-center align-items-center ">
-          <Buttons onClick={() => nextPage()} />
+          <Buttons
+            onClick={() => nextPage()}
+            disabled={selectedServices.length === 0}
+          />
         </section>
       </section>
     </section>
