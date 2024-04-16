@@ -317,9 +317,9 @@ u {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
-/* .scroll-container::-webkit-scrollbar {
-  display: none; 
-} */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
 .custom-cards {
   display: flex;
   padding-left: 10px;
