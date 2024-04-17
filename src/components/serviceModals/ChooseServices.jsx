@@ -24,10 +24,11 @@ const ChooseServices = () => {
       ? setCounts(7)
       : serviceDatas.includes("Website")
       ? setCounts(8)
+      : serviceDatas.includes("Training & Internship")
+      ? setCounts(5)
       : setCounts(2);
   };
   // console.log(selectedServices);
-  console.log("spcl", selectedServices);
   console.log("spcl2", serviceDatas);
   console.log("count", counts);
   console.log();
@@ -39,7 +40,7 @@ const ChooseServices = () => {
       {serviceOptions.map((item) => (
         <section
           key={item}
-          className={`d-flex choose-service-container fw-bolder fs-5 d-flex align-items-center justify-content-center p-2 px-5 lato my-3 ${
+          className={`d-flex choose-service-container  fw-bolder fs-5 d-flex align-items-center justify-content-center p-2 px-5 lato my-3 ${
             selectedServices.includes(item) ? "selected" : ""
           }`}
           onClick={() => toggleService(item)}

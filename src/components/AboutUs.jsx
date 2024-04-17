@@ -6,13 +6,13 @@ const AboutUs = () => {
       <div className="content-header text-center custom-about-header2">
         About Us
       </div>
-      <section className="d-flex custom-about justify-content-evenly gap-5">
+      <section className="d-flex custom-about justify-content-evenly gap-5 ">
         <ImageSlider />
         <section>
           <div className="content-header text-center mb-3 d-sm-table d-md-none  custom-about-header3">
             About Us
           </div>
-          <p className="about-p my-5">
+          <p className="about-p my-5  my-0">
             Yotta Web Services was founded by <strong>Mrs.Renuka</strong> in the
             year <strong>2021</strong> with the goal to provide opportunities in
             developing web development projects. We are a team of talented

@@ -3,11 +3,12 @@ import { useState } from "react";
 import { projectType } from "../datas.js";
 import Buttons from "../Buttons.jsx";
 import { HiOutlineExclamationCircle } from "react-icons/hi2";
-import { count } from "../utils/globalState.js";
+import { count, serviceData } from "../utils/globalState.js";
 import { useRecoilState } from "recoil";
 
 const ProjectType = () => {
   const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const [selectedServices, setSelectedServices] = useState([]);
   const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
   const [selectedModal, setSelectedModal] = useState(null);
@@ -15,13 +16,15 @@ const ProjectType = () => {
   const toggleService = (service, modal) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
+      setServiceDatas(serviceDatas.filter((item) => item !== service));
       setSelectedModal(null);
     } else {
       setSelectedServices([...selectedServices, service]);
+      setServiceDatas([...serviceDatas, service]);
       setSelectedModal(modal);
     }
   };
-
+  console.log(serviceDatas);
   const handleModalPosition = (event) => {
     const rect = event.target.getBoundingClientRect();
     const isMobile = window.innerWidth <= 768; // Set your breakpoint for mobile screens
@@ -61,9 +64,6 @@ const ProjectType = () => {
               onClick={() =>
                 toggleService(item, item === "Project" ? "modal1" : "modal2")
               }
-              // onMouseEnter={() =>
-              //   toggleService(item, item === "Project" ? "modal1" : "modal2")
-              // }
             >
               <div>{item}</div>
             </section>

@@ -46,7 +46,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-content mt-5">
-            <div className="fs-4">Thank you for your support!</div>
+            <div className="fs-4 lato">Thank you for your support!</div>
             <span className="fs-6">We deliver the best web products</span>
           </div>
         </section>

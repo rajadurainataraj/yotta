@@ -1,21 +1,25 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 
 import { websiteTypes } from "../datas";
 import { useRecoilState } from "recoil";
-import { count } from "../utils/globalState";
+import { count, serviceData } from "../utils/globalState";
 const WebsiteType = () => {
   const [selectedServices, setSelectedServices] = useState([]);
   const [counts, setCounts] = useRecoilState(count);
-
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const toggleService = (service) => {
+    console.log(service);
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
+      setServiceDatas(serviceDatas.filter((item) => item !== service));
     } else {
       setSelectedServices([...selectedServices, service]);
+      setServiceDatas([...serviceDatas, service]);
     }
     setCounts(9);
   };
-  console.log(selectedServices);
+  console.log("update", selectedServices);
 
   return (
     <section>

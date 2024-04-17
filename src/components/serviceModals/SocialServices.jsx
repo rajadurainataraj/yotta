@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { socialServices } from "../datas.js";
 import Buttons from "../Buttons.jsx";
@@ -13,8 +14,10 @@ const SocialServices = () => {
   const toggleService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
+      setServiceDatas(serviceDatas.filter((item) => item !== service));
     } else {
       setSelectedServices([...selectedServices, service]);
+      setServiceDatas([...serviceDatas, service]);
     }
   };
 
@@ -39,7 +42,10 @@ const SocialServices = () => {
         </section>
       ))}
       <section className="d-flex justify-content-center align-items-center ">
-        <Buttons onClick={() => nextPage()} />
+        <Buttons
+          onClick={() => nextPage()}
+          disabled={selectedServices.length === 0}
+        />
       </section>
     </section>
   );

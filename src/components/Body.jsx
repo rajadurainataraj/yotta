@@ -12,6 +12,8 @@ import Card from "./Card";
 import ContactInfo from "./ContactInfo";
 import Technologies2 from "./Technologies2";
 import CarouselSwip from "./CarouselSwip";
+import Footer from "./footer/Footer";
+import GetQuote from "./GetQuote";
 
 const Body = () => {
   return (
@@ -23,13 +25,16 @@ const Body = () => {
       <WhatWeDo />
       <Digital />
       <MeetOurTeam />
-      <OurClients />
+
       <Technologies2 />
-      {/* <GetQuote /> */}
+      {/* <MeetOurTeam /> */}
+      <OurClients />
+      <GetQuote />
 
       {/* <GetQuoteService /> */}
       {/* <ThankYou /> */}
       {/* <ContactInfo /> */}
+      {/* <Footer /> */}
       {/*   
       <MeetOurTeam /> */}
       {/* <CarouselSwip /> */}

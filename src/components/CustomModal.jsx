@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
 import "./CustomModal.css"; // Assuming you have a CSS file for styling the modal
@@ -25,6 +26,8 @@ const CustomModal = ({ isOpen, onClose }) => {
     counts === 7
       ? setCounts(1)
       : counts === 8
+      ? setCounts(1)
+      : serviceDatas.includes("Training & Internship")
       ? setCounts(1)
       : setCounts((counts) => counts - 1);
   };

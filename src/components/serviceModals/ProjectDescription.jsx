@@ -1,16 +1,50 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import Buttons from "../Buttons.jsx";
-import { count } from "../utils/globalState.js";
+import { count, serviceData } from "../utils/globalState.js";
 import { useRecoilState } from "recoil";
 const ProjectDescription = () => {
   const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const [inputValue, setInputValue] = useState("");
-  const nextPage = () => {
-    console.log(4);
-    setCounts(4);
-  };
 
+  // const nextPage = () => {
+  //   setServiceDatas((prevServiceDatas) => {
+  //     if (!prevServiceDatas.includes(inputValue)) {
+  //       return [...prevServiceDatas, inputValue];
+  //     } else {
+  //       return prevServiceDatas.map((item) =>
+  //         item === inputValue ? inputValue : item
+  //       );
+  //     }
+  //   });
+
+  //   setInputValue("");
+  // };
+  const nextPage = () => {
+    const newServiceData = { projectDescription: inputValue };
+
+    setServiceDatas((prevServiceDatas) => {
+      const updatedServiceDatas = [...prevServiceDatas];
+      const index = updatedServiceDatas.findIndex(
+        (item) => item.projectDescription === inputValue
+      );
+
+      if (index !== -1) {
+        // If inputValue already exists, update the value
+        updatedServiceDatas[index] = newServiceData;
+      } else {
+        // If inputValue is new, add it to the array
+        updatedServiceDatas.push(newServiceData);
+      }
+
+      return updatedServiceDatas;
+    });
+
+    setInputValue("");
+    setCounts(4); // Clear the input after updating serviceDatas
+  };
+  console.log(serviceDatas);
   function handleChange(event) {
     setInputValue(event.target.value);
   }

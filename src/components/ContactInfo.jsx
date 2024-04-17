@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import contactbg from "../assets/images/bg-contact.png";
+import contactbg from "../assets/images/contact-info-img2.png";
 import footercontact from "../assets/images/footercontact.png";
 import contactBg from "../assets/images/contactBg.png";
 import { IoClose } from "react-icons/io5";
@@ -55,7 +56,7 @@ const ContactInfo = () => {
     >
       <CustomModal isOpen={isModalOpen} onClose={closeModal} />
       <section
-        className="custom-contact-info d-flex justify-content-between p-3 "
+        className="custom-contact-info d-flex justify-content-around p-3 "
         style={{ backgroundImage: `url(${contactBg})` }}
       >
         {counts === 0 && (
@@ -63,9 +64,9 @@ const ContactInfo = () => {
             <IoClose color="white" />
           </div>
         )}
-        <section className="w-50">
+        <section className="contact-info-subDiv">
           <h3 className="h3 fw-bold text-light ">
-            We'd <span className="h3 love-text fw-bolder ">love</span> to hear
+            We'd <span className="h3 love-text fw-bolder  ">love</span> to hear
             from you!!
           </h3>
           <p className="p lato text-light ">
@@ -170,16 +171,23 @@ const ContactInfo = () => {
         </section>
 
         <section
-          className="customImg"
-          style={{
-            marginTop: "80px",
-            backgroundImage: `url(${contactbg})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            marginLeft: "10vw",
-            width: "40vw",
-          }}
-        ></section>
+          className="customImg d-flex justify-content-center align-items-center"
+          style={
+            {
+              // marginTop: "80px",
+              // backgroundImage: `url(${contactbg})`,
+              // backgroundSize: "contain",
+              // backgroundRepeat: "no-repeat",
+              // width: "35vw",
+            }
+          }
+        >
+          <img
+            src={contactbg}
+            className="contact-custom-img "
+            alt="img-contact"
+          />
+        </section>
       </section>
       <div
         className="container-fluid d-flex justify-content-center flex-column align-items-center quote-container  "
