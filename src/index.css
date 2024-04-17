@@ -863,10 +863,10 @@ u {
   color: transparent;
 }
 @media only screen and (max-width: 600px) {
-  body {
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden !important; */
-  }
+  /* body { */
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden !important; */
+  /* } */
   .custom-clients p {
     /* width: 100vw; */
     font-size: 14px;
@@ -874,7 +874,9 @@ u {
   .footer-contact {
     height: auto;
   }
-
+  .what-we-do-container {
+    padding: 0 !important;
+  }
   .quote-container div {
     width: 90vw !important;
   }
