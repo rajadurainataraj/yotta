@@ -14,7 +14,7 @@ const GetQuote = () => {
   };
   return (
     <div
-      className="container-fluid d-flex justify-content-center flex-column align-items-center quote-container  "
+      className="container-fluid d-flex justify-content-center flex-column align-items-center quote-container p-3 "
       style={{
         backgroundImage: `url(${footercontact})`,
         backgroundSize: "cover",

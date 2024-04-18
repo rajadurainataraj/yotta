@@ -30,7 +30,7 @@ const ProjectType = () => {
     const isMobile = window.innerWidth <= 768; // Set your breakpoint for mobile screens
 
     if (isMobile) {
-      setModalPosition({ x: 0, y: window.innerHeight - 200 }); // Adjust the y position as needed
+      setModalPosition({ x: 0, y: window.innerHeight - 800 }); // Adjust the y position as needed
     } else {
       setModalPosition({ x: rect.left + rect.width, y: rect.top });
     }
@@ -42,7 +42,7 @@ const ProjectType = () => {
   return (
     <section style={{}}>
       <section style={{ display: "flex", flexDirection: "column" }}>
-        <section className="lato fs-4">
+        <section className="lato fs-4 service-question ">
           What services would you like to opt?
         </section>
         {projectType.map((item) => (
@@ -70,7 +70,7 @@ const ProjectType = () => {
             <div>
               <HiOutlineExclamationCircle
                 size={30}
-                color="red"
+                color="#FB1E1E"
                 onMouseEnter={(event) => {
                   handleModalPosition(event);
                   setSelectedModal(

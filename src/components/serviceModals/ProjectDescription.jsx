@@ -50,8 +50,8 @@ const ProjectDescription = () => {
   }
 
   return (
-    <section style={{ width: "50vw" }} className="">
-      <section className="lato fw-bold text-left fs-4 h5">
+    <section style={{ width: "50vw" }} className="project-description-section">
+      <section className="lato fw-bold text-left fs-4 h5 service-question ">
         Project Description
       </section>
       <section>

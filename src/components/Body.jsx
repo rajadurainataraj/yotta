@@ -26,9 +26,9 @@ const Body = () => {
       <Digital />
       <MeetOurTeam />
 
-      <Technologies2 />
+      {/* <Technologies2 /> */}
       {/* <MeetOurTeam /> */}
-      <OurClients />
+      {/* <OurClients /> */}
       <GetQuote />
 
       {/* <GetQuoteService /> */}

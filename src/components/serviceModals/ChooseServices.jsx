@@ -34,7 +34,7 @@ const ChooseServices = () => {
   console.log();
   return (
     <section>
-      <section className="lato fw-bold fs-5">
+      <section className="lato fw-bold fs-5 service-question">
         What services would you like to opt?
       </section>
       {serviceOptions.map((item) => (

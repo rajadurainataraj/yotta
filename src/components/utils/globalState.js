@@ -12,3 +12,7 @@ export const count = atom({
   key: "count",
   default: 0,
 });
+export const modalOpen = atom({
+  key: "modalOpen ",
+  default: false,
+});

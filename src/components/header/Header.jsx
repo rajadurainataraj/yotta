@@ -3,10 +3,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/yws-logo.png";
 import ContactInfo from "../ContactInfo";
 import { IoCloseSharp } from "react-icons/io5";
+import { count } from "../utils/globalState";
+// import { useRecoilState } from "recoil";
 
 const Header = () => {
   const [selectedNavItem, setSelectedNavItem] = useState("Home");
   const [isContactOpen, setIsContactOpen] = useState(false);
+  // const [counts, setCounts] = useRecoilState(count);
   const location = useLocation();
   const navigate = useNavigate();
   const handleNavItemSelect = (item) => {
@@ -21,16 +24,37 @@ const Header = () => {
     setIsContactOpen(false);
   };
 
+  // const handleNavItemSelects = (item) => {
+  //   setSelectedNavItem(item);
+
+  //   if (item === "About") {
+  //     navigate("/");
+  //     const scrollPosition = window.innerHeight * 0.85;
+  //     window.scrollTo({
+  //       top: scrollPosition,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
   const handleNavItemSelects = (item) => {
     setSelectedNavItem(item);
 
     if (item === "About") {
-      navigate("/");
-      const scrollPosition = window.innerHeight * 0.84;
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: "smooth",
-      });
+      const isMobile = window.innerWidth <= 768; // Set your breakpoint for mobile screens
+      if (isMobile) {
+        const scrollPosition = window.innerHeight * 0.55;
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      } else {
+        navigate("/");
+        const scrollPosition = window.innerHeight * 0.85;
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
@@ -191,14 +215,19 @@ const Header = () => {
       {isContactOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <ContactInfo />
-
-            <div
-              className="contact-close custom-icon-contact fw-bolder border-2"
-              onClick={handleContactClose}
-            >
-              <IoCloseSharp color="white" />
-            </div>
+            <ContactInfo onClose={handleContactClose} />
+            {count === 0 && (
+              <div
+                className="contact-close custom-icon-contact fw-bolder border-2"
+                onClick={() => handleContactClose()}
+              >
+                <IoCloseSharp
+                  color="##000000"
+                  className="icon-close-modal1"
+                  onClick={handleContactClose}
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

@@ -23,7 +23,9 @@ const WebsiteType = () => {
 
   return (
     <section>
-      <section className="lato text-center">Is it going to?</section>
+      <section className="lato text-center service-question ">
+        Is it going to?
+      </section>
       {websiteTypes.map((item) => (
         <section
           key={item}

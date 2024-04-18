@@ -31,7 +31,7 @@ const CustomerDetails = () => {
   };
   console.log(serviceDatas);
   return (
-    <section className="d-flex flex-column  text-left my-4">
+    <section className="d-flex flex-column  text-left my-4 container-fluid justify-content-center align-items-center ">
       <Formik
         initialValues={{
           firstName: "",
@@ -49,7 +49,7 @@ const CustomerDetails = () => {
         }}
       >
         {({ errors, touched }) => (
-          <Form className="d-flex flex-column gap-4">
+          <Form className="d-flex flex-column gap-4 ">
             <div className="d-flex flex-column  gap-1 fs-5 ">
               <div className="d-flex  gap-3 align-items-center">
                 <div className="fw-bold">Hi! Iam</div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import { Formik, Form, Field } from "formik";
@@ -7,12 +8,15 @@ import footercontact from "../assets/images/footercontact.png";
 import contactBg from "../assets/images/contactBg.png";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
-
-// import { useHistory } from "react-router-dom";
 import CustomModal from "./CustomModal";
 import { useState } from "react";
-import { count, serviceData } from "../components/utils/globalState.js";
+import {
+  count,
+  modalOpen,
+  serviceData,
+} from "../components/utils/globalState.js";
 import { useRecoilState } from "recoil";
+import { useNavigate } from "react-router-dom";
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
     .min(2, "Too Short!")
@@ -23,11 +27,11 @@ const contactSchema = Yup.object().shape({
   contactNumber: Yup.number().required("Required"),
 });
 
-const ContactInfo = () => {
+const ContactInfo = ({ onClose }) => {
   const [counts, setCounts] = useRecoilState(count);
   const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isModalOpen, setIsModalOpen] = useState(modalOpen);
+  const navigate = useNavigate();
   const openModal = () => {
     setCounts(1);
     setIsModalOpen(true);
@@ -61,7 +65,10 @@ const ContactInfo = () => {
       >
         {counts === 0 && (
           <div className="contact-close ">
-            <IoClose color="white" />
+            <IoClose
+              className="icon-close-modal1  "
+              onClick={() => onClose()}
+            />
           </div>
         )}
         <section className="contact-info-subDiv">
@@ -160,9 +167,6 @@ const ContactInfo = () => {
                     >
                       Send Message
                     </button>
-                    {/* <span className="lato respect-span">
-                      We respect your privacy. We promise we won't spam you :)
-                    </span> */}
                   </div>
                 </Form>
               )}
@@ -170,18 +174,7 @@ const ContactInfo = () => {
           </div>
         </section>
 
-        <section
-          className="customImg d-flex justify-content-center align-items-center"
-          style={
-            {
-              // marginTop: "80px",
-              // backgroundImage: `url(${contactbg})`,
-              // backgroundSize: "contain",
-              // backgroundRepeat: "no-repeat",
-              // width: "35vw",
-            }
-          }
-        >
+        <section className="customImg d-flex justify-content-center align-items-center">
           <img
             src={contactbg}
             className="contact-custom-img "
@@ -197,7 +190,6 @@ const ContactInfo = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           minHeight: "50vh",
-          // width: "100vw", // Added this line
         }}
       >
         <div className="w-50 d-flex  flex-column justify-content-center align-items-center ">
@@ -211,33 +203,10 @@ const ContactInfo = () => {
             and brand identity design, a video production or a full fledged
             digital marketing campaign - we have a solution for you.
           </p>
-          {/* <button type="submit" className="design-btn fw-bolder mont">
-          Design A Quote
-        </button> */}
+
           <div className="water-fill-btn my-4" onClick={openModal}></div>
         </div>
       </div>
-      {/* <section
-        className="footer-contact d-flex justify-content-center flex-column align-items-center "
-        style={{
-          backgroundImage: `url(${footercontact})`,
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <h4 className="h4 text-light mont">
-          Let's talk about what we can build together
-        </h4>
-        <p className="p lato">
-          Whatever may be your requirement - be it a simple website design, a
-          complex data driven web application development, an ecommerce website,
-          a native or cross platform mobile app development, a logo and brand
-          identity design, a video production or a full fledged digital
-          marketing campaign - we have a solution for you.
-        </p>
-        <button className="btn btn-outline-primary text-light footer-contact-btn border-2 mont">
-          Contact us now for a free quote!
-        </button>
-      </section> */}
     </motion.section>
   );
 };

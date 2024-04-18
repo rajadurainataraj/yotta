@@ -35,24 +35,25 @@ const CustomModal = ({ isOpen, onClose }) => {
     <>
       {isOpen && (
         <div
-          className="custom-modal-overlay container-fluid "
+          className="custom-modal-overlay align-items-center "
           // onClick={onClose}
         >
           <div
-            className="custom-modal custom-modal d-flex flex-column align-items-center "
+            className="custom-modal d-flex flex-column align-items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="d-flex justify-content-between w-100 px-3">
+            <div className="d-flex justify-content-between custom-modal-heading-sub w-100 px-3 ">
               {counts === 1 && <div></div>}
               {counts !== 1 && (
                 <div>
                   <FaArrowLeftLong className="fs-5" onClick={() => goBack()} />
                 </div>
               )}
-
-              <h2 className="h3 px-3 ">
-                Design A <span className="text-primary">Quote</span>
-              </h2>
+              <div>
+                <div className="h3 px-3 custom-modal-heading-quote">
+                  Design A <span className="text-primary">Quote</span>
+                </div>
+              </div>
 
               <MdClose
                 size={30}

@@ -37,8 +37,8 @@ const EstimatedBudget = () => {
   }
 
   return (
-    <section style={{ width: "50vw" }} className="">
-      <section className="lato fw-bold text-left h5 fs-4">
+    <section style={{ width: "50vw" }} className="estimated-budget-section">
+      <section className="lato fw-bold text-left h5 fs-4 service-question ">
         Estimated Budget
       </section>
       <section>

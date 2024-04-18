@@ -6,7 +6,7 @@ const ThankYou = ({ onClose }) => {
     onClose();
   };
   return (
-    <section className="d-flex flex-column justify-content-center  align-items-center thanks-container">
+    <section className="d-flex flex-column justify-content-center  align-items-center thanks-container container-fluid ">
       <img src={thankyou} alt="thankyou" />
       <h3 className="h2 mb-2 mt-3 mont fw-bold"> Thank you!</h3>
       <p className="p lato fs-5 fw-bold">Will get back to you soon.</p>

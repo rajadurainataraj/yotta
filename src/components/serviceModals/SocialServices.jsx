@@ -26,8 +26,8 @@ const SocialServices = () => {
   };
   console.log(selectedServices);
   return (
-    <section>
-      <section className="lato fw-bold my-2">
+    <section className="social-section">
+      <section className="lato fw-bold my-2 service-question">
         What services would you like to opt?
       </section>
       {socialServices.map((item) => (
