@@ -1,14 +1,20 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Services from "./components/Services";
+/* eslint-disable no-unused-vars */
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import Services from './components/Services'
 // import CarouselContainer from './components/CarouselContainer'
-import Body from "./components/Body";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import Body from './components/Body'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import { useRecoilState } from 'recoil'
+import { count } from './components/utils/globalState'
 
 const App = () => {
+  const [counts, setCounts] = useRecoilState(count)
+  console.log(counts)
   return (
     <BrowserRouter>
-      <Header />
+      {counts === 0 && <Header />}
+
       <Routes>
         <Route path="/" element={<Body />} />
 
@@ -16,7 +22,7 @@ const App = () => {
       </Routes>
       <Footer />
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App

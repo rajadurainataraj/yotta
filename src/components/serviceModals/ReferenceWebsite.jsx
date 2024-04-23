@@ -1,43 +1,41 @@
 /* eslint-disable no-unused-vars */
-import { useRecoilState } from "recoil";
-import Buttons from "../Buttons";
-import { count, serviceData } from "../utils/globalState";
-import { useState } from "react";
+import { useRecoilState } from 'recoil'
+import Buttons from '../Buttons'
+import { count, referenceWebsites, serviceData } from '../utils/globalState'
+import { useState } from 'react'
 
 const ReferenceWebsite = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
-  const [counts, setCounts] = useRecoilState(count);
+  const [inputValue, setInputValue] = useRecoilState(referenceWebsites)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [counts, setCounts] = useRecoilState(count)
   const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
+    setInputValue(e.target.value)
+  }
   // const nextPage = () => {
   //   setServiceDatas()
   //   setCounts(2);
   // };
   const nextPage = () => {
-    const newServiceData = { ReferenceWebsite: inputValue };
-
-    setServiceDatas((prevServiceDatas) => {
-      const updatedServiceDatas = [...prevServiceDatas];
-      const index = updatedServiceDatas.findIndex(
-        (item) => item.ReferenceWebsite === inputValue
-      );
-
-      if (index !== -1) {
-        // If inputValue already exists, update the value
-        updatedServiceDatas[index] = newServiceData;
-      } else {
-        // If inputValue is new, add it to the array
-        updatedServiceDatas.push(newServiceData);
+    const existingServicesIndex = serviceDatas.findIndex(
+      (data) => 'referenceWebsiteData' in data
+    )
+    if (existingServicesIndex !== -1) {
+      // Replace existing services
+      const newServiceDatas = [...serviceDatas]
+      newServiceDatas[existingServicesIndex] = {
+        referenceWebsiteData: { inputValue },
       }
-
-      return updatedServiceDatas;
-    });
-
-    setInputValue("");
-    setCounts(2); // Clear the input after updating serviceDatas
-  };
+      setServiceDatas(newServiceDatas)
+    } else {
+      // Append new services
+      setServiceDatas([
+        ...serviceDatas,
+        { referenceWebsiteData: { inputValue } },
+      ])
+    }
+    setCounts(2)
+  }
+  console.log(serviceDatas)
   return (
     <section>
       <section className="lato service-question ">
@@ -53,10 +51,10 @@ const ReferenceWebsite = () => {
         />
       </section>
       <section className="d-flex justify-content-center align-items-center ">
-        <Buttons onClick={() => nextPage()} disabled={inputValue === ""} />
+        <Buttons onClick={() => nextPage()} disabled={inputValue === ''} />
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default ReferenceWebsite;
+export default ReferenceWebsite

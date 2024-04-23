@@ -5,8 +5,9 @@ const Digital = () => {
         <div className="content-header h3">Experience the Digital Realm</div>
         <span className="h5">
           All the products have been customized as per the requirement with
+          cutting edge tech
         </span>
-        <p className="h5">cutting edge tech</p>
+        {/* <p className="h5">cutting edge tech</p> */}
       </section>
       <section className="container text-center content-container2 py-5 ">
         <h4 className="fw-bolder custom-build ">
@@ -20,7 +21,7 @@ const Digital = () => {
         </p>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Digital;
+export default Digital

@@ -1,12 +1,16 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
-import Buttons from "../Buttons.jsx";
-import { count, serviceData } from "../utils/globalState.js";
-import { useRecoilState } from "recoil";
+import { useState } from 'react'
+import Buttons from '../Buttons.jsx'
+import {
+  count,
+  projectDescriptions,
+  serviceData,
+} from '../utils/globalState.js'
+import { useRecoilState } from 'recoil'
 const ProjectDescription = () => {
-  const [counts, setCounts] = useRecoilState(count);
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
-  const [inputValue, setInputValue] = useState("");
+  const [counts, setCounts] = useRecoilState(count)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [inputValue, setInputValue] = useRecoilState(projectDescriptions)
 
   // const nextPage = () => {
   //   setServiceDatas((prevServiceDatas) => {
@@ -22,35 +26,29 @@ const ProjectDescription = () => {
   //   setInputValue("");
   // };
   const nextPage = () => {
-    const newServiceData = { projectDescription: inputValue };
-
-    setServiceDatas((prevServiceDatas) => {
-      const updatedServiceDatas = [...prevServiceDatas];
-      const index = updatedServiceDatas.findIndex(
-        (item) => item.projectDescription === inputValue
-      );
-
-      if (index !== -1) {
-        // If inputValue already exists, update the value
-        updatedServiceDatas[index] = newServiceData;
-      } else {
-        // If inputValue is new, add it to the array
-        updatedServiceDatas.push(newServiceData);
+    const existingServicesIndex = serviceDatas.findIndex(
+      (data) => 'projectDescription' in data
+    )
+    if (existingServicesIndex !== -1) {
+      // Replace existing services
+      const newServiceDatas = [...serviceDatas]
+      newServiceDatas[existingServicesIndex] = {
+        projectDescription: { inputValue },
       }
-
-      return updatedServiceDatas;
-    });
-
-    setInputValue("");
-    setCounts(4); // Clear the input after updating serviceDatas
-  };
-  console.log(serviceDatas);
+      setServiceDatas(newServiceDatas)
+    } else {
+      // Append new services
+      setServiceDatas([...serviceDatas, { projectDescription: { inputValue } }])
+    }
+    setCounts(4)
+  }
+  console.log(serviceDatas)
   function handleChange(event) {
-    setInputValue(event.target.value);
+    setInputValue(event.target.value)
   }
 
   return (
-    <section style={{ width: "50vw" }} className="project-description-section">
+    <section style={{ width: '50vw' }} className="project-description-section">
       <section className="lato fw-bold text-left fs-4 h5 service-question ">
         Project Description
       </section>
@@ -74,7 +72,7 @@ const ProjectDescription = () => {
         />
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default ProjectDescription;
+export default ProjectDescription

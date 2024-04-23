@@ -1,43 +1,61 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
-import Buttons from "../Buttons.jsx";
-import { count, serviceData } from "../utils/globalState.js";
-import { useRecoilState } from "recoil";
+import { useState } from 'react'
+import Buttons from '../Buttons.jsx'
+import { useRecoilState } from 'recoil'
+import { count, estimatedBudgets, serviceData } from '../utils/globalState.js'
+
 const EstimatedBudget = () => {
-  const [counts, setCounts] = useRecoilState(count);
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
-  const [inputValue, setInputValue] = useState("");
+  const [counts, setCounts] = useRecoilState(count)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets)
 
   const nextPage = () => {
-    const newServiceData = { EstimatedBudget: inputValue };
-
-    setServiceDatas((prevServiceDatas) => {
-      const updatedServiceDatas = [...prevServiceDatas];
-      const index = updatedServiceDatas.findIndex(
-        (item) => item.EstimatedBudget === inputValue
-      );
-
-      if (index !== -1) {
-        // If inputValue already exists, update the value
-        updatedServiceDatas[index] = newServiceData;
-      } else {
-        // If inputValue is new, add it to the array
-        updatedServiceDatas.push(newServiceData);
+    const existingServicesIndex = serviceDatas.findIndex(
+      (data) => 'EstimatedBudget' in data
+    )
+    if (existingServicesIndex !== -1) {
+      // Replace existing services
+      const newServiceDatas = [...serviceDatas]
+      newServiceDatas[existingServicesIndex] = {
+        EstimatedBudget: { inputValue },
       }
+      setServiceDatas(newServiceDatas)
+    } else {
+      // Append new services
+      setServiceDatas([...serviceDatas, { EstimatedBudget: { inputValue } }])
+    }
+    setCounts(5)
+  }
+  // console.log(serviceDatas)
 
-      return updatedServiceDatas;
-    });
+  // const nextPage = () => {
+  //   const newServiceData = { EstimatedBudget: inputValue }
 
-    setInputValue("");
-    setCounts(5); // Clear the input after updating serviceDatas
-  };
-  console.log(serviceDatas);
+  //   setServiceDatas((prevServiceDatas) => {
+  //     const updatedServiceDatas = [...prevServiceDatas]
+  //     const index = updatedServiceDatas.findIndex(
+  //       (item) => item.EstimatedBudget === inputValue
+  //     )
+
+  //     if (index !== -1) {
+
+  //       updatedServiceDatas[index] = newServiceData
+  //     } else {
+
+  //       updatedServiceDatas.push(newServiceData)
+  //     }
+
+  //     return updatedServiceDatas
+  //   })
+  //   setCounts(5)
+  // }
+  console.log(serviceDatas)
   function handleChange(event) {
-    setInputValue(event.target.value);
+    setInputValue(event.target.value)
   }
 
   return (
-    <section style={{ width: "50vw" }} className="estimated-budget-section">
+    <section style={{ width: '50vw' }} className="estimated-budget-section">
       <section className="lato fw-bold text-left h5 fs-4 service-question ">
         Estimated Budget
       </section>
@@ -57,7 +75,7 @@ const EstimatedBudget = () => {
         />
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default EstimatedBudget;
+export default EstimatedBudget

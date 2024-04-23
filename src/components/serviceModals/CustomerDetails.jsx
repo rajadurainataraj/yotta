@@ -1,51 +1,64 @@
 /* eslint-disable no-unused-vars */
-import { count, serviceData } from "../utils/globalState.js";
-import { useRecoilState } from "recoil";
-import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
+import { count, serviceData } from '../utils/globalState.js'
+import { useRecoilState } from 'recoil'
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
 
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
-  email: Yup.string().email("Invalid email").required("Required"),
-  countryName: Yup.string().required("Required"),
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  countryName: Yup.string().required('Required'),
   contactNumber: Yup.number()
-    .typeError("Mobile number must be a number")
-    .positive("Mobile number must be positive")
-    .integer("Mobile number must be an integer")
-    .required("Mobile number is required")
+    .typeError('Mobile number must be a number')
+    .positive('Mobile number must be positive')
+    .integer('Mobile number must be an integer')
+    .required('Mobile number is required')
     .test(
-      "len",
-      "Mobile number must be exactly 10 digits",
+      'len',
+      'Mobile number must be exactly 10 digits',
       (val) => val.toString().length === 10
     ),
-});
+})
 
 const CustomerDetails = () => {
-  const [counts, setCounts] = useRecoilState(count);
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
+  const [counts, setCounts] = useRecoilState(count)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
   const nextPage = () => {
     // setCounts(6);
-  };
-  console.log(serviceDatas);
+  }
+  console.log(serviceDatas)
   return (
     <section className="d-flex flex-column  text-left my-4 container-fluid justify-content-center align-items-center ">
       <Formik
         initialValues={{
-          firstName: "",
-          email: "",
-          countryName: "",
-          contactNumber: "", // Added contactNumber to initialValues
+          firstName: '',
+          email: '',
+          countryName: '',
+          contactNumber: '', // Added contactNumber to initialValues
         }}
         validationSchema={contactSchema}
         onSubmit={(values) => {
           // same shape as initial values
-          setServiceDatas([...serviceDatas, { userDetails: values }]);
-
-          setCounts(6);
-          console.log(values);
+          // setServiceDatas([...serviceDatas, { userDetails: values }]);
+          const existingServicesIndex = serviceDatas.findIndex(
+            (data) => 'customerDetails' in data
+          )
+          if (existingServicesIndex !== -1) {
+            // Replace existing services
+            const newServiceDatas = [...serviceDatas]
+            newServiceDatas[existingServicesIndex] = {
+              customerDetails: { values },
+            }
+            setServiceDatas(newServiceDatas)
+          } else {
+            // Append new services
+            setServiceDatas([...serviceDatas, { customerDetails: { values } }])
+          }
+          setCounts(6)
+          console.log(serviceDatas)
         }}
       >
         {({ errors, touched }) => (
@@ -125,7 +138,7 @@ const CustomerDetails = () => {
         )}
       </Formik>
     </section>
-  );
-};
+  )
+}
 
-export default CustomerDetails;
+export default CustomerDetails

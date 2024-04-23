@@ -1,30 +1,45 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
-import { socialServices } from "../datas.js";
-import Buttons from "../Buttons.jsx";
-import { useRecoilState } from "recoil";
-import { serviceData, count } from "../utils/globalState.js";
+import { useState } from 'react'
+import { socialServices } from '../datas.js'
+import Buttons from '../Buttons.jsx'
+import { useRecoilState } from 'recoil'
+import { serviceData, count, socialService } from '../utils/globalState.js'
 
 const SocialServices = () => {
-  const [selectedServices, setSelectedServices] = useState([]);
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
-  const [counts, setCounts] = useRecoilState(count);
-  console.log(serviceDatas, "service");
-  console.log(counts, "counts");
+  const [selectedServices, setSelectedServices] = useRecoilState(socialService)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [counts, setCounts] = useRecoilState(count)
+  console.log(serviceDatas, 'service')
+  console.log(counts, 'counts')
   const toggleService = (service) => {
     if (selectedServices.includes(service)) {
-      setSelectedServices(selectedServices.filter((item) => item !== service));
-      setServiceDatas(serviceDatas.filter((item) => item !== service));
+      setSelectedServices(selectedServices.filter((item) => item !== service))
+      // setServiceDatas(serviceDatas.filter((item) => item !== service))
     } else {
-      setSelectedServices([...selectedServices, service]);
-      setServiceDatas([...serviceDatas, service]);
+      setSelectedServices([...selectedServices, service])
+      // setServiceDatas([...serviceDatas, service])
     }
-  };
+  }
 
   const nextPage = () => {
-    setCounts(2);
-  };
-  console.log(selectedServices);
+    const existingServicesIndex = serviceDatas.findIndex(
+      (data) => 'socialServicesData' in data
+    )
+    if (existingServicesIndex !== -1) {
+      const newServiceDatas = [...serviceDatas]
+      newServiceDatas[existingServicesIndex] = {
+        socialServicesData: { ...selectedServices },
+      }
+      setServiceDatas(newServiceDatas)
+    } else {
+      setServiceDatas([
+        ...serviceDatas,
+        { socialServicesData: { ...selectedServices } },
+      ])
+    }
+    setCounts(2)
+  }
+  console.log(serviceDatas)
   return (
     <section className="social-section">
       <section className="lato fw-bold my-2 service-question">
@@ -34,7 +49,7 @@ const SocialServices = () => {
         <section
           key={item}
           className={`d-flex choose-service-container fw-bolder fs-5 d-flex align-items-center justify-content-center p-2 px-5 lato my-3 ${
-            selectedServices.includes(item) ? "selected" : ""
+            selectedServices.includes(item) ? 'selected' : ''
           }`}
           onClick={() => toggleService(item)}
         >
@@ -48,7 +63,7 @@ const SocialServices = () => {
         />
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default SocialServices;
+export default SocialServices

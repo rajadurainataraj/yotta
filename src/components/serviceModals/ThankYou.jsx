@@ -1,10 +1,46 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import thankyou from "../../assets/images/thanku.png";
+import { useRecoilState } from 'recoil'
+import thankyou from '../../assets/images/thanku.png'
+import {
+  count,
+  estimatedBudgets,
+  projectDescriptions,
+  projectTypes,
+  selectedService,
+  serviceData,
+  socialService,
+  websiteTypeState,
+  referenceWebsites,
+} from '../utils/globalState'
 
 const ThankYou = ({ onClose }) => {
+  const [counts, setCounts] = useRecoilState(count)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [selectedServices, setSelectedServices] =
+    useRecoilState(selectedService)
+  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets)
+  const [inputValuePD, setInputValuePD] = useRecoilState(projectDescriptions)
+  const [projectType, setProjectType] = useRecoilState(projectTypes)
+  const [referenceWebsite, setReferenceWebsite] =
+    useRecoilState(referenceWebsites)
+  const [socialServices, setSocialServices] = useRecoilState(socialService)
+  const [websiteTypeStates, setWebsiteTypeState] =
+    useRecoilState(websiteTypeState)
   const closeThePage = () => {
-    onClose();
-  };
+    setCounts(0)
+    setServiceDatas([])
+    setSelectedServices([])
+    setInputValue('')
+    setInputValuePD('')
+    setProjectType([])
+    setReferenceWebsite('')
+    setSocialServices([])
+    setWebsiteTypeState([])
+
+    onClose()
+  }
+  console.log(serviceDatas)
   return (
     <section className="d-flex flex-column justify-content-center  align-items-center thanks-container container-fluid ">
       <img src={thankyou} alt="thankyou" />
@@ -17,7 +53,7 @@ const ThankYou = ({ onClose }) => {
         Okay
       </button>
     </section>
-  );
-};
+  )
+}
 
-export default ThankYou;
+export default ThankYou

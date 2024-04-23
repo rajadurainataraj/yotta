@@ -1,7 +1,7 @@
-import { frontEnd, backend, databases, deployment } from "./datas";
+import { frontEnd, backend, databases, deployment } from './datas'
 const Technologies2 = () => {
   return (
-    <>
+    <section className="container-fluid custom-tech-container">
       <div className="content-header h3 text-center py-3">
         Technologies We Use
       </div>
@@ -48,8 +48,8 @@ const Technologies2 = () => {
           </div>
         </section>
       </section>
-    </>
-  );
-};
+    </section>
+  )
+}
 
-export default Technologies2;
+export default Technologies2
