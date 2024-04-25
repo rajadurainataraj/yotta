@@ -1,53 +1,54 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form, Field } from "formik";
 
-import * as Yup from 'yup'
-import contactbg from '../assets/images/contact-info-img2.png'
-import footercontact from '../assets/images/footercontact.png'
-import contactBg from '../assets/images/contactBg.png'
-import { IoClose } from 'react-icons/io5'
-import { motion } from 'framer-motion'
-import CustomModal from './CustomModal'
-import GetQuote from './GetQuote'
-import { useState } from 'react'
+import * as Yup from "yup";
+import contactbg from "../assets/images/contact-info-img2.png";
+import footercontact from "../assets/images/footercontact.png";
+import contactBg from "../assets/images/contactBg.png";
+import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion";
+import CustomModal from "./CustomModal";
+import GetQuote from "./GetQuote";
+import { useState } from "react";
 
-import { useRecoilState } from 'recoil'
-import { useNavigate } from 'react-router-dom'
-import { count, modalOpen, serviceData } from './utils/globalState'
+import { useRecoilState } from "recoil";
+import { useNavigate } from "react-router-dom";
+import { count, modalOpen, serviceData } from "./utils/globalState";
+import Footer from "./footer/Footer";
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
-  requirement: Yup.string().required('Required'),
-  contactNumber: Yup.number().required('Required'),
-})
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+  email: Yup.string().email("Invalid email").required("Required"),
+  requirement: Yup.string().required("Required"),
+  contactNumber: Yup.number().required("Required"),
+});
 
 const ContactInfo = ({ onClose }) => {
-  const [counts, setCounts] = useRecoilState(count)
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
-  const [isModalOpen, setIsModalOpen] = useRecoilState(modalOpen)
-  const navigate = useNavigate()
+  const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
+  const [isModalOpen, setIsModalOpen] = useRecoilState(modalOpen);
+  const navigate = useNavigate();
 
   const openModal = () => {
-    setIsModalOpen(true)
-    setCounts(1)
-  }
+    setIsModalOpen(true);
+    setCounts(1);
+  };
 
   const closeModal = () => {
-    setCounts(0)
-    setServiceDatas([])
+    setCounts(0);
+    setServiceDatas([]);
 
-    setIsModalOpen(false)
-  }
+    setIsModalOpen(false);
+  };
   // const history = useHistory();
   const containerVariants = {
-    hidden: { opacity: 0, y: '-100vh' },
+    hidden: { opacity: 0, y: "-100vh" },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-  }
+  };
   // const navigateToHome = () => {
   //   history.push("/");
   // };
@@ -85,15 +86,15 @@ const ContactInfo = ({ onClose }) => {
             <div>
               <Formik
                 initialValues={{
-                  firstName: '',
-                  email: '',
-                  requirement: '',
-                  contactNumber: '', // Added contactNumber to initialValues
+                  firstName: "",
+                  email: "",
+                  requirement: "",
+                  contactNumber: "", // Added contactNumber to initialValues
                 }}
                 validationSchema={contactSchema}
                 onSubmit={(values) => {
                   // same shape as initial values
-                  console.log(values)
+                  console.log(values);
                 }}
               >
                 {({ errors, touched }) => (
@@ -189,6 +190,7 @@ const ContactInfo = ({ onClose }) => {
         </section>
         <GetQuote />
       </>
+      <Footer />
 
       {/* <div
         className="container-fluid d-flex justify-content-center flex-column align-items-center quote-container  "
@@ -216,7 +218,7 @@ const ContactInfo = ({ onClose }) => {
         </div>
       </div> */}
     </motion.section>
-  )
-}
+  );
+};
 
-export default ContactInfo
+export default ContactInfo;

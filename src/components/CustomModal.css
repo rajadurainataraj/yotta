@@ -19,7 +19,7 @@
   padding: 20px;
   /* border-radius: 10px; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  overflow: scroll;
+  /* overflow: scroll; */
   /* position: relative;  */
   z-index: 1; /* Ensure modal is above overlay */
 }
@@ -31,16 +31,23 @@
 .custom-modal p {
   margin-bottom: 20px;
 }
-
+.custom-modal button:disabled {
+  pointer-events: none;
+}
 .custom-modal button {
   padding: 10px 20px;
-  background-color: #0077b6;
+
   color: #fff;
   border: none;
+  font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
+  pointer-events: auto;
 }
 
+.custom-modal button:disabled {
+  opacity: 0.5; /* Reduced opacity for disabled state */
+}
 .custom-modal button:hover {
   background-color: #005c89;
 }

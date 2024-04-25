@@ -1,35 +1,34 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import './CustomModal.css' // Assuming you have a CSS file for styling the modal
-import { MdClose } from 'react-icons/md'
-import ChooseServices from './serviceModals/ChooseServices.jsx'
-import { FaArrowLeftLong } from 'react-icons/fa6'
-import ProjectType from './serviceModals/ProjectType.jsx'
-import ProjectDescription from './serviceModals/ProjectDescription.jsx'
-import EstimatedBudget from './serviceModals/EstimatedBudget.jsx'
-import ReferenceWebsite from './serviceModals/ReferenceWebsite.jsx'
-import CustomerDetails from './serviceModals/CustomerDetails.jsx'
-import ThankYou from './serviceModals/ThankYou.jsx'
+import "./CustomModal.css"; // Assuming you have a CSS file for styling the modal
+import { MdClose } from "react-icons/md";
+import ChooseServices from "./serviceModals/ChooseServices.jsx";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import ProjectType from "./serviceModals/ProjectType.jsx";
+import ProjectDescription from "./serviceModals/ProjectDescription.jsx";
+import EstimatedBudget from "./serviceModals/EstimatedBudget.jsx";
+import ReferenceWebsite from "./serviceModals/ReferenceWebsite.jsx";
+import CustomerDetails from "./serviceModals/CustomerDetails.jsx";
+import ThankYou from "./serviceModals/ThankYou.jsx";
 import {
   count,
   selectedService,
   serviceData,
   socialService,
-} from '../components/utils/globalState.js'
-import { useRecoilState } from 'recoil'
+} from "../components/utils/globalState.js";
+import { useRecoilState } from "recoil";
 
-import SocialServices from './serviceModals/SocialServices.jsx'
-import WebsiteType from './serviceModals/WebsiteType.jsx'
+import SocialServices from "./serviceModals/SocialServices.jsx";
+import WebsiteType from "./serviceModals/WebsiteType.jsx";
 
 const CustomModal = ({ isOpen, onClose }) => {
-  const [counts, setCounts] = useRecoilState(count)
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const [selectedServices, setSelectedServices] =
-    useRecoilState(selectedService)
+    useRecoilState(selectedService);
   const [selectedServiceSocial, setSelectedServiceSocial] =
-    useRecoilState(socialService)
-  console.log(counts)
+    useRecoilState(socialService);
 
   const goBack = () => {
     counts === 2 && selectedServiceSocial.length !== 0
@@ -38,10 +37,10 @@ const CustomModal = ({ isOpen, onClose }) => {
       ? setCounts(1)
       : counts === 8
       ? setCounts(1)
-      : selectedServices.includes('Training & Internship')
+      : selectedServices.includes("Training & Internship")
       ? setCounts(1)
-      : setCounts((counts) => counts - 1)
-  }
+      : setCounts((counts) => counts - 1);
+  };
   return (
     <>
       {isOpen && (
@@ -65,8 +64,8 @@ const CustomModal = ({ isOpen, onClose }) => {
               )}
               <div>
                 {counts !== 6 && (
-                  <div className="h3 px-3 custom-modal-heading-quote">
-                    Design A <span className="text-primary">Quote</span>
+                  <div className="h3 px-3 custom-modal-heading-quote fw-bold pb-3">
+                    Design A <span className="fw-bold fs-1">Quote</span>
                   </div>
                 )}
               </div>
@@ -93,7 +92,7 @@ const CustomModal = ({ isOpen, onClose }) => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default CustomModal
+export default CustomModal;

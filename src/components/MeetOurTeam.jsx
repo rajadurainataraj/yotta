@@ -13,7 +13,11 @@ const MeetOurTeam = () => {
         >
           {team.map((profile) => (
             <div className="mx-2 custom-card text-center" key={profile?.name}>
-              <img src={profile?.image} alt="Rajeswari" className="card-img" />
+              <img
+                src={profile?.image}
+                alt="Jayalakshmi L"
+                className="card-img"
+              />
               <h5 className="card-header text-center mt-3">{profile?.name}</h5>
               <p>{profile?.role}</p>
               <div className="d-flex text-center justify-content-center gap-3 align-items-center ">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 import HoverContainer from "./HoverContainer";
 import customSoftware from "../assets/images/custom-software.png";
 import digital from "../assets/images/digital-marketing.png";
@@ -8,6 +9,7 @@ import mobile from "../assets/images/mobile-application.png";
 import websites from "../assets/images/websites.png";
 import training from "../assets/images/training&internships.png";
 import uiux from "../assets/images/uiux.jpg";
+import { motion } from "framer-motion";
 
 const images = [
   { src: customSoftware, bgColor: "#828BC3", title: "Custom Software" },
@@ -68,6 +70,13 @@ const CarouselContainer = () => {
         ) : isHovering && images[index].title === "UI/UX" ? (
           <HoverContainer title={{ title: images[index].title }} />
         ) : null}
+
+        {/* <motion.div
+          className=""
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7 }}
+        > */}
         <div className="col-3 d-flex align-items-center justify-content-center ">
           <h3
             className={`text-start custom-carousel-heading fw-bolder  ${
@@ -102,6 +111,7 @@ const CarouselContainer = () => {
             </Carousel>
           )}
         </div>
+        {/* </motion.div> */}
       </div>
 
       <button
@@ -111,6 +121,7 @@ const CarouselContainer = () => {
         onClick={handleNext}
         // style={{ marginLeft: "50px" }}
       >
+        {/* <img src={arrowRight} alt="" /> */}
         <FaArrowRight />
       </button>
     </div>

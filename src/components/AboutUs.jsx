@@ -12,6 +12,7 @@ const AboutUs = () => {
           <div className="content-header text-center mb-3 d-sm-table d-md-none  custom-about-header3">
             About Us
           </div>
+
           <p className="about-p my-5  my-0">
             Yotta Web Services was founded by <strong>Mrs.Renuka</strong> in the
             year <strong>2021</strong> with the goal to provide opportunities in
