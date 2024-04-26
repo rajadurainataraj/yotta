@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
-import { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import logo from '../../assets/logo/yws-logo.png'
-import ContactInfo from '../ContactInfo'
-import { IoCloseSharp } from 'react-icons/io5'
-import { motion } from 'framer-motion'
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "../../assets/logo/yws-logo.png";
+import ContactInfo from "../ContactInfo";
+import { IoCloseSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 import {
   count,
   estimatedBudgets,
@@ -15,77 +14,73 @@ import {
   serviceData,
   socialService,
   websiteTypeState,
-} from '../utils/globalState'
-import { useRecoilState } from 'recoil'
-
-// import { useRecoilState } from "recoil";
+} from "../utils/globalState";
+import { useRecoilState } from "recoil";
 
 const Header = () => {
-  const [selectedNavItem, setSelectedNavItem] = useState('Home')
-  const [isContactOpen, setIsContactOpen] = useState(false)
-  // const [counts, setCounts] = useRecoilState(count);
+  const [selectedNavItem, setSelectedNavItem] = useState("Home");
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [selectedServices, setSelectedServices] =
-    useRecoilState(selectedService)
-  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets)
-  const [inputValuePD, setInputValuePD] = useRecoilState(projectDescriptions)
-  const [projectType, setProjectType] = useRecoilState(projectTypes)
+    useRecoilState(selectedService);
+  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets);
+  const [inputValuePD, setInputValuePD] = useRecoilState(projectDescriptions);
+  const [projectType, setProjectType] = useRecoilState(projectTypes);
   const [referenceWebsite, setReferenceWebsite] =
-    useRecoilState(referenceWebsites)
-  const [socialServices, setSocialServices] = useRecoilState(socialService)
+    useRecoilState(referenceWebsites);
+  const [socialServices, setSocialServices] = useRecoilState(socialService);
   const [websiteTypeStates, setWebsiteTypeState] =
-    useRecoilState(websiteTypeState)
-  const [counts, setCounts] = useRecoilState(count)
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
-  const location = useLocation()
-  const navigate = useNavigate()
+    useRecoilState(websiteTypeState);
+  const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleNavItemSelect = (item) => {
-    setSelectedNavItem(item)
-  }
+    setSelectedNavItem(item);
+  };
 
   const handleContactOpen = () => {
-    setIsContactOpen(true)
-  }
+    setIsContactOpen(true);
+  };
 
   const handleContactClose = () => {
-    setCounts(0)
-    setServiceDatas([])
-    setSelectedServices([])
-    setInputValue('')
-    setInputValuePD('')
-    setProjectType([])
-    setReferenceWebsite('')
-    setSocialServices([])
-    setWebsiteTypeState([])
-    setIsContactOpen(false)
-  }
+    setCounts(0);
+    setServiceDatas([]);
+    setSelectedServices([]);
+    setInputValue("");
+    setInputValuePD("");
+    setProjectType([]);
+    setReferenceWebsite("");
+    setSocialServices([]);
+    setWebsiteTypeState([]);
+    setIsContactOpen(false);
+  };
 
   const handleNavItemSelects = (item) => {
-    setSelectedNavItem(item)
+    setSelectedNavItem(item);
 
-    if (item === 'About') {
-      navigate('/')
-      const isMobile = window.innerWidth <= 768 // Set your breakpoint for mobile screens
-      if (isMobile) {
-        const scrollPosition = window.innerHeight * 0.55
-        window.scrollTo({
-          top: scrollPosition,
-          behavior: 'smooth',
-        })
-      } else {
-        navigate('/')
-        const scrollPosition = window.innerHeight * 0.85
-        window.scrollTo({
-          top: scrollPosition,
-          behavior: 'smooth',
-        })
-      }
+    if (item === "About") {
+      navigate("/");
+      const isMobile = window.innerWidth <= 768; // Set your breakpoint for mobile screens
+      const scrollPosition = isMobile
+        ? window.innerHeight * 0.55
+        : window.innerHeight * 0.85;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
     }
-  }
+  };
+
+  const handleServicesClick = () => {
+    const navbar = document.getElementById("navbarSupportedContent");
+    if (navbar.classList.contains("show")) {
+      navbar.classList.remove("show");
+    }
+  };
 
   return (
     <>
-      {/* // d-none d-xl-block */}
       <nav className="navbar navbar-expand-lg px-5 custom-nav container-fluid">
         <div className="d-flex">
           <Link to="/">
@@ -122,15 +117,15 @@ const Header = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li
                 className={`nav-item ${
-                  selectedNavItem === 'Home' ? 'active' : ''
+                  selectedNavItem === "Home" ? "active" : ""
                 }`}
               >
                 <a
                   className="nav-link mx-3"
                   href="/"
-                  onClick={() => handleNavItemSelect('Home')}
+                  onClick={() => handleNavItemSelect("Home")}
                   style={{
-                    color: location.pathname === '/' ? 'blue !important' : '',
+                    color: location.pathname === "/" ? "blue !important" : "",
                   }}
                 >
                   Home
@@ -138,7 +133,7 @@ const Header = () => {
               </li>
               <li
                 className={`nav-item dropdown mx-2 ${
-                  selectedNavItem === 'Services' ? 'active' : ''
+                  selectedNavItem === "Services" ? "active" : ""
                 }`}
               >
                 <a
@@ -146,7 +141,7 @@ const Header = () => {
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  onClick={() => handleNavItemSelect('Services')}
+                  onClick={() => handleNavItemSelect("Services")}
                 >
                   Services
                 </a>
@@ -154,28 +149,41 @@ const Header = () => {
                   <li>
                     <Link
                       className="dropdown-item"
-                      to={'services' + '/customsoftware'}
+                      to={"services" + "/customsoftware"}
+                      onClick={handleServicesClick}
                     >
                       Custom Software
                     </Link>
                   </li>
                   <li>
-                    <Link to={'services' + '/digitalmarketing'}>
+                    <Link
+                      to={"services" + "/digitalmarketing"}
+                      onClick={handleServicesClick}
+                    >
                       <a className="dropdown-item">Digital Marketing</a>
                     </Link>
                   </li>
                   <li>
-                    <Link to={'services' + '/mobileapplication'}>
+                    <Link
+                      to={"services" + "/mobileapplication"}
+                      onClick={handleServicesClick}
+                    >
                       <a className="dropdown-item">Mobile Application</a>
                     </Link>
                   </li>
                   <li>
-                    <Link to={'services' + '/website'}>
+                    <Link
+                      to={"services" + "/website"}
+                      onClick={handleServicesClick}
+                    >
                       <a className="dropdown-item">Website</a>
                     </Link>
                   </li>
                   <li>
-                    <Link to={'services' + '/trainingandinternships'}>
+                    <Link
+                      to={"services" + "/trainingandinternships"}
+                      onClick={handleServicesClick}
+                    >
                       <a className="dropdown-item">
                         Training
                         <span span className="and-symbol">
@@ -186,7 +194,10 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={'services' + '/uiuxdesign'}>
+                    <Link
+                      to={"services" + "/uiuxdesign"}
+                      onClick={handleServicesClick}
+                    >
                       <a className="dropdown-item">UI/UX design</a>
                     </Link>
                   </li>
@@ -195,15 +206,15 @@ const Header = () => {
 
               <li
                 className={`nav-item mx-2 ${
-                  selectedNavItem === 'Careers' ? 'active' : ''
+                  selectedNavItem === "Careers" ? "active" : ""
                 }`}
               >
                 <a
                   className="nav-link"
                   href="#"
-                  onClick={() => handleNavItemSelect('Careers')}
+                  onClick={() => handleNavItemSelect("Careers")}
                   style={{
-                    color: selectedNavItem === 'Careers' ? 'blue' : '',
+                    color: selectedNavItem === "Careers" ? "blue" : "",
                   }}
                 >
                   Careers
@@ -211,14 +222,14 @@ const Header = () => {
               </li>
               <li
                 className={`nav-item mx-2 ${
-                  selectedNavItem === 'About' ? 'active' : ''
+                  selectedNavItem === "About" ? "active" : ""
                 }`}
               >
                 <a
                   className="nav-link"
                   href="#"
-                  onClick={() => handleNavItemSelects('About')}
-                  style={{ color: selectedNavItem === 'About' ? 'blue' : '' }}
+                  onClick={() => handleNavItemSelects("About")}
+                  style={{ color: selectedNavItem === "About" ? "blue" : "" }}
                 >
                   About
                 </a>
@@ -226,7 +237,7 @@ const Header = () => {
 
               <li
                 className={`nav-item mx-2 ${
-                  selectedNavItem === 'Contact Us' ? 'active' : ''
+                  selectedNavItem === "Contact Us" ? "active" : ""
                 }`}
                 onClick={handleContactOpen}
               >
@@ -235,13 +246,12 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        {/* </div> */}
       </nav>
 
       {isContactOpen && (
         <motion.div
           className=""
-          initial={{ y: '100%', opacity: 0 }}
+          initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
@@ -265,7 +275,7 @@ const Header = () => {
         </motion.div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
