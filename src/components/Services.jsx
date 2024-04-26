@@ -16,7 +16,7 @@ const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  counts > 0 && navigate("/");
+  // counts > 0 && navigate("/");
   return (
     <div>
       {/* {serviceData.map((item) => ( */}

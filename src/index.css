@@ -1166,8 +1166,8 @@ u {
   }
   .exclamation-modal2,
   .exclamation-modal1 {
-    margin-top: 6em;
-    margin-left: 2.5em;
+    margin-top: 16em;
+    margin-left: 2.2em;
   }
 
   .modal-content {
@@ -1197,6 +1197,7 @@ u {
   .satisfaction {
     gap: 25px;
   }
+
   .contact-custom-img {
     display: none;
   }
@@ -1204,8 +1205,9 @@ u {
     width: 16rem;
   }
   .custom-modal {
-    min-width: 100vw;
-    width: 100%;
+    width: 95vw !important;
+
+    padding: 30px 10px;
     box-sizing: border-box;
   }
   .custom-modal-heading-sub {

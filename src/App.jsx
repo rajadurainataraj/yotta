@@ -1,5 +1,11 @@
 /* eslint-disable no-unused-vars */
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  BrowserRouter,
+  useParams,
+  useLocation,
+} from "react-router-dom";
 import Services from "./components/Services";
 // import CarouselContainer from './components/CarouselContainer'
 import Body from "./components/Body";
@@ -10,11 +16,13 @@ import { count } from "./components/utils/globalState";
 
 const App = () => {
   const [counts, setCounts] = useRecoilState(count);
-
+  const currentPath = window.location.pathname;
+  console.log(currentPath);
+  console.log(counts);
   return (
     <BrowserRouter>
-      {counts === 0 && <Header />}
-
+      {counts > 0 && currentPath === "/" ? null : <Header />}
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Body />} />
 
