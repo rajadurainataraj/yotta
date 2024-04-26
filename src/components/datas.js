@@ -1,115 +1,115 @@
-import mathan from "../assets/images/mathan.jpg";
-import raja from "../assets/images/raja.jpg";
-import rajeswari from "../assets/images/rajeshwari.jpg";
-import mithun from "../assets/images/mithun.jpg";
-import sowmiya from "../assets/images/sowmiya.jpg";
-import hari from "../assets/images/hari.jpg";
-import vaisak from "../assets/images/vaisak.jpg";
-import jaya from "../assets/images/jaya.jpg";
-import venkatesh from "../assets/images/venkatesh.jpg";
-import soundarya from "../assets/images/soundarya.jpg";
-import training from "../assets/images/training&internships.png";
-import customSoftware from "../assets/images/custom-software.png";
-import digitalMarketing from "../assets/images/digital-marketing.png";
-import mobileApplication from "../assets/images/mobile-application.png";
-import uiuxdesign from "../assets/images/uiux1.jpg";
-import websites from "../assets/images/websites.png";
-import aws from "../assets/images/AWS.jpg";
-import Angular from "../assets/images/Angular.jpg";
-import Bootstrap5 from "../assets/images/Bootstrap5.jpg";
-import Expo from "../assets/images/Expo.jpg";
-import ExpressJS from "../assets/images/ExpressJS.jpg";
-import Flutter from "../assets/images/Flutter.jpg";
-import Hostinger from "../assets/images/Hostinger.jpg";
-import Java from "../assets/images/Java.jpg";
-import Magento from "../assets/images/Magento.jpg";
-import MongoDB from "../assets/images/MongoDB.jpg";
-import NodeJS from "../assets/images/NodeJS.jpg";
-import OracleDB from "../assets/images/OracleDB.jpg";
-import PostgreSQL from "../assets/images/PostgreSQL.jpg";
-import Python from "../assets/images/Python.jpg";
-import React from "../assets/images/React.jpg";
-import SpringBoot from "../assets/images/SpringBoot.jpg";
-import ReactNative from "../assets/images/ReactNative.jpg";
-import WordPress from "../assets/images/WordPress .jpg";
-import NextJS from "../assets/images/nextjs.png";
-import DigitalOcean from "../assets/images/digitalocean.png";
+import mathan from '../assets/images/mathan.jpg'
+import raja from '../assets/images/raja.jpg'
+import rajeswari from '../assets/images/rajeshwari.jpg'
+import mithun from '../assets/images/mithun.jpg'
+import sowmiya from '../assets/images/sowmiya.jpg'
+import hari from '../assets/images/hari.jpg'
+import vaisak from '../assets/images/vaisak.jpg'
+import jaya from '../assets/images/jaya.jpg'
+import venkatesh from '../assets/images/venkatesh.jpg'
+import soundarya from '../assets/images/soundarya.jpg'
+import training from '../assets/images/training&internships.png'
+import customSoftware from '../assets/images/custom-software.png'
+import digitalMarketing from '../assets/images/digital-marketing.png'
+import mobileApplication from '../assets/images/mobile-application.png'
+import uiuxdesign from '../assets/images/uiux1.jpg'
+import websites from '../assets/images/websites.png'
+import aws from '../assets/images/AWS.jpg'
+import Angular from '../assets/images/Angular.jpg'
+import Bootstrap5 from '../assets/images/Bootstrap5.jpg'
+import Expo from '../assets/images/Expo.jpg'
+import ExpressJS from '../assets/images/ExpressJS.jpg'
+import Flutter from '../assets/images/Flutter.jpg'
+import Hostinger from '../assets/images/Hostinger.jpg'
+import Java from '../assets/images/Java.jpg'
+import Magento from '../assets/images/Magento.jpg'
+import MongoDB from '../assets/images/MongoDB.jpg'
+import NodeJS from '../assets/images/NodeJS.jpg'
+import OracleDB from '../assets/images/OracleDB.jpg'
+import PostgreSQL from '../assets/images/PostgreSQL.jpg'
+import Python from '../assets/images/Python.jpg'
+import React from '../assets/images/React.jpg'
+import SpringBoot from '../assets/images/SpringBoot.jpg'
+import ReactNative from '../assets/images/ReactNative.jpg'
+import WordPress from '../assets/images/WordPress .jpg'
+import NextJS from '../assets/images/nextjs.png'
+import DigitalOcean from '../assets/images/digitalocean.png'
 export const team = [
   {
-    name: "Jayalakshmi L",
-    role: "Business Analyst",
+    name: 'Jayalakshmi L',
+    role: 'Business Analyst',
     image: rajeswari,
-    fbLink: "",
-    liLink: "https://www.linkedin.com/in/jayalakshmi-l-44a580243/",
+    fbLink: '',
+    liLink: 'https://www.linkedin.com/in/jayalakshmi-l-44a580243/',
   },
   {
-    name: "Vaisak",
-    role: "Admin & Accountant",
+    name: 'Vaisak',
+    role: 'Admin & Accountant',
     image: vaisak,
-    fbLink: "",
-    liLink: "",
+    fbLink: '',
+    liLink: '',
   },
+  // {
+  //   name: 'Mathan',
+  //   role: 'Associate project coordinator',
+  //   image: mathan,
+  //   fbLink: '',
+  //   liLink: '',
+  // },
   {
-    name: "Mathan",
-    role: "Associate project coordinator",
-    image: mathan,
-    fbLink: "",
-    liLink: "",
-  },
-  {
-    name: "Raja",
-    role: "FrontEnd Developer",
+    name: 'Rajadurai',
+    role: 'FrontEnd Developer',
     image: raja,
-    fbLink: "https://m.facebook.com/rajadurainatraj/",
-    liLink: "https://www.linkedin.com/in/rajadurai-nataraj/",
+    fbLink: 'https://m.facebook.com/rajadurainatraj/',
+    liLink: 'https://www.linkedin.com/in/rajadurai-nataraj/',
   },
   {
-    name: "Sowmiya",
-    role: "UI/UX Designer",
+    name: 'Sowmiya',
+    role: 'UI/UX Designer',
     image: sowmiya,
-    fbLink: "",
-    liLink: "https://www.linkedin.com/in/sowmiya-mahesh-b77a8223a",
+    fbLink: '',
+    liLink: 'https://www.linkedin.com/in/sowmiya-mahesh-b77a8223a',
   },
+  // {
+  //   name: 'Jaya Pandey',
+  //   role: 'UI/UX Designer',
+  //   image: jaya,
+  //   fbLink: 'https://www.facebook.com/profile.php?id=100094008424723',
+  //   liLink: 'https://www.linkedin.com/in/jayapandey10/',
+  // },
   {
-    name: "Jaya Pandey",
-    role: "UI/UX Designer",
-    image: jaya,
-    fbLink: "https://www.facebook.com/profile.php?id=100094008424723",
-    liLink: "https://www.linkedin.com/in/jayapandey10/",
-  },
-  {
-    name: "Hari",
-    role: "Intern",
+    name: 'Hari',
+    role: 'Intern',
     image: hari,
-    fbLink: "",
-    liLink: "",
+    fbLink: '',
+    liLink: '',
   },
+  // {
+  //   name: 'Jaya Mithun',
+  //   role: 'Intern',
+  //   image: mithun,
+  //   fbLink: '',
+  //   liLink: 'https://www.linkedin.com/in/jayamithun-m-',
+  // },
   {
-    name: "Jaya Mithun",
-    role: "Intern",
-    image: mithun,
-    fbLink: "",
-    liLink: "https://www.linkedin.com/in/jayamithun-m-",
-  },
-  {
-    name: "Venkatesan",
-    role: "Intern",
+    name: 'Venkatesan',
+    role: 'Intern',
     image: venkatesh,
-    fbLink: "https://www.facebook.com/profile.php?id=61557500845734",
-    liLink: "https://www.linkedin.com/in/venkatesan-s-0974b6276",
+    fbLink: 'https://www.facebook.com/profile.php?id=61557500845734',
+    liLink: 'https://www.linkedin.com/in/venkatesan-s-0974b6276',
   },
   {
-    name: "Soundarya",
-    role: "Intern",
+    name: 'Soundarya',
+    role: 'Intern',
     image: soundarya,
-    fbLink: "https://www.facebook.com/soundarya.srss/about/",
-    liLink: "https://www.linkedin.com/in/soundarya-rajan-89502a270/",
+    fbLink: 'https://www.facebook.com/soundarya.srss/about/',
+    liLink: 'https://www.linkedin.com/in/soundarya-rajan-89502a270/',
   },
-];
+]
 export const serviceData = [
   {
-    id: "customsoftware",
-    heading: "Custom Software",
+    id: 'customsoftware',
+    heading: 'Custom Software',
     imgUrl: customSoftware,
     content: ` Customised software is also known as tailor-made software and that
         is specially developed for some specific organization or other
@@ -128,9 +128,9 @@ export const serviceData = [
         modifying commercial software. Some of the benefits include:`,
   },
   {
-    id: "trainingandinternships",
+    id: 'trainingandinternships',
     imgUrl: training,
-    heading: "Training & Internships",
+    heading: 'Training & Internships',
     content: `Yotta Web Services intern get work into dynamic Projects that ranges
         from application development to Customized software development and
         mainly into Web Application Software’s with new technologies like
@@ -143,21 +143,21 @@ export const serviceData = [
         can also take part in our Internship Program and after the
         Internship earn a chance to secure a job here. 
         `,
-    secondHeading: "Importance of Internship",
+    secondHeading: 'Importance of Internship',
     lists: [
-      " It Helps in Achieving the educational objectives",
-      "The students can gain some experience on real time projects",
-      " The Proper use of Methods and techniques in new technology",
-      "It develops positive attitude",
-      "It increases Self Confidence",
-      "It Promotes practice skill and Work",
-      "It Provides valuable exposure on the job",
+      ' It Helps in Achieving the educational objectives',
+      'The students can gain some experience on real time projects',
+      ' The Proper use of Methods and techniques in new technology',
+      'It develops positive attitude',
+      'It increases Self Confidence',
+      'It Promotes practice skill and Work',
+      'It Provides valuable exposure on the job',
     ],
   },
   {
-    id: "digitalmarketing",
+    id: 'digitalmarketing',
     imgUrl: digitalMarketing,
-    heading: "Digital Marketing",
+    heading: 'Digital Marketing',
     content: `Digital marketing became popular with the advent of the internet in
           the 1990s. Digital marketing involves some of the same principles as
           traditional marketing and is often considered a new way for
@@ -175,9 +175,9 @@ export const serviceData = [
           their phones) before they actually hit the purchase button.`,
   },
   {
-    id: "mobileapplication",
+    id: 'mobileapplication',
     imgUrl: mobileApplication,
-    heading: "Mobile Application",
+    heading: 'Mobile Application',
     content: ` One of the Best Mobile App Development companies and here we
           introducing the Best Mobile App Development of New Experiences to
           you. You deserve the Latest Mobile App Development Experiences. Our
@@ -201,9 +201,9 @@ export const serviceData = [
           with innovative ideas`,
   },
   {
-    id: "uiuxdesign",
+    id: 'uiuxdesign',
     imgUrl: uiuxdesign,
-    heading: "UIUX Design",
+    heading: 'UIUX Design',
     content: `UX design stands for userexperience design, while UI design stands
           for user interfacedesign. Both are important facets of the <a target="blank" href="https://www.keenesystems.com/custom-software-development-services/custom-software-design"><u>custom
           software development</u></a> process, and both involve working closely with
@@ -225,9 +225,9 @@ export const serviceData = [
           a web application.`,
   },
   {
-    id: "website",
+    id: 'website',
     imgUrl: websites,
-    heading: "Websites",
+    heading: 'Websites',
     content: `The best Website Design company in Coimbatore will help you create
           and maintain an online presence that attracts our customers. To make
           people looking for the products or services you offer a visual
@@ -240,76 +240,76 @@ export const serviceData = [
           with in-app tools that facilitate their usage and Develop and
           propose of website improvements will satisfy customers’ needs.`,
     lists: [
-      " E-Commerce Website",
-      " Business Website ",
-      " Corporate Website Site",
-      " Site Maintenance",
+      ' E-Commerce Website',
+      ' Business Website ',
+      ' Corporate Website Site',
+      ' Site Maintenance',
     ],
   },
-];
+]
 export const ClientData = [
   {
-    title: "Harini",
-    company: "CEO, Hashigo Technologies",
+    title: 'Harini',
+    company: 'CEO, Hashigo Technologies',
     review:
-      "Working with YWS has been an absolute pleasure Their dedication, professionalism, and attention to detail have truly impressed me. I highly recommend YWS team for any project and look forward to collaborating with them again in the future!",
+      'Working with YWS has been an absolute pleasure Their dedication, professionalism, and attention to detail have truly impressed me. I highly recommend YWS team for any project and look forward to collaborating with them again in the future!',
   },
   {
-    title: "Bala",
-    company: "CEO, Enterot",
+    title: 'Bala',
+    company: 'CEO, Enterot',
     review:
-      "They are providing good services in web development in enterprise level projects. Timely delivery of products with no compromise to quality.Recommendable for developing web apps in budget!",
+      'They are providing good services in web development in enterprise level projects. Timely delivery of products with no compromise to quality.Recommendable for developing web apps in budget!',
   },
   {
-    title: "sathish",
-    company: "CEO, Test Your Matrics",
+    title: 'sathish',
+    company: 'CEO, Test Your Matrics',
     review:
-      "Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend this team for startups, who want to spend more time on customers instead of technical developments.",
+      'Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend this team for startups, who want to spend more time on customers instead of technical developments.',
   },
-];
+]
 
 export const allData = [
   {
-    id: "customsoftware",
+    id: 'customsoftware',
     content: `Customised software is also known as tailor-made software and that
       is specially developed for some specific organization or other
       user. The process of designing, creating, deploying, and
       maintaining software for a specific set of users, functions, or
       organizations.`,
-    link: "",
+    link: '',
   },
   {
-    id: "digitalmarketing",
+    id: 'digitalmarketing',
     content: `Digital marketing became popular with the advent of the internet
       in the 1990s. Digital marketing involves some of the same
       principles as traditional marketing and is often considered a new
       way for companies to approach consumers and understand their
       behaviour. Companies often combine traditional and digital
       marketing techniques in their strategies.`,
-    link: "",
+    link: '',
   },
   {
-    id: "mobileapplication",
+    id: 'mobileapplication',
     content: `One of the Best Mobile App Development companies and here we
       introducing the Best Mobile App Development of New Experiences to
       you. You deserve the Latest Mobile App Development Experiences.
       Our Mobile App Developers can build the Mobile App for your
       requirement in your budget.`,
-    link: "",
+    link: '',
   },
   {
-    id: "training&internships",
+    id: 'training&internships',
     content: `Yotta intern get work into dynamic Projects that ranges from
       application development to Customized software development and
       mainly into Web Application Software's with new technologies like
       react js, node js, express js. Internship is a platform where
       students can gain real time experience on their career
       development.`,
-    link: "",
+    link: '',
   },
 
   {
-    id: "websites",
+    id: 'websites',
     content: `The best Website Design company in Coimbatore will help you create
       and maintain an online presence that attracts our customers. To
       make people looking for the products or services you offer a
@@ -317,14 +317,14 @@ export const allData = [
       presence`,
   },
   {
-    id: "ui/ux",
+    id: 'ui/ux',
     content: `Customised software is also known as tailor-made software and that
       is specially developed for some specific organization or other
       user.The process of designing, creating, deploying and maintaining
       software for a specific set of users, functions or organizations.`,
-    link: "",
+    link: '',
   },
-];
+]
 export const tech = [
   aws,
   Angular,
@@ -344,81 +344,81 @@ export const tech = [
   SpringBoot,
   ReactNative,
   WordPress,
-];
+]
 
 export const frontEnd = [
   {
-    title: "React",
+    title: 'React',
     icon: React,
   },
   {
-    title: "Angular",
+    title: 'Angular',
     icon: Angular,
   },
   {
-    title: "Nextjs",
+    title: 'Nextjs',
     icon: NextJS,
   },
-];
+]
 export const backend = [
   {
-    title: "Java",
+    title: 'Java',
     icon: Java,
   },
   {
-    title: "Node.js",
+    title: 'Node.js',
     icon: NodeJS,
   },
   {
-    title: "Python",
+    title: 'Python',
     icon: Python,
   },
-];
+]
 export const databases = [
   {
-    title: "PostgreSQL",
+    title: 'PostgreSQL',
     icon: PostgreSQL,
   },
   {
-    title: "OracleDB",
+    title: 'OracleDB',
     icon: OracleDB,
   },
   {
-    title: "MongoDB",
+    title: 'MongoDB',
     icon: MongoDB,
   },
-];
+]
 export const deployment = [
   {
-    title: "Hostinger",
+    title: 'Hostinger',
     icon: Hostinger,
   },
   {
-    title: "AWS",
+    title: 'AWS',
     icon: aws,
   },
   {
-    title: "DigitalOcean",
+    title: 'DigitalOcean',
     icon: DigitalOcean,
   },
-];
+]
 export const serviceOptions = [
-  "Custom Software",
-  "Digital Marketing",
-  "Logo Design",
-  "Mobile Application",
-  "Website",
-  "Training & Internship",
-];
+  'Custom Software',
+  'Digital Marketing',
+  'Logo Design',
+  'Mobile Application',
+  'Website',
+  'Training & Internship',
+]
 export const websiteTypes = [
-  "Static Website",
-  "Dynamic Website",
-  "E-Commerce Website",
-];
-export const projectType = ["Project", "Retainer"];
+  'Static Website',
+  'Dynamic Website',
+  'E-Commerce Website',
+]
+export const projectType = ['Project', 'Retainer']
 export const socialServices = [
-  "Instagram",
-  "Facebook",
-  "X (Twitter)",
-  "Linkedin",
-];
+  'Instagram',
+  'Facebook',
+  'X (Twitter)',
+  'Linkedin',
+]

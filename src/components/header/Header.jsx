@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import logo from '../../assets/logo/yws-logo.png'
 import ContactInfo from '../ContactInfo'
 import { IoCloseSharp } from 'react-icons/io5'
+import { motion } from 'framer-motion'
 import {
   count,
   estimatedBudgets,
@@ -59,18 +60,6 @@ const Header = () => {
     setIsContactOpen(false)
   }
 
-  // const handleNavItemSelects = (item) => {
-  //   setSelectedNavItem(item);
-
-  //   if (item === "About") {
-  //     navigate("/");
-  //     const scrollPosition = window.innerHeight * 0.85;
-  //     window.scrollTo({
-  //       top: scrollPosition,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
   const handleNavItemSelects = (item) => {
     setSelectedNavItem(item)
 
@@ -248,24 +237,32 @@ const Header = () => {
         </div>
         {/* </div> */}
       </nav>
+
       {isContactOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <ContactInfo onClose={handleContactClose} />
-            {count === 0 && (
-              <div
-                className="contact-close custom-icon-contact fw-bolder border-2"
-                onClick={() => handleContactClose()}
-              >
-                <IoCloseSharp
-                  color="##000000"
-                  className="icon-close-modal1"
-                  onClick={handleContactClose}
-                />
-              </div>
-            )}
+        <motion.div
+          className=""
+          initial={{ y: '100%', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="modal-overlay">
+            <div className="modal-content">
+              <ContactInfo onClose={handleContactClose} />
+              {count === 0 && (
+                <div
+                  className="contact-close custom-icon-contact fw-bolder border-2"
+                  onClick={() => handleContactClose()}
+                >
+                  <IoCloseSharp
+                    color="##000000"
+                    className="icon-close-modal1"
+                    onClick={handleContactClose}
+                  />
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   )

@@ -1,67 +1,65 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unexpected-multiline */
-import { useState, useEffect } from "react";
-import { ClientData } from "./datas";
+import { useState, useEffect } from 'react'
+import { ClientData } from './datas'
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
-} from "react-icons/md";
-import { count } from "./utils/globalState";
-import { useRecoilState } from "recoil";
+} from 'react-icons/md'
+import { count } from './utils/globalState'
+import { useRecoilState } from 'recoil'
 const CompanyReview = () => {
-  const [counts, setCounts] = useRecoilState(count);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [counts, setCounts] = useRecoilState(count)
+  const [activeIndex, setActiveIndex] = useState(0)
 
   // const handlePrev = () => {
   //   setActiveIndex(activeIndex === 0 ? ClientData.length - 1 : activeIndex - 1);
   // };
   const handlePrev = () => {
     const prevIndex =
-      activeIndex === 0 ? ClientData.length - 1 : activeIndex - 1;
+      activeIndex === 0 ? ClientData.length - 1 : activeIndex - 1
     document
-      .querySelectorAll(".carousel-item")
-      [activeIndex].classList.remove("active");
-    document
-      .querySelectorAll(".carousel-item")
-      [prevIndex].classList.add("prev");
+      .querySelectorAll('.carousel-item')
+      [activeIndex].classList.remove('active')
+    document.querySelectorAll('.carousel-item')[prevIndex].classList.add('prev')
     setTimeout(() => {
-      setActiveIndex(prevIndex);
+      setActiveIndex(prevIndex)
       document
-        .querySelectorAll(".carousel-item.prev")[0]
-        .classList.remove("prev");
-    }, 500); // Animation duration
-  };
+        .querySelectorAll('.carousel-item.prev')[0]
+        .classList.remove('prev')
+    }, 500) // Animation duration
+  }
 
   // const handleNext = () => {
   //   setActiveIndex(activeIndex === ClientData.length - 1 ? 0 : activeIndex + 1);
   // };
   const handleNext = () => {
     const nextIndex =
-      activeIndex === ClientData.length - 1 ? 0 : activeIndex + 1;
+      activeIndex === ClientData.length - 1 ? 0 : activeIndex + 1
     document
-      .querySelectorAll(".carousel-item")
-      [activeIndex].classList.add("prev");
+      .querySelectorAll('.carousel-item')
+      [activeIndex].classList.add('prev')
     document
-      .querySelectorAll(".carousel-item")
-      [nextIndex].classList.add("active");
+      .querySelectorAll('.carousel-item')
+      [nextIndex].classList.add('active')
     setTimeout(() => {
       document
-        .querySelectorAll(".carousel-item.prev")[0]
-        .classList.remove("prev");
-      setActiveIndex(nextIndex);
-    }, 500); // Animation duration
-  };
+        .querySelectorAll('.carousel-item.prev')[0]
+        .classList.remove('prev')
+      setActiveIndex(nextIndex)
+    }, 500) // Animation duration
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) =>
         prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 6000); // Change slide every 3 seconds
+      )
+    }, 6000) // Change slide every 3 seconds
 
-    return () => clearInterval(interval);
-  }, []);
-  if (counts > 0) return;
+    return () => clearInterval(interval)
+  }, [])
+  if (counts > 0) return
   return (
     <div
       id="carouselExampleControls"
@@ -73,7 +71,7 @@ const CompanyReview = () => {
         {ClientData.map((client, index) => (
           <div
             key={index}
-            className={`carousel-item ${index === activeIndex ? "active" : ""}`}
+            className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
           >
             <div className="card my-5">
               <div className="card-body">
@@ -99,21 +97,21 @@ const CompanyReview = () => {
         <MdOutlineArrowBackIosNew />
         {/* </span> */}
       </div>
-      <a
+      <div
         className="carousel-control-next"
         // href="#carouselExampleControls"
         role="button"
         data-slide="next"
         onClick={handleNext}
       >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
         <span className="sr-only">
           <MdOutlineArrowForwardIos />
         </span>
-      </a>
+      </div>
       <style></style>
     </div>
-  );
-};
+  )
+}
 
-export default CompanyReview;
+export default CompanyReview
