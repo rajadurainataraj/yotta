@@ -492,9 +492,9 @@ u {
 
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-.custom-tech-container {
+/* .custom-tech-container {
   width: 100vw;
-}
+} */
 .content-header {
   font-size: 1.5rem;
   font-weight: bold;
@@ -924,6 +924,13 @@ u {
   padding-left: 6em;
   width: 40%;
 }
+.custom-contact-info-success {
+  background-color: green;
+  color: white;
+  height: 3em;
+  font-family: montserrat !important;
+  border-radius: 3px;
+}
 .custom-contact-info textarea {
   height: 200px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -1122,12 +1129,14 @@ u {
   margin-left: 30vw;
 }
 .custom-client-container {
-  width: 100vw;
   box-sizing: border-box;
   overflow: hidden;
   padding: 0 !important;
   margin: 0 !important;
   text-align: center;
+}
+.custom-scroll-infinity {
+  width: 100vw;
 }
 .custom-project-type {
   width: 100vw;

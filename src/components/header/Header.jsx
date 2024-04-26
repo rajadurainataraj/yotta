@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/yws-logo.png";
@@ -16,6 +17,7 @@ import {
   websiteTypeState,
 } from "../utils/globalState";
 import { useRecoilState } from "recoil";
+import bgContact from "../../assets/images/contactBg.png";
 
 const Header = () => {
   const [selectedNavItem, setSelectedNavItem] = useState("Home");
@@ -255,18 +257,21 @@ const Header = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="modal-overlay">
+          <div
+            className="modal-overlay"
+            style={{ backgroundImage: `url(${bgContact})` }}
+          >
             <div className="modal-content">
               <ContactInfo onClose={handleContactClose} />
               {count === 0 && (
                 <div
                   className="contact-close custom-icon-contact fw-bolder border-2"
-                  onClick={() => handleContactClose()}
+                  onClick={handleContactClose}
                 >
                   <IoCloseSharp
                     color="##000000"
                     className="icon-close-modal1"
-                    onClick={handleContactClose}
+                    // onClick={handleContactClose}
                   />
                 </div>
               )}

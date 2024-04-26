@@ -6,7 +6,7 @@ const Technologies2 = () => {
       <div className="content-header h3 text-center py-3">
         Technologies We Use
       </div>
-      <section className="d-flex custom-tech2 justify-content-evenly container-fluid my-4">
+      <section className="d-flex custom-tech2 justify-content-evenly my-4">
         <section className="flex-column  ">
           <div className="tech-title text-center fw-semibold">UI/UX</div>
           <div className="custom-tech2-container d-flex flex-column gap-2 box-tech">

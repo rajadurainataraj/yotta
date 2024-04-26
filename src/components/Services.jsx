@@ -1,13 +1,22 @@
-/* eslint-disable no-irregular-whitespace */
+/* eslint-disable no-unused-vars */
 import { serviceData } from "./datas";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { count } from "./utils/globalState";
+import { useRecoilState } from "recoil";
 
 const Services = () => {
+  const [counts, setCounts] = useRecoilState(count);
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const data = serviceData.find((item) => item.id === id);
 
   const { heading, imgUrl, content, secondContent, secondHeading } = data;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  counts > 0 && navigate("/");
   return (
     <div>
       {/* {serviceData.map((item) => ( */}

@@ -28,9 +28,10 @@ const Body = () => {
 
       <MeetOurTeam />
       <OurClients />
-      <GetQuote />
+
       <CompanyReview />
       <Technologies2 />
+      <GetQuote />
 
       {/* <GetQuoteService /> */}
       {/* <ThankYou /> */}

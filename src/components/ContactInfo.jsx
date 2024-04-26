@@ -1,22 +1,22 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
-import { Formik, Form, Field } from "formik";
-
+/* eslint-disable no-undef */
+import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
-import contactbg from "../assets/images/contact-info-img2.png";
-import footercontact from "../assets/images/footercontact.png";
-import contactBg from "../assets/images/contactBg.png";
+// import { Alert, Button } from "react-bootstrap";
+import { useRecoilState } from "recoil";
+import { useNavigate } from "react-router-dom";
+import { count, modalOpen, serviceData } from "./utils/globalState";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import CustomModal from "./CustomModal";
 import GetQuote from "./GetQuote";
 import { useState } from "react";
-
-import { useRecoilState } from "recoil";
-import { useNavigate } from "react-router-dom";
-import { count, modalOpen, serviceData } from "./utils/globalState";
+import contactBg from "../assets/images/contactBg.png";
+import imgContact from "../assets/images/bg-contact.png";
 import Footer from "./footer/Footer";
+import { TiTickOutline } from "react-icons/ti";
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
     .min(2, "Too Short!")
@@ -32,6 +32,7 @@ const ContactInfo = ({ onClose }) => {
   const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const [isModalOpen, setIsModalOpen] = useRecoilState(modalOpen);
   const navigate = useNavigate();
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -44,18 +45,15 @@ const ContactInfo = ({ onClose }) => {
 
     setIsModalOpen(false);
   };
-  // const history = useHistory();
+
   const containerVariants = {
     hidden: { opacity: 0, y: "-100vh" },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
-  // const navigateToHome = () => {
-  //   history.push("/");
-  // };
 
   return (
     <motion.section
-      className="container-fluid custom-contact-main "
+      className="container-fluid custom-contact-main"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -63,23 +61,20 @@ const ContactInfo = ({ onClose }) => {
       <CustomModal isOpen={isModalOpen} onClose={closeModal} />
       <>
         <section
-          className="custom-contact-info d-flex justify-content-around p-3 "
+          className="custom-contact-info d-flex justify-content-around p-3"
           style={{ backgroundImage: `url(${contactBg})` }}
         >
           {counts === 0 && (
-            <div className="contact-close ">
-              <IoClose
-                className="icon-close-modal1  "
-                onClick={() => onClose()}
-              />
+            <div className="contact-close" onClick={() => onClose()}>
+              <IoClose className="icon-close-modal1" />
             </div>
           )}
           <section className="contact-info-subDiv">
-            <h3 className="h3 fw-bold text-light ">
-              We'd <span className="h3 love-text fw-bolder  ">love</span> to
-              hear from you!!
+            <h3 className="h3 fw-bold text-light">
+              We'd <span className="h3 love-text fw-bolder">love</span> to hear
+              from you!!
             </h3>
-            <p className="p lato text-light ">
+            <p className="p lato text-light">
               Brief us your requirements below, and let's connect.
             </p>
 
@@ -89,33 +84,36 @@ const ContactInfo = ({ onClose }) => {
                   firstName: "",
                   email: "",
                   requirement: "",
-                  contactNumber: "", // Added contactNumber to initialValues
+                  contactNumber: "",
                 }}
                 validationSchema={contactSchema}
-                onSubmit={(values) => {
-                  // same shape as initial values
+                onSubmit={(values, { setSubmitting, setStatus, resetForm }) => {
+                  setShowSuccessAlert(true);
+                  setStatus({ success: true });
+                  setTimeout(() => {
+                    // setShowSuccessAlert(false);
+                    setStatus({ success: false });
+                    resetForm();
+                    // setSubmitting(false);
+                  }, 2000);
                   console.log(values);
                 }}
               >
-                {({ errors, touched }) => (
+                {({ errors, touched, isSubmitting, status }) => (
                   <Form>
-                    <div className="d-flex flex-column ">
-                      <label
-                        htmlFor="firstName fw-bold text-light"
-                        className="text-light"
-                      >
+                    <div className="d-flex flex-column">
+                      <label htmlFor="firstName" className="text-light">
                         Your name <span className="text-danger">*</span>
                       </label>
                       <Field name="firstName" placeholder="Enter your name" />
-
                       <div className="custom-error-contact text-danger errdiv">
                         {errors.firstName && touched.firstName
                           ? errors.firstName
                           : null}
                       </div>
                     </div>
-                    <div className="d-flex flex-column ">
-                      <label htmlFor="email fw-bold " className="text-light">
+                    <div className="d-flex flex-column">
+                      <label htmlFor="email" className="text-light">
                         Email <span className="text-danger">*</span>
                       </label>
                       <Field
@@ -123,16 +121,12 @@ const ContactInfo = ({ onClose }) => {
                         type="email"
                         placeholder="Enter your email"
                       />
-
                       <div className="custom-error-contact text-danger errdiv">
                         {errors.email && touched.email ? errors.email : null}
                       </div>
                     </div>
-                    <div className="d-flex flex-column ">
-                      <label
-                        htmlFor="contactNumber fw-bold"
-                        className="text-light"
-                      >
+                    <div className="d-flex flex-column">
+                      <label htmlFor="contactNumber" className="text-light">
                         Contact Number <span className="text-danger">*</span>
                       </label>
                       <Field
@@ -140,18 +134,14 @@ const ContactInfo = ({ onClose }) => {
                         type="number"
                         placeholder="Enter your number"
                       />
-
                       <div className="custom-error-contact text-danger errdiv">
                         {errors.contactNumber && touched.contactNumber
                           ? errors.contactNumber
                           : null}
                       </div>
                     </div>
-                    <div className="d-flex flex-column ">
-                      <label
-                        htmlFor="requirement fw-bold"
-                        className="text-light"
-                      >
+                    <div className="d-flex flex-column">
+                      <label htmlFor="requirement" className="text-light">
                         Your Requirement <span className="text-danger">*</span>
                       </label>
                       <Field
@@ -159,20 +149,42 @@ const ContactInfo = ({ onClose }) => {
                         as="textarea"
                         placeholder="Enter your requirement"
                       />
-
                       <div className="custom-error-contact text-danger errdiv">
                         {errors.requirement && touched.requirement
                           ? errors.requirement
                           : null}
                       </div>
                     </div>
-                    <div className="my-2 d-flex  flex-column ">
+                    <div className="my-2 d-flex flex-column">
                       <button
                         type="submit"
-                        className="my-1 border-0 custom-btn-contactinfo  text-light"
+                        className={`my-1 border-0 ${
+                          status?.success
+                            ? "custom-contact-info-success"
+                            : "custom-btn-contactinfo"
+                        } text-light ${isSubmitting ? "disabled" : ""}`}
+                        disabled={isSubmitting}
                       >
-                        Send Message
+                        {status?.success ? (
+                          <>
+                            Success <TiTickOutline color="white" />
+                          </>
+                        ) : (
+                          "Send Message"
+                        )}
                       </button>
+                      {/* {showSuccessAlert && (
+                        <div className="text-center">
+                          <Alert
+                            variant="success"
+                            className="fade"
+                            id="alert-success"
+                            onClose={() => setShowSuccessAlert(false)}
+                          >
+                            We wil get back you soon
+                          </Alert>
+                        </div>
+                      )} */}
                     </div>
                   </Form>
                 )}
@@ -182,41 +194,16 @@ const ContactInfo = ({ onClose }) => {
 
           <section className="customImg d-flex justify-content-center align-items-center">
             <img
-              src={contactbg}
-              className="contact-custom-img "
+              src={imgContact}
+              className="contact-custom-img"
               alt="img-contact"
             />
           </section>
         </section>
+
         <GetQuote />
       </>
       <Footer />
-
-      {/* <div
-        className="container-fluid d-flex justify-content-center flex-column align-items-center quote-container  "
-        style={{
-          backgroundImage: `url(${footercontact})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '50vh',
-        }}
-      >
-        <div className="w-50 d-flex  flex-column justify-content-center align-items-center ">
-          <h4 className="h4 text-light mont text-center mont mb-3 custom-contact-div">
-            Let's talk about what we can build together
-          </h4>
-          <p className="p lato text-center lato custom-contact-div">
-            Whatever may be your requirement - be it a simple website design, a
-            complex data driven web application development, an ecommerce
-            website, a native or cross platform mobile app development, a logo
-            and brand identity design, a video production or a full fledged
-            digital marketing campaign - we have a solution for you.
-          </p>
-
-          <div className="water-fill-btn my-4" onClick={openModal}></div>
-        </div>
-      </div> */}
     </motion.section>
   );
 };
