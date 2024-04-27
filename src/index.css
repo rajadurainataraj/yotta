@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,6 +6,27 @@
 body {
   background-color: rgba(240, 240, 240, 1);
 }
+/* Style the scrollbar track */
+body::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the scrollbar thumb */
+  border-radius: 5px; /* Set the border radius of the scrollbar thumb */
+}
+
+/* Style the scrollbar track on hover */
+body::-webkit-scrollbar-track:hover {
+  background-color: #f1f1f1; /* Set the background color of the scrollbar track on hover */
+}
+
+/* Style the scrollbar thumb on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Set the color of the scrollbar thumb on hover */
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -14,140 +35,12 @@ a {
 .custom-modal-overlay {
   height: 100vh;
 }
-.custom-wave-btn {
-  position: relative;
-  overflow: hidden;
-  background-color: white !important;
-  color: linear-gradient(90deg, #0178be 0%, #0f5c94 100%);
-}
 
-.custom-wave-btn:not([disabled])::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 8px;
-  z-index: -1;
-  background-color: #03a9f4;
-  animation: loadingWave 4s linear;
-}
-
-.custom-wave-btn:not([disabled]):hover::before {
-  animation-play-state: paused;
-}
 .footer {
   background-color: white;
 }
 .container-fluid {
   --bs-gutter-x: 0 !important;
-}
-@keyframes loadingWave {
-  0% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      99% 100%,
-      81% 100%,
-      64% 100%,
-      46% 100%,
-      29% 100%,
-      14% 100%,
-      0 100%
-    );
-  }
-  10% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      100% 90%,
-      84% 94%,
-      66% 95%,
-      47% 94%,
-      31% 95%,
-      14% 96%,
-      0 94%
-    );
-  }
-  20% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      100% 74%,
-      81% 72%,
-      63% 72%,
-      44% 75%,
-      33% 77%,
-      16% 78%,
-      0 74%
-    );
-  }
-  40% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      100% 53%,
-      85% 55%,
-      67% 58%,
-      44% 54%,
-      30% 48%,
-      15% 47%,
-      0 49%
-    );
-  }
-  60% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      100% 24%,
-      86% 25%,
-      69% 29%,
-      53% 34%,
-      37% 38%,
-      18% 40%,
-      0 38%
-    );
-  }
-  80% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      100% 22%,
-      84% 29%,
-      67% 31%,
-      45% 27%,
-      26% 17%,
-      12% 14%,
-      0 15%
-    );
-  }
-  90% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      100% 5%,
-      86% 10%,
-      73% 10%,
-      55% 6%,
-      33% 3%,
-      15% 5%,
-      0 9%
-    );
-  }
-  100% {
-    clip-path: polygon(
-      0% 100%,
-      100% 100%,
-      100% 0,
-      86% 0,
-      71% 0,
-      55% 0,
-      34% 0,
-      18% 0,
-      0 0
-    );
-  }
 }
 
 /* Custom styles for the carousel */
@@ -302,7 +195,7 @@ a {
 
 .nav-header-container,
 .footer-container {
-  font-family: "Song Myung";
+  font-family: 'Song Myung';
   font-weight: 400;
   display: flex;
   text-align: end;
@@ -333,7 +226,7 @@ u {
   }
 }
 .footer-company {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 700;
 }
 .footer-about,
@@ -342,13 +235,13 @@ u {
   font-size: 1em;
 }
 .border-color-custom {
-  font-family: "Inknut Antiqua";
+  font-family: 'Inknut Antiqua';
   border: 1px solid #0178be;
   width: 30px;
   height: 30px;
 }
 .bottom-container {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
@@ -356,7 +249,7 @@ u {
 
 .footer-middle-container,
 .footer-contact {
-  font-family: "Lato";
+  font-family: 'Lato';
 }
 .and-symbol {
   font-family: Arial, sans-serif;
@@ -402,7 +295,7 @@ u {
 .next-gen {
   display: block;
   margin-left: auto;
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 .next-gen-content-container {
   display: flex;
@@ -450,7 +343,7 @@ u {
   background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -655,7 +548,7 @@ u {
 }
 /* general styles */
 
-.scroller[data-animated="true"] .scroller__inner {
+.scroller[data-animated='true'] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
@@ -665,19 +558,19 @@ u {
   mix-blend-mode: multiply;
 }
 
-.scroller[data-direction="right"] {
+.scroller[data-direction='right'] {
   --_animation-direction: reverse;
 }
 
-.scroller[data-direction="left"] {
+.scroller[data-direction='left'] {
   --_animation-direction: forwards;
 }
 
-.scroller[data-speed="fast"] {
+.scroller[data-speed='fast'] {
   --_animation-duration: 20s;
 }
 
-.scroller[data-speed="slow"] {
+.scroller[data-speed='slow'] {
   --_animation-duration: 50s;
 }
 .scroller {
@@ -712,7 +605,7 @@ u {
 }
 .service-paras {
   font-size: 1.1rem;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
@@ -723,12 +616,12 @@ u {
 }
 .custom-contact {
   margin-top: 5rem;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   color: #ffffff;
 }
 .custom-contact p {
   font-size: 1.5rem;
-  color: "red";
+  color: 'red';
 }
 .contact-heading {
   font-size: 2rem;
@@ -752,7 +645,7 @@ u {
 .text-area-contact {
   height: 150px;
   resize: none;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   font-size: 1.5rem;
 }
 .icon-close-modal1 {
@@ -817,7 +710,6 @@ u {
   cursor: pointer;
   background-color: #007bb6;
 }
-
 .contact-custom-img {
   width: 35vw;
 }
@@ -987,84 +879,6 @@ u {
   color: #889198;
 }
 
-.water-fill-btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 60px;
-  background-color: white;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  overflow: hidden;
-  font-weight: bold;
-  transition: color 0.5s ease-out;
-  cursor: pointer;
-  pointer-events: auto;
-}
-.water-fill-btn:disabled {
-  pointer-events: none; /* Disable pointer events when button is disabled */
-}
-
-.water-fill-btn::before {
-  color: black;
-  content: "Design A Quote";
-  /*  position: absolute;
-  text-align: center;
-  color: black;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1; */
-}
-
-.water-fill-btn::after {
-  content: "Design A Quote";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #0077b6;
-  color: white !important;
-  transition: height 0.5s ease-out;
-  overflow: hidden;
-}
-@keyframes wave {
-  0% {
-    background-position: 0 100%;
-  }
-  50% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 100%;
-  }
-}
-
-.water-fill-btn:hover {
-  color: white !important;
-}
-
-.water-fill-btn:hover::after {
-  height: 100%;
-}
-
-.water-fill-btn::after::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  animation: waves 1s linear infinite;
-}
-.water-fill-btn:disabled {
-  opacity: 0.5; /* Reduced opacity for disabled state */
-}
 .choose-service-container:hover {
   background-position: 0 0;
   color: white;

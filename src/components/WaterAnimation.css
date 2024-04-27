@@ -1,0 +1,75 @@
+/* body {
+    align-items: center;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+  } */
+
+.waves-btn .waves {
+  border: 2px solid #00aeff;
+  color: #00aeff;
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  overflow: hidden;
+  padding: 10px 30px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.waves-btn .waves span {
+  position: relative;
+  transition: color 1s ease;
+  z-index: 1;
+}
+
+.waves-btn .waves:hover span,
+.waves-btn .waves:focus span,
+.waves-btn .waves:active span {
+  color: #ffffff;
+}
+
+.waves-btn .waves .wave:before {
+  animation: wave 0.5s linear infinite;
+  background-image: url('wave.png');
+  background-size: contain;
+  content: '';
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: -22px;
+  width: 100%;
+}
+
+.waves-btn .waves .wave {
+  background-color: #00aeff;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: calc(100% + 22px);
+  transition: top 1s ease;
+  width: 100%;
+}
+
+.waves-btn .waves:hover .wave,
+.waves-btn .waves:focus .wave,
+.waves-btn .waves:active .wave {
+  top: 0;
+}
+
+@keyframes wave {
+  to {
+    background-position-x: 118px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .waves-btn .waves {
+    font-size: 1rem;
+    width: 70vw;
+    text-align: center;
+  }
+}

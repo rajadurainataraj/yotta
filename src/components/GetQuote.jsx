@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import footercontact from "../assets/images/footercontact.png";
-import { useState } from "react";
+import './WaterAnimation.css'
+import footercontact from '../assets/images/footercontact.png'
+import { useState } from 'react'
 
-import { useRecoilState } from "recoil";
-import CustomModal from "./CustomModal";
+import { useRecoilState } from 'recoil'
+import CustomModal from './CustomModal'
 import {
   count,
   modalOpen,
@@ -16,50 +17,50 @@ import {
   serviceData,
   socialService,
   websiteTypeState,
-} from "../components/utils/globalState.js";
+} from '../components/utils/globalState.js'
 // import CustomModal from "../CustomModal";
 const GetQuote = () => {
-  const [isModalOpen, setIsModalOpen] = useRecoilState(modalOpen);
-  const [counts, setCounts] = useRecoilState(count);
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
+  const [isModalOpen, setIsModalOpen] = useRecoilState(modalOpen)
+  const [counts, setCounts] = useRecoilState(count)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
   const [selectedServices, setSelectedServices] =
-    useRecoilState(selectedService);
-  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets);
-  const [inputValuePD, setInputValuePD] = useRecoilState(projectDescriptions);
-  const [projectType, setProjectType] = useRecoilState(projectTypes);
+    useRecoilState(selectedService)
+  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets)
+  const [inputValuePD, setInputValuePD] = useRecoilState(projectDescriptions)
+  const [projectType, setProjectType] = useRecoilState(projectTypes)
   const [referenceWebsite, setReferenceWebsite] =
-    useRecoilState(referenceWebsites);
-  const [socialServices, setSocialServices] = useRecoilState(socialService);
+    useRecoilState(referenceWebsites)
+  const [socialServices, setSocialServices] = useRecoilState(socialService)
   const [websiteTypeStates, setWebsiteTypeState] =
-    useRecoilState(websiteTypeState);
+    useRecoilState(websiteTypeState)
   // const [isModalOpen, setIsModalOpen] = useState(false)
 
   const openModal = () => {
-    setIsModalOpen(true);
-    setCounts(1);
-  };
+    setIsModalOpen(true)
+    setCounts(1)
+  }
 
   const closeModal = () => {
-    setCounts(0);
-    setServiceDatas([]);
-    setSelectedServices([]);
-    setInputValue("");
-    setInputValuePD("");
-    setProjectType([]);
-    setReferenceWebsite("");
-    setSocialServices([]);
-    setWebsiteTypeState([]);
-    setIsModalOpen(false);
-  };
+    setCounts(0)
+    setServiceDatas([])
+    setSelectedServices([])
+    setInputValue('')
+    setInputValuePD('')
+    setProjectType([])
+    setReferenceWebsite('')
+    setSocialServices([])
+    setWebsiteTypeState([])
+    setIsModalOpen(false)
+  }
   return (
     <div
       className="container-fluid d-flex justify-content-center flex-column align-items-center  quote-container p-3 "
       style={{
         backgroundImage: `url(${footercontact})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        minHeight: "50vh",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '50vh',
         // width: "100vw", // Added this line
       }}
     >
@@ -78,12 +79,19 @@ const GetQuote = () => {
         {/* <button type="submit" className="design-btn fw-bolder mont">
           Design A Quote
         </button> */}
+
+        {/* <div className="water-fill-btn my-4" onClick={openModal}></div> */}
         {counts === 0 && (
-          <div className="water-fill-btn my-4" onClick={openModal}></div>
+          <div className="waves-btn my-4" onClick={openModal}>
+            <div className="waves">
+              <span>Design A Quote</span>
+              <div className="wave"></div>
+            </div>
+          </div>
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GetQuote;
+export default GetQuote
