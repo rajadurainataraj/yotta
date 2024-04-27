@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,6 +6,9 @@
 body {
   background-color: rgba(240, 240, 240, 1);
 }
+/* a.nav-link:first-child {
+  margin-left: 0.5rem !important;
+} */
 /* Style the scrollbar track */
 body::-webkit-scrollbar {
   width: 10px; /* Set the width of the scrollbar */
@@ -55,6 +58,7 @@ a {
 
 .carousel-inner {
   width: 100%;
+  height: 40vh;
 }
 
 .carousel-item {
@@ -195,7 +199,7 @@ a {
 
 .nav-header-container,
 .footer-container {
-  font-family: 'Song Myung';
+  font-family: "Song Myung";
   font-weight: 400;
   display: flex;
   text-align: end;
@@ -226,7 +230,7 @@ u {
   }
 }
 .footer-company {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: 700;
 }
 .footer-about,
@@ -235,13 +239,13 @@ u {
   font-size: 1em;
 }
 .border-color-custom {
-  font-family: 'Inknut Antiqua';
+  font-family: "Inknut Antiqua";
   border: 1px solid #0178be;
   width: 30px;
   height: 30px;
 }
 .bottom-container {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
@@ -249,7 +253,7 @@ u {
 
 .footer-middle-container,
 .footer-contact {
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 .and-symbol {
   font-family: Arial, sans-serif;
@@ -275,7 +279,17 @@ u {
 .linkedin-footer {
   background-color: #007bb6;
 }
-
+.careers-main-wrapper {
+  width: 90vw;
+  margin: 100px auto;
+  font-size: 1.1rem;
+  font-family: Lato;
+  color: #2a2a2c;
+  text-align: start;
+}
+.mail-careers {
+  color: blue;
+}
 .tech-container {
   height: 85vh;
 }
@@ -295,7 +309,7 @@ u {
 .next-gen {
   display: block;
   margin-left: auto;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
 }
 .next-gen-content-container {
   display: flex;
@@ -343,7 +357,7 @@ u {
   background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -369,7 +383,8 @@ u {
 .box-tech {
   border-radius: 10px;
   width: 12em;
-  height: 10em;
+  height: 12em;
+  /* padding: 20px 10px; */
   font-family: Montserrat;
   background-color: white;
   font-weight: bold;
@@ -548,7 +563,7 @@ u {
 }
 /* general styles */
 
-.scroller[data-animated='true'] .scroller__inner {
+.scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
@@ -558,19 +573,19 @@ u {
   mix-blend-mode: multiply;
 }
 
-.scroller[data-direction='right'] {
+.scroller[data-direction="right"] {
   --_animation-direction: reverse;
 }
 
-.scroller[data-direction='left'] {
+.scroller[data-direction="left"] {
   --_animation-direction: forwards;
 }
 
-.scroller[data-speed='fast'] {
+.scroller[data-speed="fast"] {
   --_animation-duration: 20s;
 }
 
-.scroller[data-speed='slow'] {
+.scroller[data-speed="slow"] {
   --_animation-duration: 50s;
 }
 .scroller {
@@ -605,7 +620,7 @@ u {
 }
 .service-paras {
   font-size: 1.1rem;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Aref Ruqaa Ink";
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
@@ -616,12 +631,12 @@ u {
 }
 .custom-contact {
   margin-top: 5rem;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Aref Ruqaa Ink";
   color: #ffffff;
 }
 .custom-contact p {
   font-size: 1.5rem;
-  color: 'red';
+  color: "red";
 }
 .contact-heading {
   font-size: 2rem;
@@ -645,7 +660,7 @@ u {
 .text-area-contact {
   height: 150px;
   resize: none;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Aref Ruqaa Ink";
   font-size: 1.5rem;
 }
 .icon-close-modal1 {

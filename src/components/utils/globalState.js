@@ -1,46 +1,54 @@
-import { atom } from 'recoil'
+import { atom } from "recoil";
 
-export const darkModeState = atom({
-  key: 'darkModeState',
-  default: false,
-})
+// export const darkModeState = atom({
+//   key: "darkModeState",
+//   default: false,
+// });
 export const serviceData = atom({
-  key: 'serviceData',
+  key: "serviceData",
   default: [],
-})
+});
 export const count = atom({
-  key: 'count',
+  key: "count",
   default: 0,
-})
+});
 export const modalOpen = atom({
-  key: 'modalOpen ',
+  key: "modalOpen ",
   default: false,
-})
+});
 export const selectedService = atom({
-  key: 'selectedService ',
+  key: "selectedService ",
   default: [],
-})
+});
 export const projectTypes = atom({
-  key: 'projectTypes',
+  key: "projectTypes",
   default: [],
-})
+});
 export const projectDescriptions = atom({
-  key: 'projectDescriptions',
-  default: '',
-})
+  key: "projectDescriptions",
+  default: "",
+});
 export const estimatedBudgets = atom({
-  key: 'estimatedBudgets',
-  default: '',
-})
+  key: "estimatedBudgets",
+  default: "",
+});
 export const referenceWebsites = atom({
-  key: 'referenceWebsites',
-  default: '',
-})
+  key: "referenceWebsites",
+  default: "",
+});
 export const socialService = atom({
-  key: 'socialService',
+  key: "socialService",
   default: [],
-})
+});
 export const websiteTypeState = atom({
-  key: 'websiteTypeState',
+  key: "websiteTypeState",
   default: [],
-})
+});
+export const training = atom({
+  key: "training",
+  default: [],
+});
+export const getCourseInput = atom({
+  key: "getCourseInput",
+  default: [],
+});

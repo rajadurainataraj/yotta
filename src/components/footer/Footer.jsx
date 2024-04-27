@@ -76,24 +76,29 @@ const Footer = () => {
           <section className="d-b-px-5">
             <div className="footer-company py-1">Contact Us</div>
             <div className="d-flex flex-column align-items-start py-3 footer-contact">
-              <div className="d-flex align-items-center justify-content-center text-center">
-                <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
-                  <TfiEmail size={15} color="#0178BE" />
+              <a href="mailto:example@example.com">
+                <div className="d-flex align-items-center justify-content-center text-center">
+                  <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
+                    <TfiEmail size={15} color="#0178BE" />
+                  </div>
+                  <span>hr@yottawebservices.in</span>
                 </div>
-                <span>hr@yottawebservices.in</span>
-              </div>
+              </a>
               <div className="d-flex align-items-center justify-content-center text-center py-3">
                 <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
                   <TbWorld size={15} color="#0178BE" />
                 </div>
-                <span>yottawebservices.in</span>
+                <span style={{ color: "black" }}>yottawebservices.in</span>
               </div>
-              <div className="d-flex align-items-center justify-content-center text-center ">
-                <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
-                  <FaPhone size={15} color="#0178BE" />
+
+              <a href="tel:+919944458897">
+                <div className="d-flex align-items-center justify-content-center text-center ">
+                  <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
+                    <FaPhone size={15} color="#0178BE" />
+                  </div>
+                  <span>+91 99444 58897</span>
                 </div>
-                <span>+91 99444 58897</span>
-              </div>
+              </a>
               <div className="mt-3">
                 <h6 className="f-5  fw-bold py-2">Find us on</h6>
                 <div>

@@ -21,6 +21,7 @@ import { useRecoilState } from "recoil";
 
 import SocialServices from "./serviceModals/SocialServices.jsx";
 import WebsiteType from "./serviceModals/WebsiteType.jsx";
+import OurTranings from "./serviceModals/OurTranings.jsx";
 
 const CustomModal = ({ isOpen, onClose }) => {
   const [counts, setCounts] = useRecoilState(count);
@@ -29,7 +30,8 @@ const CustomModal = ({ isOpen, onClose }) => {
     useRecoilState(selectedService);
   const [selectedServiceSocial, setSelectedServiceSocial] =
     useRecoilState(socialService);
-
+  console.log(serviceDatas.includes("trainingsData"), "simple");
+  console.log(serviceDatas, "simple2");
   const goBack = () => {
     counts === 2 && selectedServiceSocial.length !== 0
       ? setCounts(7)
@@ -37,6 +39,8 @@ const CustomModal = ({ isOpen, onClose }) => {
       ? setCounts(1)
       : counts === 8
       ? setCounts(1)
+      : serviceDatas?.trainingsData
+      ? setCounts(10)
       : selectedServices.includes("Training & Internship")
       ? setCounts(1)
       : setCounts((counts) => counts - 1);
@@ -88,6 +92,7 @@ const CustomModal = ({ isOpen, onClose }) => {
             {counts === 7 && <SocialServices />}
             {counts === 8 && <WebsiteType />}
             {counts === 9 && <ReferenceWebsite />}
+            {counts === 10 && <OurTranings />}
           </div>
         </div>
       )}

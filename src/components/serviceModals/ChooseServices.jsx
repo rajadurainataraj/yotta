@@ -41,7 +41,7 @@ const ChooseServices = () => {
     } else if (selectedServices.includes("Website")) {
       setCounts(8);
     } else if (selectedServices.includes("Training & Internship")) {
-      setCounts(5);
+      setCounts(10);
     } else {
       setCounts(2);
     }

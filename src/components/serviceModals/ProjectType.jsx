@@ -6,6 +6,7 @@ import { HiOutlineExclamationCircle } from "react-icons/hi2";
 import { count, serviceData, projectTypes } from "../utils/globalState.js";
 import { useRecoilState } from "recoil";
 import { motion } from "framer-motion";
+import { MdHelpOutline } from "react-icons/md";
 
 const ProjectType = () => {
   const [counts, setCounts] = useRecoilState(count);
@@ -96,7 +97,7 @@ const ProjectType = () => {
                 <div className="project-type-div">{item}</div>
               </section>
               <div>
-                <HiOutlineExclamationCircle
+                <MdHelpOutline
                   size={30}
                   color="#FB1E1E"
                   onMouseEnter={(event) => {

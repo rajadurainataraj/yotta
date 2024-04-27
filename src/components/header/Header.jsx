@@ -123,7 +123,7 @@ const Header = () => {
                 }`}
               >
                 <a
-                  className="nav-link mx-3"
+                  className="nav-link mx-2"
                   href="/"
                   onClick={() => handleNavItemSelect("Home")}
                   style={{
@@ -211,16 +211,18 @@ const Header = () => {
                   selectedNavItem === "Careers" ? "active" : ""
                 }`}
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={() => handleNavItemSelect("Careers")}
-                  style={{
-                    color: selectedNavItem === "Careers" ? "blue" : "",
-                  }}
-                >
-                  Careers
-                </a>
+                <Link to={"/careers"}>
+                  <a
+                    className="nav-link"
+                    href="#"
+                    onClick={() => handleNavItemSelect("Careers")}
+                    style={{
+                      color: selectedNavItem === "Careers" ? "blue" : "",
+                    }}
+                  >
+                    Careers
+                  </a>
+                </Link>
               </li>
               <li
                 className={`nav-item mx-2 ${
