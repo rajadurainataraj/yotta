@@ -5,7 +5,7 @@ const Buttons = ({ onClick, disabled }) => {
     <div>
       <button
         type="button"
-        className=" fs-5 text-primary custom-wave-btn"
+        className=" fs-5 text-primary service-modal-btn"
         onClick={onClick}
         disabled={disabled}
       >

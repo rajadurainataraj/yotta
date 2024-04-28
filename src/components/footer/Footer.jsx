@@ -1,11 +1,11 @@
-import logo from "../../assets/logo/yws-logo.png";
-import { TfiEmail } from "react-icons/tfi";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import { GrFacebookOption } from "react-icons/gr";
-import { TbWorld } from "react-icons/tb";
-import { Link } from "react-router-dom";
+import logo from '../../assets/logo/yws-logo.png'
+import { TfiEmail } from 'react-icons/tfi'
+import { FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaPhone } from 'react-icons/fa6'
+import { FaXTwitter } from 'react-icons/fa6'
+import { GrFacebookOption } from 'react-icons/gr'
+import { TbWorld } from 'react-icons/tb'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -81,14 +81,14 @@ const Footer = () => {
                   <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
                     <TfiEmail size={15} color="#0178BE" />
                   </div>
-                  <span>hr@yottawebservices.in</span>
+                  <span className="hover-color">hr@yottawebservices.in</span>
                 </div>
               </a>
               <div className="d-flex align-items-center justify-content-center text-center py-3">
                 <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
                   <TbWorld size={15} color="#0178BE" />
                 </div>
-                <span style={{ color: "black" }}>yottawebservices.in</span>
+                <span className="hover-color">yottawebservices.in</span>
               </div>
 
               <a href="tel:+919944458897">
@@ -96,7 +96,7 @@ const Footer = () => {
                   <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
                     <FaPhone size={15} color="#0178BE" />
                   </div>
-                  <span>+91 99444 58897</span>
+                  <span className="hover-color">+91 99444 58897</span>
                 </div>
               </a>
               <div className="mt-3">
@@ -104,7 +104,7 @@ const Footer = () => {
                 <div>
                   <div
                     className="d-flex justify-content-around align-items-center"
-                    style={{ width: "200px" }}
+                    style={{ width: '200px' }}
                   >
                     <a
                       href="https://www.instagram.com/yottawebservices"
@@ -120,14 +120,14 @@ const Footer = () => {
                     >
                       <div
                         className="rounded-circle facebook-footer d-inline-flex justify-content-center align-items-center"
-                        style={{ width: "35px", height: "35px" }}
+                        style={{ width: '35px', height: '35px' }}
                       >
                         <GrFacebookOption color="#fff" size={17} />
                       </div>
                     </a>
                     <div
                       className="rounded-circle bg-dark d-inline-flex justify-content-center align-items-center"
-                      style={{ width: "35px", height: "35px" }}
+                      style={{ width: '35px', height: '35px' }}
                     >
                       <FaXTwitter color="#fff" size={17} />
                     </div>
@@ -137,7 +137,7 @@ const Footer = () => {
                     >
                       <div
                         className="rounded-circle linkedin-footer d-inline-flex justify-content-center align-items-center"
-                        style={{ width: "35px", height: "35px" }}
+                        style={{ width: '35px', height: '35px' }}
                       >
                         <FaLinkedin color="#fff" size={17} />
                       </div>
@@ -159,7 +159,7 @@ const Footer = () => {
         </span>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

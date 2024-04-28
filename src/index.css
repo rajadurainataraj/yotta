@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,6 +6,59 @@
 body {
   background-color: rgba(240, 240, 240, 1);
 }
+
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #0077b5;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  border: 1px solid rgba(216, 216, 216, 0.466);
+  background-color: rgba(190, 190, 190, 0.466);
+  backdrop-filter: blur(4px);
+}
+
 /* a.nav-link:first-child {
   margin-left: 0.5rem !important;
 } */
@@ -42,10 +95,15 @@ a {
 .footer {
   background-color: white;
 }
+.footer a {
+  color: #45494c !important;
+}
 .container-fluid {
   --bs-gutter-x: 0 !important;
 }
-
+.hover-color:hover {
+  color: #03045e;
+}
 /* Custom styles for the carousel */
 .carousel {
   display: flex;
@@ -199,7 +257,7 @@ a {
 
 .nav-header-container,
 .footer-container {
-  font-family: "Song Myung";
+  font-family: 'Song Myung';
   font-weight: 400;
   display: flex;
   text-align: end;
@@ -230,7 +288,7 @@ u {
   }
 }
 .footer-company {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 700;
 }
 .footer-about,
@@ -239,13 +297,13 @@ u {
   font-size: 1em;
 }
 .border-color-custom {
-  font-family: "Inknut Antiqua";
+  font-family: 'Inknut Antiqua';
   border: 1px solid #0178be;
   width: 30px;
   height: 30px;
 }
 .bottom-container {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
@@ -253,7 +311,7 @@ u {
 
 .footer-middle-container,
 .footer-contact {
-  font-family: "Lato";
+  font-family: 'Lato';
 }
 .and-symbol {
   font-family: Arial, sans-serif;
@@ -309,7 +367,7 @@ u {
 .next-gen {
   display: block;
   margin-left: auto;
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 .next-gen-content-container {
   display: flex;
@@ -357,7 +415,7 @@ u {
   background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -563,7 +621,7 @@ u {
 }
 /* general styles */
 
-.scroller[data-animated="true"] .scroller__inner {
+.scroller[data-animated='true'] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
@@ -573,19 +631,19 @@ u {
   mix-blend-mode: multiply;
 }
 
-.scroller[data-direction="right"] {
+.scroller[data-direction='right'] {
   --_animation-direction: reverse;
 }
 
-.scroller[data-direction="left"] {
+.scroller[data-direction='left'] {
   --_animation-direction: forwards;
 }
 
-.scroller[data-speed="fast"] {
+.scroller[data-speed='fast'] {
   --_animation-duration: 20s;
 }
 
-.scroller[data-speed="slow"] {
+.scroller[data-speed='slow'] {
   --_animation-duration: 50s;
 }
 .scroller {
@@ -620,7 +678,7 @@ u {
 }
 .service-paras {
   font-size: 1.1rem;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
@@ -631,12 +689,12 @@ u {
 }
 .custom-contact {
   margin-top: 5rem;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   color: #ffffff;
 }
 .custom-contact p {
   font-size: 1.5rem;
-  color: "red";
+  color: 'red';
 }
 .contact-heading {
   font-size: 2rem;
@@ -660,7 +718,7 @@ u {
 .text-area-contact {
   height: 150px;
   resize: none;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   font-size: 1.5rem;
 }
 .icon-close-modal1 {
@@ -978,8 +1036,20 @@ u {
 .service-question {
   font-weight: 700;
 }
-
+.service-modal-btn {
+  background-color: white !important;
+}
 @media only screen and (max-width: 600px) {
+  .box-tech {
+    width: 70vw;
+  }
+  .tech-container {
+    height: 54vh;
+  }
+  .custom-customer-info {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
   .custom-modal-overlay {
     height: 100vh;
   }
@@ -1031,7 +1101,7 @@ u {
     display: none;
   }
   .custom-input-customer {
-    width: 16rem;
+    /* width: 16rem; */
   }
   .custom-modal {
     width: 95vw !important;
@@ -1201,9 +1271,9 @@ u {
   .next-gen-content-container {
     justify-content: center;
     margin: 0;
-
+    align-items: center;
     padding: 0;
-    padding-bottom: 100px;
+    padding-bottom: 6.5em;
   }
   .custom-font-75 {
     font-size: 2rem;

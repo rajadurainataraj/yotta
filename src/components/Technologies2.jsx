@@ -1,4 +1,4 @@
-import { frontEnd, backend, databases, deployment, cms, uiux } from "./datas";
+import { frontEnd, backend, databases, deployment, cms, uiux } from './datas'
 
 const Technologies2 = () => {
   return (
@@ -72,7 +72,7 @@ const Technologies2 = () => {
         </section>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default Technologies2;
+export default Technologies2
