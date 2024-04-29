@@ -1,12 +1,12 @@
-import logo from '../../assets/logo/yws-logo.png'
-import { TfiEmail } from 'react-icons/tfi'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { FaPhone } from 'react-icons/fa6'
-import { FaXTwitter } from 'react-icons/fa6'
-import { GrFacebookOption } from 'react-icons/gr'
-import { TbWorld } from 'react-icons/tb'
-import { Link } from 'react-router-dom'
-
+import logo from "../../assets/logo/yws-logo.png";
+import { TfiEmail } from "react-icons/tfi";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { GrFacebookOption } from "react-icons/gr";
+import { TbWorld } from "react-icons/tb";
+import { Link } from "react-router-dom";
+import logo2 from "../../assets/logo/yws-logo2.png";
 const Footer = () => {
   return (
     <footer className="container-fluid footer mt-auto">
@@ -31,7 +31,7 @@ const Footer = () => {
           </div> */}
           <div className="d-flex">
             <Link to="/">
-              <img src={logo} width="72vw" alt="" className="me-1" />
+              <img src={logo2} alt="" className="me-1 logo2" />
             </Link>
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item nav-header-container d-sm-block d-xl-block ">
@@ -39,9 +39,9 @@ const Footer = () => {
                   className="nav-link fs-4 nav-header text-dark fw-bolder"
                   href="/"
                 >
-                  Yotta Web Services
+                  {/* Yotta Web Services */}
                 </a>
-                <p className="sub-logo-title">Enlighten the Dark Data</p>
+                {/* <p className="sub-logo-title">Enlighten the Dark Data</p> */}
               </li>
             </ul>
           </div>
@@ -78,14 +78,14 @@ const Footer = () => {
             <div className="d-flex flex-column align-items-start py-3 footer-contact">
               <a href="mailto:example@example.com">
                 <div className="d-flex align-items-center justify-content-center text-center">
-                  <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
+                  <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2 icon-zoom">
                     <TfiEmail size={15} color="#0178BE" />
                   </div>
                   <span className="hover-color">hr@yottawebservices.in</span>
                 </div>
               </a>
               <div className="d-flex align-items-center justify-content-center text-center py-3">
-                <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
+                <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2 icon-zoom">
                   <TbWorld size={15} color="#0178BE" />
                 </div>
                 <span className="hover-color">yottawebservices.in</span>
@@ -93,7 +93,7 @@ const Footer = () => {
 
               <a href="tel:+919944458897">
                 <div className="d-flex align-items-center justify-content-center text-center ">
-                  <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2">
+                  <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2 icon-zoom">
                     <FaPhone size={15} color="#0178BE" />
                   </div>
                   <span className="hover-color">+91 99444 58897</span>
@@ -104,13 +104,13 @@ const Footer = () => {
                 <div>
                   <div
                     className="d-flex justify-content-around align-items-center"
-                    style={{ width: '200px' }}
+                    style={{ width: "200px" }}
                   >
                     <a
                       href="https://www.instagram.com/yottawebservices"
                       target="_blank"
                     >
-                      <div className="instagram-icon">
+                      <div className="instagram-icon icon-zoom">
                         <FaInstagram color="#fff" size={17} />
                       </div>
                     </a>
@@ -119,27 +119,39 @@ const Footer = () => {
                       target="_blank"
                     >
                       <div
-                        className="rounded-circle facebook-footer d-inline-flex justify-content-center align-items-center"
-                        style={{ width: '35px', height: '35px' }}
+                        className="rounded-circle icon-zoom  facebook-footer d-inline-flex justify-content-center align-items-center icon-zoom"
+                        style={{ width: "35px", height: "35px" }}
                       >
-                        <GrFacebookOption color="#fff" size={17} />
+                        <GrFacebookOption
+                          color="#fff"
+                          size={17}
+                          // className="hover-transform"
+                        />
                       </div>
                     </a>
                     <div
-                      className="rounded-circle bg-dark d-inline-flex justify-content-center align-items-center"
-                      style={{ width: '35px', height: '35px' }}
+                      className="rounded-circle bg-dark d-inline-flex justify-content-center align-items-center icon-zoom"
+                      style={{ width: "35px", height: "35px" }}
                     >
-                      <FaXTwitter color="#fff" size={17} />
+                      <FaXTwitter
+                        color="#fff"
+                        size={17}
+                        // className="icon-zoom"
+                      />
                     </div>
                     <a
                       href="https://www.linkedin.com/company/yotta-web-services/"
                       target="_blank"
                     >
                       <div
-                        className="rounded-circle linkedin-footer d-inline-flex justify-content-center align-items-center"
-                        style={{ width: '35px', height: '35px' }}
+                        className="rounded-circle linkedin-footer d-inline-flex justify-content-center align-items-center icon-zoom"
+                        style={{ width: "35px", height: "35px" }}
                       >
-                        <FaLinkedin color="#fff" size={17} />
+                        <FaLinkedin
+                          color="#fff"
+                          size={17}
+                          // className="icon-zoom"
+                        />
                       </div>
                     </a>
                   </div>
@@ -159,7 +171,7 @@ const Footer = () => {
         </span>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

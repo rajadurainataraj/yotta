@@ -8,9 +8,15 @@ body {
 }
 
 .logo2 {
-  width: 100%;
+  width: 80%;
 }
 
+.icon-zoom {
+  transition: transform 0.3s;
+}
+.icon-zoom:hover {
+  transform: scale(1.2);
+}
 /* a.nav-link:first-child {
   margin-left: 0.5rem !important;
 } */
@@ -957,6 +963,11 @@ u {
   border: 1px solid black !important;
   color: black !important;
   width: 150px !important;
+  transition: background-color 0.9s;
+}
+.custom-ouline-btn:hover {
+  background-color: #000000 !important;
+  color: white !important;
 }
 
 .thanks-container {
@@ -1015,9 +1026,9 @@ u {
   .card {
     --bs-card-spacer-y: 1.5rem;
   }
-  .carousel-inner {
+  /* .carousel-inner {
     height: 46vh;
-  }
+  } */
   .tech-container {
     height: 54vh;
   }
@@ -1040,7 +1051,7 @@ u {
   }
   .exclamation-modal2,
   .exclamation-modal1 {
-    margin-top: 22em;
+    margin-top: 16em;
     margin-left: 2.2em;
   }
 
@@ -1083,6 +1094,17 @@ u {
     padding: 30px 10px;
     box-sizing: border-box;
     overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #333333 #f1f1f1; /* For Firefox */
+    -webkit-scrollbar {
+      width: 5px; /* For Chrome, Safari, and Opera */
+    }
+    -webkit-scrollbar-track {
+      background-color: #f1f1f1; /* For Chrome, Safari, and Opera */
+    }
+    -webkit-scrollbar-thumb {
+      background-color: #333333; /* For Chrome, Safari, and Opera */
+    }
   }
   .custom-modal-heading-sub {
     padding: 0 !important;
@@ -1295,9 +1317,9 @@ u {
     overflow-x: hidden;
     padding-top: 1em !important;
   }
-  .quote-container {
+  /* .quote-container {
     margin-bottom: 1em;
-  }
+  } */
   .custom-card {
     overflow-x: hidden;
   }
@@ -1330,7 +1352,7 @@ u {
     flex: none !important;
   }
   .custom-nav img {
-    width: 10vw;
+    width: 20vw;
   }
   .nav-header-container {
     display: flex;

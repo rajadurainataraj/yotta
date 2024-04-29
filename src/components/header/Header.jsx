@@ -15,6 +15,7 @@ import {
   serviceData,
   socialService,
   websiteTypeState,
+  getCourseInput,
 } from "../utils/globalState";
 import { useRecoilState } from "recoil";
 import bgContact from "../../assets/images/contactBg.png";
@@ -32,6 +33,7 @@ const Header = () => {
   const [socialServices, setSocialServices] = useRecoilState(socialService);
   const [websiteTypeStates, setWebsiteTypeState] =
     useRecoilState(websiteTypeState);
+  const [getCourseInputs, setCoureInputs] = useRecoilState(getCourseInput);
   const [counts, setCounts] = useRecoilState(count);
   const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const location = useLocation();
@@ -56,6 +58,7 @@ const Header = () => {
     setSocialServices([]);
     setWebsiteTypeState([]);
     setIsContactOpen(false);
+    getCourseInputs("");
   };
 
   const handleNavItemSelects = (item) => {
@@ -86,7 +89,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg px-5 custom-nav container-fluid">
         <div className="d-flex">
           <Link to="/">
-            <img src={logo2} alt="" className="" />
+            <img src={logo2} alt="" className="logo2" />
           </Link>
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item nav-header-container d-sm-block d-xl-block ">
@@ -251,33 +254,26 @@ const Header = () => {
       </nav>
 
       {isContactOpen && (
-        <motion.div
-          className=""
-          initial={{ y: "100%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7 }}
+        <div
+          className="modal-overlay"
+          style={{ backgroundImage: `url(${bgContact})` }}
         >
-          <div
-            className="modal-overlay"
-            style={{ backgroundImage: `url(${bgContact})` }}
-          >
-            <div className="modal-content">
-              <ContactInfo onClose={handleContactClose} />
-              {count === 0 && (
-                <div
-                  className="contact-close custom-icon-contact fw-bolder border-2"
-                  onClick={handleContactClose}
-                >
-                  <IoCloseSharp
-                    color="##000000"
-                    className="icon-close-modal1"
-                    // onClick={handleContactClose}
-                  />
-                </div>
-              )}
-            </div>
+          <div className="modal-content">
+            <ContactInfo onClose={handleContactClose} />
+            {count === 0 && (
+              <div
+                className="contact-close custom-icon-contact fw-bolder border-2"
+                onClick={handleContactClose}
+              >
+                <IoCloseSharp
+                  color="##000000"
+                  className="icon-close-modal1"
+                  // onClick={handleContactClose}
+                />
+              </div>
+            )}
           </div>
-        </motion.div>
+        </div>
       )}
     </>
   );

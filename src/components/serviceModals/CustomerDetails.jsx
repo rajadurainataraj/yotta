@@ -72,7 +72,7 @@ const CustomerDetails = () => {
             setCounts(6);
           }}
         >
-          {({ errors, touched }) => (
+          {({ isSubmitting, errors, touched }) => (
             <Form className="d-flex flex-column gap-4 custom-customer-form ">
               <div className="d-flex flex-column  gap-1 fs-5 ">
                 <div className="d-flex custom-customer-info  gap-3 align-items-center ">
@@ -155,6 +155,7 @@ const CustomerDetails = () => {
                   type="submit"
                   className="btn btn-outline-dark custom-ouline-btn fw-bold fs-5 "
                   onClick={() => nextPage()}
+                  disabled={isSubmitting || Object.keys(errors).length > 0}
                 >
                   send
                 </button>

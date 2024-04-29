@@ -52,6 +52,20 @@ const OurTranings = () => {
     setCounts(5);
   };
   console.log(serviceDatas);
+  console.log(inputValue.trim() !== " " || selectedServices.length !== 0);
+  console.log(typeof inputValue);
+  console.log(inputValue, "getCourseInput");
+
+  var datas = true;
+  if (inputValue === "" && selectedServices.length > 0) {
+    datas = false;
+  } else if (inputValue !== "" && selectedServices.length === 0) {
+    datas = false;
+  } else if (inputValue !== "" && selectedServices.length > 0) {
+    datas = false;
+  }
+
+  console.log(datas, "datas");
   return (
     <motion.div
       className=""
@@ -88,10 +102,7 @@ const OurTranings = () => {
           />
         </section>
         <section className="d-flex justify-content-center align-items-center ">
-          <Buttons
-            onClick={() => nextPage()}
-            disabled={selectedServices.length === 0}
-          />
+          <Buttons onClick={() => nextPage()} disabled={datas} />
         </section>
       </section>
     </motion.div>

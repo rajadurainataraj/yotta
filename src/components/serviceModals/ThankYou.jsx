@@ -12,6 +12,7 @@ import {
   socialService,
   websiteTypeState,
   referenceWebsites,
+  getCourseInput,
 } from "../utils/globalState";
 import { motion } from "framer-motion";
 
@@ -28,6 +29,7 @@ const ThankYou = ({ onClose }) => {
   const [socialServices, setSocialServices] = useRecoilState(socialService);
   const [websiteTypeStates, setWebsiteTypeState] =
     useRecoilState(websiteTypeState);
+  const [getCourseInputs, setCoureInputs] = useRecoilState(getCourseInput);
   const closeThePage = () => {
     setCounts(0);
     setServiceDatas([]);
@@ -38,7 +40,7 @@ const ThankYou = ({ onClose }) => {
     setReferenceWebsite("");
     setSocialServices([]);
     setWebsiteTypeState([]);
-
+    getCourseInputs("");
     onClose();
   };
   console.log(serviceDatas);

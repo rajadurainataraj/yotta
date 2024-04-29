@@ -50,5 +50,5 @@ export const training = atom({
 });
 export const getCourseInput = atom({
   key: "getCourseInput",
-  default: [],
+  default: "",
 });

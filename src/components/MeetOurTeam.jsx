@@ -20,10 +20,10 @@ const MeetOurTeam = () => {
               />
               <h5 className="card-header text-center mt-3">{profile?.name}</h5>
               <p>{profile?.role}</p>
-              <div className="d-flex text-center justify-content-center gap-3 align-items-center ">
+              <div className="d-flex text-center justify-content-center gap-3 align-items-center icon-zoom">
                 {profile.liLink ? (
                   <a target="_blank" href={profile?.liLink}>
-                    <FaLinkedinIn />
+                    <FaLinkedinIn color="#0A66C2" />
                   </a>
                 ) : (
                   <FaLinkedinIn />
@@ -31,7 +31,7 @@ const MeetOurTeam = () => {
 
                 {profile.fbLink ? (
                   <a target="_blank" href={profile?.fbLink}>
-                    <FaFacebookF />
+                    <FaFacebookF color=" #1877F2" />
                   </a>
                 ) : (
                   <FaFacebookF />

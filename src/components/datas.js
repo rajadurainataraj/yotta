@@ -54,15 +54,15 @@ export const team = [
     name: "Jayalakshmi L",
     role: "Business Analyst",
     image: rajeswari,
-    fbLink: "",
+    fbLink: "https://www.facebook.com/",
     liLink: "https://www.linkedin.com/in/jayalakshmi-l-44a580243/",
   },
   {
     name: "Vaisak",
     role: "Admin & Accountant",
     image: vaisak,
-    fbLink: "",
-    liLink: "",
+    fbLink: "https://www.facebook.com/profile.php?id=100086049038993",
+    liLink: "https://www.linkedin.com/in/vaishak-t/",
   },
   // {
   //   name: 'Mathan',
@@ -82,7 +82,7 @@ export const team = [
     name: "Sowmiya",
     role: "UI/UX Designer",
     image: sowmiya,
-    fbLink: "",
+    fbLink: "https://www.facebook.com/",
     liLink: "https://www.linkedin.com/in/sowmiya-mahesh-b77a8223a",
   },
   // {
@@ -96,8 +96,8 @@ export const team = [
     name: "Hari",
     role: "Intern",
     image: hari,
-    fbLink: "",
-    liLink: "",
+    fbLink: "https://www.facebook.com/",
+    liLink: "https://www.linkedin.com/in/sri-hari-t-877568247/",
   },
   // {
   //   name: 'Jaya Mithun',
