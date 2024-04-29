@@ -9,7 +9,7 @@ const WebsiteType = () => {
   const [counts, setCounts] = useRecoilState(count);
   const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const toggleService = (service) => {
-    console.log(service);
+    // console.log(service);
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
       // setServiceDatas(serviceDatas.filter((item) => item !== service))
@@ -34,7 +34,7 @@ const WebsiteType = () => {
       setCounts(9);
     }
   };
-  console.log("update", serviceDatas);
+  // console.log("update", serviceDatas);
   return (
     <motion.div
       className=""
@@ -42,7 +42,7 @@ const WebsiteType = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <section className="lato text-center service-question ">
+      <section className="lato text-center service-question h5">
         Is it going to?
       </section>
       {websiteTypes.map((item) => (

@@ -70,7 +70,6 @@ const Technologies2 = () => {
             ))}
           </div>
         </section>
-        <button className="custom-button">Hover Me</button>
       </section>
     </section>
   );

@@ -40,7 +40,7 @@ const ReferenceWebsite = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <section className="lato service-question ">
+      <section className="lato service-question h5 ">
         Reference Sites (like you wanted to build website something you
         inspired)
       </section>

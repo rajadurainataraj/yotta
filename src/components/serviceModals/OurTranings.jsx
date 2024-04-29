@@ -18,8 +18,7 @@ const OurTranings = () => {
   const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const [counts, setCounts] = useRecoilState(count);
   const [inputValue, setInputValue] = useRecoilState(getCourseInput);
-  console.log(serviceDatas, "service");
-  console.log(counts, "counts");
+
   const toggleService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
@@ -51,10 +50,6 @@ const OurTranings = () => {
     }
     setCounts(5);
   };
-  console.log(serviceDatas);
-  console.log(inputValue.trim() !== " " || selectedServices.length !== 0);
-  console.log(typeof inputValue);
-  console.log(inputValue, "getCourseInput");
 
   var datas = true;
   if (inputValue === "" && selectedServices.length > 0) {
@@ -65,7 +60,6 @@ const OurTranings = () => {
     datas = false;
   }
 
-  console.log(datas, "datas");
   return (
     <motion.div
       className=""
@@ -74,7 +68,7 @@ const OurTranings = () => {
       transition={{ duration: 0.7 }}
     >
       <section className="social-section">
-        <section className="lato fw-bold my-2 service-question">
+        <section className="lato fw-bold my-2  h5  service-question">
           What option would you like to choose?
         </section>
         {tranings.map((item) => (

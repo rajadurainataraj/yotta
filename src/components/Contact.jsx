@@ -39,7 +39,7 @@ const Contact = () => {
 
   const handleSubmit = (values, { setSubmitting }) => {
     // Handle form submission here
-    console.log(values);
+    // console.log(values);
     setSubmitting(false);
   };
 

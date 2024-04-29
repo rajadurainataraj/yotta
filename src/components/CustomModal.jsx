@@ -46,13 +46,15 @@ const CustomModal = ({ isOpen, onClose }) => {
       ? setCounts(1)
       : counts === 8
       ? setCounts(1)
+      : counts === 10
+      ? setCounts(1)
       : serviceDatasKeys.includes("trainingsData")
       ? setCounts(10)
       : selectedServices.includes("Training & Internship")
       ? setCounts(1)
       : setCounts((counts) => counts - 1);
   };
-  console.log(counts);
+  // console.log(counts);
   return (
     <>
       {counts > 0 && (

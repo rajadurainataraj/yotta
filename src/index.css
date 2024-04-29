@@ -543,6 +543,9 @@ u {
   background-color: rgb(68, 234, 249);
   transform: scale(1.1);
 }
+.linkedIn-color {
+  color: "#0A66C2" !important;
+}
 .card-img {
   width: 150px;
   height: 150px;

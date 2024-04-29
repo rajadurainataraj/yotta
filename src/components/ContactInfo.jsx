@@ -96,7 +96,7 @@ const ContactInfo = ({ onClose }) => {
                     resetForm();
                     // setSubmitting(false);
                   }, 2000);
-                  console.log(values);
+                  //console.log(values);
                 }}
               >
                 {({ errors, touched, isSubmitting, status }) => (

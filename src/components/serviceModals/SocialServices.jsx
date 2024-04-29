@@ -49,7 +49,7 @@ const SocialServices = () => {
       transition={{ duration: 0.7 }}
     >
       <section className="social-section">
-        <section className="lato fw-bold my-2 service-question">
+        <section className="lato fw-bold my-2 service-question h5">
           What services would you like to opt?
         </section>
         {socialServices.map((item) => (

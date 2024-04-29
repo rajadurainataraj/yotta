@@ -1,4 +1,4 @@
-import logo from "../../assets/logo/yws-logo.png";
+// import logo from "../../assets/logo/yws-logo.png";
 import { TfiEmail } from "react-icons/tfi";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
