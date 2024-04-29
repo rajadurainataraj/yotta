@@ -1,9 +1,9 @@
-import { frontEnd, backend, databases, deployment, cms, uiux } from './datas'
+import { frontEnd, backend, databases, deployment, cms, uiux } from "./datas";
 
 const Technologies2 = () => {
   return (
-    <section className="container-fluid custom-tech-container my-5">
-      <div className="content-header h3 text-center py-3">
+    <section className="container-fluid custom-tech-container mb-5">
+      <div className="content-header h3 text-center pb-2">
         Technologies We Use
       </div>
       <section className="d-flex custom-tech2 justify-content-evenly my-4">
@@ -72,7 +72,7 @@ const Technologies2 = () => {
         </section>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default Technologies2
+export default Technologies2;

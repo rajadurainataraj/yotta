@@ -49,7 +49,7 @@ const CarouselContainer = () => {
       </button>
 
       <div
-        className="row custom-img-slider justify-content-center align-items-center"
+        className="row d-flex custom-img-slider justify-content-center align-items-center"
         style={{
           backgroundColor: images[index].bgColor,
           position: "relative",
@@ -98,14 +98,16 @@ const CarouselContainer = () => {
             >
               {images.map((image, idx) => (
                 <Carousel.Item key={idx}>
-                  <img
-                    className="d-block w-100 custom-sliding-img"
-                    src={image.src}
-                    alt={`Slide ${idx}`}
-                    style={{
-                      objectFit: "contain",
-                    }}
-                  />
+                  <div className="d-flex justify-content-center align-items-center">
+                    <img
+                      className="d-block w-100 custom-sliding-img"
+                      src={image.src}
+                      alt={`Slide ${idx}`}
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
                 </Carousel.Item>
               ))}
             </Carousel>

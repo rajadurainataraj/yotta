@@ -8,7 +8,9 @@ const WhatWeDo = () => {
         <p className="content-para py-2 ">
           Everything you need for your success
         </p>
-        <CarouselContainer />
+        <div className="d-flex justify-content-center align-items-center  align-content-center ">
+          <CarouselContainer />
+        </div>
       </section>
     </section>
   );

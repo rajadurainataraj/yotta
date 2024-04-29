@@ -20,7 +20,10 @@ const Services = () => {
   return (
     <div>
       {/* {serviceData.map((item) => ( */}
-      <div key={heading} className="container-fluid pe-5 custom-services p-5">
+      <div
+        key={heading}
+        className="container-fluid pe-5 custom-services p-5 pt-2"
+      >
         <div className="service-headers service-headers1 text-black p-4">
           {heading}
         </div>

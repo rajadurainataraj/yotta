@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo/yws-logo.png";
+import logo2 from "../../assets/logo/yws-logo2.png";
 import ContactInfo from "../ContactInfo";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
@@ -86,17 +86,15 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg px-5 custom-nav container-fluid">
         <div className="d-flex">
           <Link to="/">
-            <img src={logo} width="72vw" alt="" className="me-1" />
+            <img src={logo2} alt="" className="" />
           </Link>
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item nav-header-container d-sm-block d-xl-block ">
               <a
                 className="nav-link fs-4 nav-header text-dark fw-bolder"
                 href="/"
-              >
-                Yotta Web Services
-              </a>
-              <p className="sub-logo-title">Enlighten the Dark Data</p>
+              ></a>
+              {/* <p className="sub-logo-title">Enlighten the Dark Data</p> */}
             </li>
           </ul>
         </div>

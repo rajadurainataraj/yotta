@@ -1,79 +1,79 @@
 /* eslint-disable no-unused-vars */
-import { count, serviceData } from '../utils/globalState.js'
-import { useRecoilState } from 'recoil'
-import { Formik, Form, Field } from 'formik'
-import * as Yup from 'yup'
-import { motion } from 'framer-motion'
+import { count, serviceData } from "../utils/globalState.js";
+import { useRecoilState } from "recoil";
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+import { motion } from "framer-motion";
 
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
-  countryName: Yup.string().required('Required'),
-  address: Yup.string().required('Required'),
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+  email: Yup.string().email("Invalid email").required("Required"),
+  countryName: Yup.string().required("Required"),
+  address: Yup.string().required("Required"),
   contactNumber: Yup.number()
-    .typeError('Mobile number must be a number')
-    .positive('Mobile number must be positive')
-    .integer('Mobile number must be an integer')
-    .required('Mobile number is required')
+    .typeError("Mobile number must be a number")
+    .positive("Mobile number must be positive")
+    .integer("Mobile number must be an integer")
+    .required("Mobile number is required")
     .test(
-      'len',
-      'Mobile number must be exactly 10 digits',
+      "len",
+      "Mobile number must be exactly 10 digits",
       (val) => val.toString().length === 10
     ),
-})
+});
 
 const CustomerDetails = () => {
-  const [counts, setCounts] = useRecoilState(count)
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
   const nextPage = () => {
     // setCounts(6);
-  }
+  };
 
   return (
     <motion.div
       className=""
-      initial={{ y: '100%', opacity: 0 }}
+      initial={{ y: "100%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
       <section className="d-flex flex-column  text-left my-4 container-fluid justify-content-center align-items-center ">
         <Formik
           initialValues={{
-            firstName: '',
-            email: '',
-            countryName: '',
-            contactNumber: '',
-            address: '',
+            firstName: "",
+            email: "",
+            countryName: "",
+            contactNumber: "",
+            address: "",
           }}
           validationSchema={contactSchema}
           onSubmit={(values) => {
             // same shape as initial values
             // setServiceDatas([...serviceDatas, { userDetails: values }]);
             const existingServicesIndex = serviceDatas.findIndex(
-              (data) => 'customerDetails' in data
-            )
+              (data) => "customerDetails" in data
+            );
             if (existingServicesIndex !== -1) {
               // Replace existing services
-              const newServiceDatas = [...serviceDatas]
+              const newServiceDatas = [...serviceDatas];
               newServiceDatas[existingServicesIndex] = {
                 customerDetails: { values },
-              }
-              setServiceDatas(newServiceDatas)
+              };
+              setServiceDatas(newServiceDatas);
             } else {
               // Append new services
               setServiceDatas([
                 ...serviceDatas,
                 { customerDetails: { values } },
-              ])
+              ]);
             }
-            setCounts(6)
+            setCounts(6);
           }}
         >
           {({ errors, touched }) => (
-            <Form className="d-flex flex-column gap-4 ">
+            <Form className="d-flex flex-column gap-4 custom-customer-form ">
               <div className="d-flex flex-column  gap-1 fs-5 ">
                 <div className="d-flex custom-customer-info  gap-3 align-items-center ">
                   <div className="fw-bold">Hi! Iam</div>
@@ -164,7 +164,7 @@ const CustomerDetails = () => {
         </Formik>
       </section>
     </motion.div>
-  )
-}
+  );
+};
 
-export default CustomerDetails
+export default CustomerDetails;
