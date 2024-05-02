@@ -277,7 +277,7 @@ export const ClientData = [
   },
   {
     title: "sathish",
-    company: "CEO, Test Your Matrics",
+    company: "CEO, Test Your Metrics",
     review:
       "Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend this team for startups, who want to spend more time on customers instead of technical developments.",
   },

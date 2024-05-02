@@ -10,7 +10,7 @@ import Carousel from "./Carousel";
 import Card from "./Card";
 import ContactInfo from "./ContactInfo";
 import Technologies2 from "./Technologies2";
-import CarouselSwip from "./CarouselSwip";
+// import CarouselSwip from "./CarouselSwip";
 import Footer from "./footer/Footer";
 import GetQuote from "./GetQuote";
 import CompanyReview from "./CompanyReview";
