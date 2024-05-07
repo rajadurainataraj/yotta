@@ -85,7 +85,7 @@ const Header = () => {
   }
 
   return (
-    <div style={{ height: '3.5em' }}>
+    <div className="nav-container-main">
       <nav className="navbar navbar-expand-lg px-5 custom-nav container-fluid">
         <div className="d-flex">
           <Link to="/">

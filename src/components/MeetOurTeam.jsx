@@ -1,6 +1,6 @@
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
-import { team } from "./datas";
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF } from 'react-icons/fa6'
+import { team } from './datas'
 
 const MeetOurTeam = () => {
   return (
@@ -9,7 +9,7 @@ const MeetOurTeam = () => {
       <div className="scroll-container pt-5">
         <div
           className="d-flex custom-cards gap-5"
-          style={{ marginRight: "20px" }}
+          style={{ marginRight: '20px' }}
         >
           {team.map((profile) => (
             <div className="mx-2 custom-card text-center" key={profile?.name}>
@@ -23,7 +23,7 @@ const MeetOurTeam = () => {
               <div className="d-flex text-center justify-content-center gap-3 align-items-center icon-zoom">
                 {profile.liLink ? (
                   <a target="_blank" href={profile?.liLink}>
-                    <FaLinkedinIn color="#0A66C2" />
+                    <FaLinkedinIn />
                   </a>
                 ) : (
                   <FaLinkedinIn />
@@ -31,7 +31,7 @@ const MeetOurTeam = () => {
 
                 {profile.fbLink ? (
                   <a target="_blank" href={profile?.fbLink}>
-                    <FaFacebookF color=" #1877F2" />
+                    <FaFacebookF />
                   </a>
                 ) : (
                   <FaFacebookF />
@@ -42,7 +42,7 @@ const MeetOurTeam = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default MeetOurTeam;
+export default MeetOurTeam

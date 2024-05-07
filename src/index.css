@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -57,7 +57,9 @@ a {
     width: 5px;
   }
 }
-
+.nav-container-main {
+  margin-bottom: 4.5em;
+}
 .footer {
   background-color: white;
 }
@@ -82,7 +84,7 @@ a {
 
 .carousel-inner {
   width: 100%;
-  height: 40vh;
+  /* height: 40vh; */
 }
 
 .carousel-item {
@@ -223,7 +225,7 @@ a {
 
 .nav-header-container,
 .footer-container {
-  font-family: "Song Myung";
+  font-family: 'Song Myung';
   font-weight: 400;
   display: flex;
   text-align: end;
@@ -254,7 +256,7 @@ u {
   }
 }
 .footer-company {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 700;
 }
 .footer-about,
@@ -263,13 +265,13 @@ u {
   font-size: 1em;
 }
 .border-color-custom {
-  font-family: "Inknut Antiqua";
+  font-family: 'Inknut Antiqua';
   border: 1px solid #0178be;
   width: 30px;
   height: 30px;
 }
 .bottom-container {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
@@ -277,7 +279,7 @@ u {
 
 .footer-middle-container,
 .footer-contact {
-  font-family: "Lato";
+  font-family: 'Lato';
 }
 .and-symbol {
   font-family: Arial, sans-serif;
@@ -333,7 +335,7 @@ u {
 .next-gen {
   display: block;
   margin-left: auto;
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 .next-gen-content-container {
   display: flex;
@@ -349,7 +351,7 @@ u {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  padding: 2em 4em;
+  padding: 0.4em 4em;
   border: 5px solid transparent;
   /* border-image: linear-gradient(
       to right,
@@ -381,7 +383,7 @@ u {
   background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -550,7 +552,7 @@ u {
   transform: scale(1.1);
 }
 .linkedIn-color {
-  color: "#0A66C2" !important;
+  color: '#0A66C2' !important;
 }
 .card-img {
   width: 150px;
@@ -592,7 +594,7 @@ u {
 }
 /* general styles */
 
-.scroller[data-animated="true"] .scroller__inner {
+.scroller[data-animated='true'] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
@@ -602,19 +604,19 @@ u {
   mix-blend-mode: multiply;
 }
 
-.scroller[data-direction="right"] {
+.scroller[data-direction='right'] {
   --_animation-direction: reverse;
 }
 
-.scroller[data-direction="left"] {
+.scroller[data-direction='left'] {
   --_animation-direction: forwards;
 }
 
-.scroller[data-speed="fast"] {
+.scroller[data-speed='fast'] {
   --_animation-duration: 20s;
 }
 
-.scroller[data-speed="slow"] {
+.scroller[data-speed='slow'] {
   --_animation-duration: 50s;
 }
 .scroller {
@@ -649,7 +651,7 @@ u {
 }
 .service-paras {
   font-size: 1.1rem;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
@@ -660,12 +662,12 @@ u {
 }
 .custom-contact {
   margin-top: 5rem;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   color: #ffffff;
 }
 .custom-contact p {
   font-size: 1.5rem;
-  color: "red";
+  color: 'red';
 }
 .contact-heading {
   font-size: 2rem;
@@ -689,7 +691,7 @@ u {
 .text-area-contact {
   height: 150px;
   resize: none;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   font-size: 1.5rem;
 }
 .icon-close-modal1 {
@@ -988,7 +990,7 @@ u {
   color: white !important;
 }
 .custom-ouline-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1159,6 +1161,9 @@ u {
   }
   .service-question {
     margin-top: 20px !important;
+  }
+  .nav-container-main {
+    margin-bottom: 2.5em;
   }
   .modal-close {
     margin: 0 !important;
