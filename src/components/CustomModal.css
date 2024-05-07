@@ -4,14 +4,14 @@
   left: 0;
   min-width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .custom-modal {
-  background-color: #fff;
+  background-color: #f0f0f0;
   width: 100vw;
   /* height: 90vh; */
   width: 80vw;

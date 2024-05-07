@@ -34,12 +34,13 @@ const ReferenceWebsite = () => {
   };
 
   return (
-    <motion.div
-      className=""
-      initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
+    // <motion.div
+    //   className=""
+    //   initial={{ y: "100%", opacity: 0 }}
+    //   animate={{ y: 0, opacity: 1 }}
+    //   transition={{ duration: 0.7 }}
+    // >
+    <div>
       <section className="lato service-question h5 ">
         Reference Sites (like you wanted to build website something you
         inspired)
@@ -55,7 +56,8 @@ const ReferenceWebsite = () => {
       <section className="d-flex justify-content-center align-items-center ">
         <Buttons onClick={() => nextPage()} disabled={inputValue === ""} />
       </section>
-    </motion.div>
+    </div>
+    // </motion.div>
   );
 };
 

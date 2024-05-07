@@ -14,10 +14,12 @@ import Technologies2 from "./Technologies2";
 import Footer from "./footer/Footer";
 import GetQuote from "./GetQuote";
 import CompanyReview from "./CompanyReview";
-
+import { useRecoilState } from "recoil";
+import { count } from "./utils/globalState";
 const Body = () => {
+  const [counts, setCounts] = useRecoilState(count);
   return (
-    <div className="custom-main-div">
+    <div className={`custom-main-div ${counts !== 0 && "bg-light"}`}>
       {/* <ContactInfo /> */}
 
       <Hero />

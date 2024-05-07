@@ -6,11 +6,15 @@
 body {
   background-color: rgba(240, 240, 240, 1);
 }
-
+.bg-light {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
 .logo2 {
   width: 80%;
 }
-
+.content-header {
+  padding-bottom: 10px;
+}
 .icon-zoom {
   transition: transform 0.3s;
 }
@@ -440,7 +444,8 @@ u {
 }
 .content-container2 {
   background: linear-gradient(to bottom, #3d1478, #850c90);
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  width: 100% !important;
 }
 
 .content-container-p {
@@ -938,16 +943,22 @@ u {
   outline: none;
   margin-top: 4em;
   margin-bottom: 2em;
+  background-color: transparent;
   overflow-wrap: break-word;
 }
 .exclamation-modal2,
 .exclamation-modal1 {
   max-width: 300px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 12px;
   position: absolute;
   cursor: pointer;
+  background-color: #f7fdff;
+}
+.satisfaction p {
+  color: #000000 !important;
+  font-weight: 500;
 }
 .satisfaction {
   background-color: #e2e6eb;
@@ -955,6 +966,7 @@ u {
 .custom-input-customer {
   outline: none;
   width: 20rem;
+  background-color: transparent;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -968,12 +980,32 @@ u {
   color: black !important;
   width: 150px !important;
   transition: background-color 0.9s;
+  position: relative !important;
+  overflow: hidden;
 }
 .custom-ouline-btn:hover {
-  background-color: #000000 !important;
+  /* background-color: #000000 !important; */
   color: white !important;
 }
+.custom-ouline-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: #000 !important;
+  z-index: -1;
+  transition: 0.4s;
+  border-radius: 0 25% 50% 25%;
+}
 
+.custom-ouline-btn:hover::before {
+  width: 200%;
+  height: 200%;
+  right: 0;
+  bottom: 0;
+}
 .thanks-container {
   height: 70vh;
 }
@@ -1011,7 +1043,12 @@ u {
   font-weight: 700;
 }
 .service-modal-btn {
-  background-color: white !important;
+  background-color: transparent !important;
+}
+.project-type-container {
+  padding-bottom: 50px;
+}
+.custom-ouline-btn {
 }
 @media only screen and (max-width: 600px) {
   .tech-header {
@@ -1293,7 +1330,7 @@ u {
     font-size: 0.6rem;
   }
   .content-container2 {
-    width: 90vw;
+    /* width: 90vw; */
     text-align: start;
     margin-bottom: 2em;
   }

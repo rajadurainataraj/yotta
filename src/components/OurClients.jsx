@@ -6,7 +6,7 @@ import c2 from "../assets/images/c2.png";
 import c3 from "../assets/images/c3.png";
 import c4 from "../assets/images/c4.png";
 import c5 from "../assets/images/c5.png";
-// import c6 from "../assets/images/rainbow.jpeg";
+// import c6 from "../assets/images/rainbow.png";
 
 const images = [c1, c2, c3, c4, c5];
 

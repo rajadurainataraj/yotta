@@ -8,7 +8,7 @@ import vaisak from "../assets/images/vaisak.jpg";
 import jaya from "../assets/images/jaya.jpg";
 import venkatesh from "../assets/images/venkatesh.jpg";
 import soundarya from "../assets/images/soundarya.jpg";
-import training from "../assets/images/training&internships.png";
+import training from "../assets/images/traniningandintern.png";
 import customSoftware from "../assets/images/custom-software.png";
 import digitalMarketing from "../assets/images/digital-marketing.png";
 import mobileApplication from "../assets/images/mobile-application.png";

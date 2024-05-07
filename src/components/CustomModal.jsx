@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-
-import "./CustomModal.css"; // Assuming you have a CSS file for styling the modal
+import React from "react";
+import "./CustomModal.css";
 import { MdClose } from "react-icons/md";
 import ChooseServices from "./serviceModals/ChooseServices.jsx";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -22,6 +21,7 @@ import { useRecoilState } from "recoil";
 import SocialServices from "./serviceModals/SocialServices.jsx";
 import WebsiteType from "./serviceModals/WebsiteType.jsx";
 import OurTranings from "./serviceModals/OurTranings.jsx";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CustomModal = ({ isOpen, onClose }) => {
   const [counts, setCounts] = useRecoilState(count);
@@ -38,30 +38,39 @@ const CustomModal = ({ isOpen, onClose }) => {
     return acc;
   }, []);
 
-  console.log(serviceDatasKeys);
   const goBack = () => {
-    counts === 2 && selectedServiceSocial.length !== 0
-      ? setCounts(7)
-      : counts === 7
-      ? setCounts(1)
-      : counts === 8
-      ? setCounts(1)
-      : counts === 10
-      ? setCounts(1)
-      : serviceDatasKeys.includes("trainingsData")
-      ? setCounts(10)
-      : selectedServices.includes("Training & Internship")
-      ? setCounts(1)
-      : setCounts((counts) => counts - 1);
+    setCounts((prevCounts) => {
+      if (prevCounts === 2 && selectedServiceSocial.length !== 0) {
+        return 7;
+      } else if (prevCounts === 7 || prevCounts === 8 || prevCounts === 10) {
+        return 1;
+      } else if (serviceDatasKeys.includes("trainingsData")) {
+        return 10;
+      } else if (selectedServices.includes("Training & Internship")) {
+        return 1;
+      } else {
+        return prevCounts - 1;
+      }
+    });
   };
-  // console.log(counts);
+
   return (
-    <>
-      {counts > 0 && (
-        <div
-          className="custom-modal-overlay align-items-center "
-          // onClick={onClose}
+    <AnimatePresence>
+      {isOpen && counts !== 0 && (
+        <motion.div
+          key={counts}
+          className="custom-modal-overlay align-items-center"
+          initial={{ opacity: 0, y: "100%" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{
+            opacity: 0,
+            y: "100%",
+            transition: { when: "afterChildren" },
+          }}
+          transition={{ duration: 0.8 }}
+          onClick={onClose}
         >
+          {/* {counts !== 0 ? ( */}
           <div
             className="custom-modal d-flex flex-column align-items-center"
             onClick={(e) => e.stopPropagation()}
@@ -91,8 +100,6 @@ const CustomModal = ({ isOpen, onClose }) => {
                 />
               )}
             </div>
-            {/* {serviceDatas.includes("Digital Marketing") && <SocialServices />} */}
-
             {counts === 1 && <ChooseServices />}
             {counts === 2 && <ProjectType />}
             {counts === 3 && <ProjectDescription />}
@@ -104,9 +111,12 @@ const CustomModal = ({ isOpen, onClose }) => {
             {counts === 9 && <ReferenceWebsite />}
             {counts === 10 && <OurTranings />}
           </div>
-        </div>
+          {/* ) : (
+            ""
+          )} */}
+        </motion.div>
       )}
-    </>
+    </AnimatePresence>
   );
 };
 

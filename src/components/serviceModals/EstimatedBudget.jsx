@@ -33,33 +33,33 @@ const EstimatedBudget = () => {
   }
 
   return (
-    <motion.div
-      className=""
-      initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
-      <section style={{ width: "50vw" }} className="estimated-budget-section">
-        <section className="lato fw-bold text-left h5 fs-4 service-question ">
-          Estimated Budget
-        </section>
-        <section>
-          <input
-            className="custom-reference-input"
-            type="text"
-            value={inputValue}
-            onChange={handleChange}
-          />
-        </section>
-
-        <section className="d-flex justify-content-center align-items-center ">
-          <Buttons
-            onClick={() => nextPage()}
-            disabled={inputValue.length === 0}
-          />
-        </section>
+    // <motion.div
+    //   className=""
+    //   initial={{ y: "100%", opacity: 0 }}
+    //   animate={{ y: 0, opacity: 1 }}
+    //   transition={{ duration: 0.7 }}
+    // >
+    <section style={{ width: "50vw" }} className="estimated-budget-section">
+      <section className="lato fw-bold text-left h5 fs-4 service-question ">
+        Estimated Budget
       </section>
-    </motion.div>
+      <section>
+        <input
+          className="custom-reference-input"
+          type="text"
+          value={inputValue}
+          onChange={handleChange}
+        />
+      </section>
+
+      <section className="d-flex justify-content-center align-items-center ">
+        <Buttons
+          onClick={() => nextPage()}
+          disabled={inputValue.length === 0}
+        />
+      </section>
+    </section>
+    // </motion.div>
   );
 };
 

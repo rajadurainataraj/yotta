@@ -265,11 +265,7 @@ const Header = () => {
                 className="contact-close custom-icon-contact fw-bolder border-2"
                 onClick={handleContactClose}
               >
-                <IoCloseSharp
-                  color="##000000"
-                  className="icon-close-modal1"
-                  // onClick={handleContactClose}
-                />
+                <IoCloseSharp color="##000000" className="icon-close-modal1" />
               </div>
             )}
           </div>

@@ -61,12 +61,7 @@ const OurTranings = () => {
   }
 
   return (
-    <motion.div
-      className=""
-      initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
+    <div>
       <section className="social-section">
         <section className="lato fw-bold my-2  h5  service-question">
           What option would you like to choose?
@@ -99,7 +94,7 @@ const OurTranings = () => {
           <Buttons onClick={() => nextPage()} disabled={datas} />
         </section>
       </section>
-    </motion.div>
+    </div>
   );
 };
 

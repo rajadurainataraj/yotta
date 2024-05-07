@@ -45,26 +45,26 @@ const ThankYou = ({ onClose }) => {
   };
   console.log(serviceDatas);
   return (
-    <motion.div
-      className=""
-      initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
-      <section className="d-flex flex-column justify-content-center  align-items-center thanks-container container-fluid ">
-        <img src={thankyou} alt="thankyou" />
-        <h3 className="h2 mb-2 mt-3 mont fw-bold"> Thank you!</h3>
-        <p className="p lato fs-3 fw-bold text-dark fw-bolder">
-          Will get back to you soon.
-        </p>
-        <button
-          className="btn btn-outline-dark custom-ouline-btn fw-bold fs-5 "
-          onClick={() => closeThePage()}
-        >
-          Okay
-        </button>
-      </section>
-    </motion.div>
+    // <motion.div
+    //   className=""
+    //   initial={{ y: "100%", opacity: 0 }}
+    //   animate={{ y: 0, opacity: 1 }}
+    //   transition={{ duration: 0.7 }}
+    // >
+    <section className="d-flex flex-column justify-content-center  align-items-center thanks-container container-fluid ">
+      <img src={thankyou} alt="thankyou" />
+      <h3 className="h2 mb-2 mt-3 mont fw-bold"> Thank you!</h3>
+      <p className="p lato fs-3 fw-bold text-dark fw-bolder">
+        Will get back to you soon.
+      </p>
+      <button
+        className="btn btn-outline-dark custom-ouline-btn fw-bold fs-5 "
+        onClick={() => closeThePage()}
+      >
+        Okay
+      </button>
+    </section>
+    // </motion.div>
   );
 };
 

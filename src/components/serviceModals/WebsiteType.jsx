@@ -36,12 +36,13 @@ const WebsiteType = () => {
   };
   // console.log("update", serviceDatas);
   return (
-    <motion.div
-      className=""
-      initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
+    // <motion.div
+    //   className=""
+    //   initial={{ y: "100%", opacity: 0 }}
+    //   animate={{ y: 0, opacity: 1 }}
+    //   transition={{ duration: 0.7 }}
+    // >
+    <div>
       <section className="lato text-center service-question h5">
         Is it going to?
       </section>
@@ -56,7 +57,7 @@ const WebsiteType = () => {
           {item}
         </section>
       ))}
-    </motion.div>
+    </div>
   );
 };
 
