@@ -403,7 +403,7 @@ u {
 .box-tech {
   border-radius: 10px;
   width: 12em;
-  height: 12em;
+  height: 14em;
   /* padding: 20px 10px; */
   font-family: Montserrat;
   background-color: white;
@@ -1020,6 +1020,7 @@ u {
   }
   .logo2 {
     width: 60%;
+    padding-top: 10px;
   }
   .card-body {
     /* padding: 10px 20px !important; */
@@ -1246,12 +1247,13 @@ u {
   .service-headers {
     font-size: 0.8rem;
     padding-left: 0 !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 20px !important;
   }
   .service-headers1 {
     text-align: center;
     font-size: 1.2rem;
   }
+
   .service-paras-home {
     font-size: 0.6rem;
     line-height: 10px;
@@ -1343,8 +1345,11 @@ u {
     flex-direction: column;
     text-align: left;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     margin-bottom: 2em;
+    text-align: justify;
+  }
+  .service-container img {
   }
   .custom-services {
     padding: 0 !important;

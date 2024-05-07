@@ -88,7 +88,7 @@ const OurTranings = () => {
             Do you want any other training?
           </section>
           <input
-            className="custom-reference-input mt-4"
+            className="custom-reference-input mt-4 fs-5 lato"
             type="text"
             value={inputValue}
             onChange={handleChange}

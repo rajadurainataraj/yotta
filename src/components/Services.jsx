@@ -28,7 +28,7 @@ const Services = () => {
           {heading}
         </div>
 
-        <section className="d-flex service-container">
+        <section className="d-flex service-container px-3">
           <img src={imgUrl} alt="" className="p-5 service-img" />
 
           {/* <span>{item.content}</span> */}

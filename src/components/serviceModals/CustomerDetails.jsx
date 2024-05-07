@@ -73,7 +73,7 @@ const CustomerDetails = () => {
           }}
         >
           {({ isSubmitting, errors, touched }) => (
-            <Form className="d-flex flex-column gap-4 custom-customer-form ">
+            <Form className="d-flex flex-column gap-4 custom-customer-form">
               <div className="d-flex flex-column  gap-1 fs-5 ">
                 <div className="d-flex custom-customer-info  gap-3 align-items-center ">
                   <div className="fw-bold">Hi! Iam</div>
