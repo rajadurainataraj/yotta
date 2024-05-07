@@ -5,24 +5,24 @@ import {
   BrowserRouter,
   useParams,
   useLocation,
-} from "react-router-dom";
-import Services from "./components/Services";
+} from 'react-router-dom'
+import Services from './components/Services'
 // import CarouselContainer from './components/CarouselContainer'
-import Body from "./components/Body";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import { useRecoilState } from "recoil";
-import { count } from "./components/utils/globalState";
-import Careers from "./components/Careers";
+import Body from './components/Body'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import { useRecoilState } from 'recoil'
+import { count } from './components/utils/globalState'
+import Careers from './components/Careers'
 
 const App = () => {
-  const [counts, setCounts] = useRecoilState(count);
-  const currentPath = window.location.pathname;
+  const [counts, setCounts] = useRecoilState(count)
+  const currentPath = window.location.pathname
   // console.log(currentPath);
   // console.log(counts);
   return (
     <BrowserRouter>
-      {counts > 0 && currentPath === "/" ? null : <Header />}
+      {counts > 0 && currentPath === '/' ? null : <Header />}
 
       <Routes>
         <Route path="/" element={<Body />} />
@@ -33,7 +33,7 @@ const App = () => {
       </Routes>
       <Footer />
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App
