@@ -72,100 +72,10 @@ a {
 .hover-color:hover {
   color: #03045e;
 }
-/* Custom styles for the carousel */
-.carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0;
-  /* height: 50vh; */
-}
 
-.carousel-inner {
-  width: 100%;
-  /* height: 40vh; */
-}
-
-.carousel-item {
-  display: none;
-}
-
-.carousel-item.active {
-  display: block;
-}
-
-/* Custom styles for the cards */
-.card {
-  width: 90%;
-  margin: 0 auto;
-}
-
-/* Custom styles for the carousel arrows */
-.carousel-control-prev,
-.carousel-control-next {
-  font-size: 2em;
-  margin-top: 50px;
-  display: none;
-}
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  color: gray;
-}
-
-@media (min-width: 768px) {
-  /* Show arrows on desktop view */
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    color: #333;
-    padding: 10px;
-    border-radius: 50%;
-  }
-
-  .carousel-control-prev {
-    left: 10px;
-  }
-
-  .carousel-control-next {
-    right: 10px;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOutLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-.carousel-item {
-  display: none;
-  animation: slideInRight 0.5s forwards;
-}
-
-.carousel-item.active {
-  display: block;
-}
-
-.carousel-item.prev {
+/* .carousel-item.prev {
   animation: slideOutLeft 0.5s forwards;
-}
+} */
 
 .custom-navv {
   display: flex;

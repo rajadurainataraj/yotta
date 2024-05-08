@@ -8,58 +8,51 @@ import {
 } from 'react-icons/md'
 import { count } from './utils/globalState'
 import { useRecoilState } from 'recoil'
+
 const CompanyReview = () => {
   const [counts, setCounts] = useRecoilState(count)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [direction, setDirection] = useState('right')
+  const [autoSlide, setAutoSlide] = useState(true)
 
-  // const handlePrev = () => {
-  //   setActiveIndex(activeIndex === 0 ? ClientData.length - 1 : activeIndex - 1);
-  // };
   const handlePrev = () => {
     const prevIndex =
       activeIndex === 0 ? ClientData.length - 1 : activeIndex - 1
-    document
-      .querySelectorAll('.carousel-item')
-      [activeIndex].classList.remove('active')
-    document.querySelectorAll('.carousel-item')[prevIndex].classList.add('prev')
+    setDirection('left')
     setTimeout(() => {
       setActiveIndex(prevIndex)
-      document
-        .querySelectorAll('.carousel-item.prev')[0]
-        .classList.remove('prev')
-    }, 500) // Animation duration
+    }, 50) // Adjust the delay as needed
   }
 
-  // const handleNext = () => {
-  //   setActiveIndex(activeIndex === ClientData.length - 1 ? 0 : activeIndex + 1);
-  // };
   const handleNext = () => {
     const nextIndex =
       activeIndex === ClientData.length - 1 ? 0 : activeIndex + 1
-    document
-      .querySelectorAll('.carousel-item')
-      [activeIndex].classList.add('prev')
-    document
-      .querySelectorAll('.carousel-item')
-      [nextIndex].classList.add('active')
+    setDirection('right')
     setTimeout(() => {
-      document
-        .querySelectorAll('.carousel-item.prev')[0]
-        .classList.remove('prev')
       setActiveIndex(nextIndex)
-    }, 500) // Animation duration
+    }, 50) // Adjust the delay as needed
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) =>
-        prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
-      )
-    }, 6000) // Change slide every 3 seconds
+    let interval
+    if (autoSlide) {
+      interval = setInterval(() => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
+        )
+        setDirection((prevDirection) =>
+          prevDirection === 'right' ? 'left' : 'right'
+        )
+      }, 6000) // Change slide every 3 seconds
+    }
 
-    return () => clearInterval(interval)
-  }, [])
-  if (counts > 0) return
+    return () => {
+      clearInterval(interval)
+    }
+  }, [autoSlide])
+
+  if (counts > 0) return null
+
   return (
     <div
       id="carouselExampleControls"
@@ -71,7 +64,9 @@ const CompanyReview = () => {
         {ClientData.map((client, index) => (
           <div
             key={index}
-            className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
+            className={`carousel-items ${
+              index === activeIndex ? 'active' : ''
+            }`}
           >
             <div className="card my-5">
               <div className="card-body">
@@ -85,31 +80,98 @@ const CompanyReview = () => {
           </div>
         ))}
       </div>
-      <div
-        className="carousel-control-prev"
-        // href="#carouselExampleControls"
-        role="button"
-        data-slide="prev"
-        onClick={handlePrev}
-      >
-        {/* <span className="carousel-control-prev-icon" aria-hidden="true"></span> */}
-        {/* <span className="sr-only"> */}
+      <div className="carousel-control-prev" onClick={handlePrev}>
         <MdOutlineArrowBackIosNew />
-        {/* </span> */}
       </div>
-      <div
-        className="carousel-control-next"
-        // href="#carouselExampleControls"
-        role="button"
-        data-slide="next"
-        onClick={handleNext}
-      >
-        {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
-        <span className="sr-only">
-          <MdOutlineArrowForwardIos />
-        </span>
+      <div className="carousel-control-next" onClick={handleNext}>
+        <MdOutlineArrowForwardIos />
       </div>
-      <style></style>
+      <style>{`
+        /* Custom styles for the carousel */
+        .carousel {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 1rem 0;
+        }
+
+        .carousel-inner {
+          width: 100%;
+        }
+
+        .carousel-items {
+          display: none;
+        }
+
+        .carousel-items.active {
+          display: block;
+          animation: ${
+            direction === 'right' ? 'slideInRight' : 'slideInLeft'
+          } 0.5s forwards;
+        }
+
+        /* Custom styles for the cards */
+        .card {
+          width: 90%;
+          margin: 0 auto;
+          height: 200px;
+        }
+
+        /* Custom styles for the carousel arrows */
+        .carousel-control-prev,
+        .carousel-control-next {
+          font-size: 2em;
+          margin-top: 50px;
+          display: none;
+        
+        }
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+          color: gray;
+        }
+
+        @media (min-width: 768px) {
+          /* Show arrows on desktop view */
+          .carousel-control-prev,
+          .carousel-control-next {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            color: #333;
+            padding: 10px;
+            border-radius: 50%;
+          }
+
+          .carousel-control-prev {
+            left: 10px;
+          }
+
+          .carousel-control-next {
+            right: 10px;
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInLeft {
+          from {
+            transform: translateX(-100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </div>
   )
 }
