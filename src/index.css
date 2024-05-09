@@ -348,6 +348,9 @@ u {
   background-clip: text;
   font-family: Montserrat;
 }
+.content-container2 {
+  padding: 4em 0 !important;
+}
 .content-container2,
 .content-container,
 .content-para {

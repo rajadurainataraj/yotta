@@ -1,25 +1,25 @@
-import Hero from './Hero'
-import AboutUs from './AboutUs'
-import WhatWeDo from './WhatWeDo'
-import Digital from './Digital'
-import MeetOurTeam from './MeetOurTeam'
-import OurClients from './OurClients'
+import Hero from "./Hero";
+import AboutUs from "./AboutUs";
+import WhatWeDo from "./WhatWeDo";
+import Digital from "./Digital";
+import MeetOurTeam from "./MeetOurTeam";
+import OurClients from "./OurClients";
 
 // import Slider from "./Slider";
 
-import Card from './Card'
-import ContactInfo from './ContactInfo'
-import Technologies2 from './Technologies2'
+import Card from "./Card";
+import ContactInfo from "./ContactInfo";
+import Technologies2 from "./Technologies2";
 // import CarouselSwip from "./CarouselSwip";
-import Footer from './footer/Footer'
-import GetQuote from './GetQuote'
-import CompanyReview from './CompanyReview'
-import { useRecoilState } from 'recoil'
-import { count } from './utils/globalState'
+import Footer from "./footer/Footer";
+import GetQuote from "./GetQuote";
+import CompanyReview from "./CompanyReview";
+import { useRecoilState } from "recoil";
+import { count } from "./utils/globalState";
 const Body = () => {
-  const [counts, setCounts] = useRecoilState(count)
+  const [counts, setCounts] = useRecoilState(count);
   return (
-    <div className={`custom-main-div ${counts !== 0 && 'bg-light'}`}>
+    <div className={`custom-main-div ${counts !== 0 && "bg-light"}`}>
       {/* <ContactInfo /> */}
 
       <Hero />
@@ -43,7 +43,7 @@ const Body = () => {
       <MeetOurTeam /> */}
       {/* <CarouselSwip /> */}
     </div>
-  )
-}
+  );
+};
 
-export default Body
+export default Body;
