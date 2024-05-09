@@ -71,6 +71,7 @@ const ChooseServices = () => {
       ))}
       <section className="d-flex justify-content-center align-items-center ">
         <Buttons
+          style={{ color: "linear-gradient(180deg, #0178be, #0f5c94)" }}
           onClick={() => nextPage()}
           disabled={selectedServices.length === 0}
         />

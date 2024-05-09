@@ -24,7 +24,7 @@ const Services = () => {
         key={heading}
         className="container-fluid pe-5 custom-services p-5 pt-2"
       >
-        <div className="service-headers service-headers1 text-black p-4">
+        <div className="service-headers service-headers1 text-black p-4 mont">
           {heading}
         </div>
 
@@ -32,7 +32,7 @@ const Services = () => {
           <img src={imgUrl} alt="" className="p-5 service-img" />
 
           {/* <span>{item.content}</span> */}
-          <div className="ps-3">
+          <div className="ps-3 lato">
             <span
               className="service-paras p"
               dangerouslySetInnerHTML={{ __html: content }}

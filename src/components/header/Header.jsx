@@ -89,7 +89,7 @@ const Header = () => {
 
   return (
     <div className="nav-container-main">
-      <nav className="navbar navbar-expand-lg px-5 custom-nav container-fluid">
+      <nav className="navbar navbar-expand-lg px-4 custom-nav container-fluid">
         <div className="d-flex">
           <Link to="/">
             <img src={logo2} alt="" className="logo2" />
@@ -240,7 +240,7 @@ const Header = () => {
                   onClick={() => handleNavItemSelects("About")}
                   style={{ color: selectedNavItem === "About" ? "blue" : "" }}
                 >
-                  About
+                  About Us
                 </a>
               </li>
 

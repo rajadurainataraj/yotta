@@ -61,6 +61,7 @@ const GetQuote = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         minHeight: "50vh",
+        backgroundColor: "#292929",
         // width: "100vw", // Added this line
       }}
     >
