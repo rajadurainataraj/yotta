@@ -33,23 +33,23 @@ const CompanyReview = () => {
     }, 50); // Adjust the delay as needed
   };
 
-  // useEffect(() => {
-  //   let interval;
-  //   if (autoSlide) {
-  //     interval = setInterval(() => {
-  //       setActiveIndex((prevIndex) =>
-  //         prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
-  //       );
-  //       setDirection((prevDirection) =>
-  //         prevDirection === "right" ? "left" : "right"
-  //       );
-  //     }, 6000);
-  //   }
+  useEffect(() => {
+    let interval;
+    if (autoSlide) {
+      interval = setInterval(() => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
+        );
+        setDirection((prevDirection) =>
+          prevDirection === "right" ? "left" : "right"
+        );
+      }, 6000);
+    }
 
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, [autoSlide]);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [autoSlide]);
 
   if (counts > 0) return null;
 
