@@ -59,14 +59,14 @@ const Footer = () => {
               <div className="footer-blog">Blog</div>
             </div>
             <div className="footer-middle-container pb-2">
-              <div className="footer-company py-1">
+              <div className="footer-company">
                 Help <span className="and-symbol">&</span> Support
               </div>
               <div className="footer-about">Contact Us</div>
               <div className="footer-blog">Custom Developement</div>
             </div>
             <div className="footer-middle-container pb-2">
-              <div className="footer-company py-1">Legal</div>
+              <div className="footer-company">Legal</div>
               <div className="footer-about">
                 Terms <span className="and-symbol"> & </span>Conditions
               </div>

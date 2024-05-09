@@ -18,7 +18,7 @@ const Services = () => {
   }, []);
   // counts > 0 && navigate("/");
   return (
-    <div>
+    <div className="service-page-container">
       {/* {serviceData.map((item) => ( */}
       <div
         key={heading}

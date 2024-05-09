@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import logo2 from '../../assets/logo/yws-logo2.png'
-import ContactInfo from '../ContactInfo'
-import { IoCloseSharp } from 'react-icons/io5'
-import { motion } from 'framer-motion'
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo2 from "../../assets/logo/yws-logo2.png";
+import ContactInfo from "../ContactInfo";
+import { IoCloseSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 import {
   count,
   estimatedBudgets,
@@ -16,73 +16,76 @@ import {
   socialService,
   websiteTypeState,
   getCourseInput,
-} from '../utils/globalState'
-import { useRecoilState } from 'recoil'
-import bgContact from '../../assets/images/contactBg.png'
+} from "../utils/globalState";
+import { useRecoilState } from "recoil";
+import bgContact from "../../assets/images/contactBg.png";
 
 const Header = () => {
-  const [selectedNavItem, setSelectedNavItem] = useState('Home')
-  const [isContactOpen, setIsContactOpen] = useState(false)
+  const [selectedNavItem, setSelectedNavItem] = useState("Home");
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [selectedServices, setSelectedServices] =
-    useRecoilState(selectedService)
-  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets)
-  const [inputValuePD, setInputValuePD] = useRecoilState(projectDescriptions)
-  const [projectType, setProjectType] = useRecoilState(projectTypes)
+    useRecoilState(selectedService);
+  const [inputValue, setInputValue] = useRecoilState(estimatedBudgets);
+  const [inputValuePD, setInputValuePD] = useRecoilState(projectDescriptions);
+  const [projectType, setProjectType] = useRecoilState(projectTypes);
   const [referenceWebsite, setReferenceWebsite] =
-    useRecoilState(referenceWebsites)
-  const [socialServices, setSocialServices] = useRecoilState(socialService)
+    useRecoilState(referenceWebsites);
+  const [socialServices, setSocialServices] = useRecoilState(socialService);
   const [websiteTypeStates, setWebsiteTypeState] =
-    useRecoilState(websiteTypeState)
-  const [getCourseInputs, setCoureInputs] = useRecoilState(getCourseInput)
-  const [counts, setCounts] = useRecoilState(count)
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
-  const location = useLocation()
-  const navigate = useNavigate()
+    useRecoilState(websiteTypeState);
+  const [getCourseInputs, setCoureInputs] = useRecoilState(getCourseInput);
+  const [counts, setCounts] = useRecoilState(count);
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleNavItemSelect = (item) => {
-    setSelectedNavItem(item)
-  }
+    setSelectedNavItem(item);
+    handleServicesClick();
+  };
 
   const handleContactOpen = () => {
-    setIsContactOpen(true)
-  }
+    setIsContactOpen(true);
+    handleServicesClick();
+  };
 
   const handleContactClose = () => {
-    setCounts(0)
-    setServiceDatas([])
-    setSelectedServices([])
-    setInputValue('')
-    setInputValuePD('')
-    setProjectType([])
-    setReferenceWebsite('')
-    setSocialServices([])
-    setWebsiteTypeState([])
-    setIsContactOpen(false)
-    getCourseInputs('')
-  }
+    setCounts(0);
+    setServiceDatas([]);
+    setSelectedServices([]);
+    setInputValue("");
+    setInputValuePD("");
+    setProjectType([]);
+    setReferenceWebsite("");
+    setSocialServices([]);
+    setWebsiteTypeState([]);
+    setIsContactOpen(false);
+    getCourseInputs("");
+  };
 
   const handleNavItemSelects = (item) => {
-    setSelectedNavItem(item)
+    setSelectedNavItem(item);
+    handleServicesClick();
 
-    if (item === 'About') {
-      navigate('/')
-      const isMobile = window.innerWidth <= 768 // Set your breakpoint for mobile screens
+    if (item === "About") {
+      navigate("/");
+      const isMobile = window.innerWidth <= 768; // Set your breakpoint for mobile screens
       const scrollPosition = isMobile
         ? window.innerHeight * 0.55
-        : window.innerHeight * 0.85
+        : window.innerHeight * 0.85;
       window.scrollTo({
         top: scrollPosition,
-        behavior: 'smooth',
-      })
+        behavior: "smooth",
+      });
     }
-  }
+  };
 
   const handleServicesClick = () => {
-    const navbar = document.getElementById('navbarSupportedContent')
-    if (navbar.classList.contains('show')) {
-      navbar.classList.remove('show')
+    const navbar = document.getElementById("navbarSupportedContent");
+    if (navbar.classList.contains("show")) {
+      navbar.classList.remove("show");
     }
-  }
+  };
 
   return (
     <div className="nav-container-main">
@@ -120,15 +123,15 @@ const Header = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li
                 className={`nav-item ${
-                  selectedNavItem === 'Home' ? 'active' : ''
+                  selectedNavItem === "Home" ? "active" : ""
                 }`}
               >
                 <a
                   className="nav-link mx-2"
                   href="/"
-                  onClick={() => handleNavItemSelect('Home')}
+                  onClick={() => handleNavItemSelect("Home")}
                   style={{
-                    color: location.pathname === '/' ? 'blue !important' : '',
+                    color: location.pathname === "/" ? "blue !important" : "",
                   }}
                 >
                   Home
@@ -136,7 +139,7 @@ const Header = () => {
               </li>
               <li
                 className={`nav-item dropdown mx-2 ${
-                  selectedNavItem === 'Services' ? 'active' : ''
+                  selectedNavItem === "Services" ? "active" : ""
                 }`}
               >
                 <a
@@ -144,7 +147,7 @@ const Header = () => {
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  onClick={() => handleNavItemSelect('Services')}
+                  onClick={() => handleNavItemSelect("Services")}
                 >
                   Services
                 </a>
@@ -152,7 +155,7 @@ const Header = () => {
                   <li>
                     <Link
                       className="dropdown-item"
-                      to={'services' + '/customsoftware'}
+                      to={"services" + "/customsoftware"}
                       onClick={handleServicesClick}
                     >
                       Custom Software
@@ -160,7 +163,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to={'services' + '/digitalmarketing'}
+                      to={"services" + "/digitalmarketing"}
                       onClick={handleServicesClick}
                     >
                       <a className="dropdown-item">Digital Marketing</a>
@@ -168,7 +171,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to={'services' + '/mobileapplication'}
+                      to={"services" + "/mobileapplication"}
                       onClick={handleServicesClick}
                     >
                       <a className="dropdown-item">Mobile Application</a>
@@ -176,7 +179,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to={'services' + '/website'}
+                      to={"services" + "/website"}
                       onClick={handleServicesClick}
                     >
                       <a className="dropdown-item">Website</a>
@@ -184,7 +187,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to={'services' + '/trainingandinternships'}
+                      to={"services" + "/trainingandinternships"}
                       onClick={handleServicesClick}
                     >
                       <a className="dropdown-item">
@@ -198,7 +201,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to={'services' + '/uiuxdesign'}
+                      to={"services" + "/uiuxdesign"}
                       onClick={handleServicesClick}
                     >
                       <a className="dropdown-item">UI/UX design</a>
@@ -209,16 +212,16 @@ const Header = () => {
 
               <li
                 className={`nav-item mx-2 ${
-                  selectedNavItem === 'Careers' ? 'active' : ''
+                  selectedNavItem === "Careers" ? "active" : ""
                 }`}
               >
-                <Link to={'/careers'}>
+                <Link to={"/careers"}>
                   <a
                     className="nav-link"
                     href="#"
-                    onClick={() => handleNavItemSelect('Careers')}
+                    onClick={() => handleNavItemSelect("Careers")}
                     style={{
-                      color: selectedNavItem === 'Careers' ? 'blue' : '',
+                      color: selectedNavItem === "Careers" ? "blue" : "",
                     }}
                   >
                     Careers
@@ -227,14 +230,14 @@ const Header = () => {
               </li>
               <li
                 className={`nav-item mx-2 ${
-                  selectedNavItem === 'About' ? 'active' : ''
+                  selectedNavItem === "About" ? "active" : ""
                 }`}
               >
                 <a
                   className="nav-link"
                   href="#"
-                  onClick={() => handleNavItemSelects('About')}
-                  style={{ color: selectedNavItem === 'About' ? 'blue' : '' }}
+                  onClick={() => handleNavItemSelects("About")}
+                  style={{ color: selectedNavItem === "About" ? "blue" : "" }}
                 >
                   About
                 </a>
@@ -242,7 +245,7 @@ const Header = () => {
 
               <li
                 className={`nav-item mx-2 ${
-                  selectedNavItem === 'Contact Us' ? 'active' : ''
+                  selectedNavItem === "Contact Us" ? "active" : ""
                 }`}
                 onClick={handleContactOpen}
               >
@@ -272,7 +275,7 @@ const Header = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

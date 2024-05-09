@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -135,14 +135,14 @@ a {
 
 .nav-header-container,
 .footer-container {
-  font-family: 'Song Myung';
+  font-family: "Song Myung";
   font-weight: 400;
   display: flex;
   text-align: end;
   line-height: 1;
   margin-top: 15px;
   span {
-    font-size: 1em;
+    font-size: 1rem;
     color: #3c3b3b;
   }
 }
@@ -166,22 +166,22 @@ u {
   }
 }
 .footer-company {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: 700;
 }
 .footer-about,
 .footer-blog {
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .border-color-custom {
-  font-family: 'Inknut Antiqua';
+  font-family: "Inknut Antiqua";
   border: 1px solid #0178be;
   width: 30px;
   height: 30px;
 }
 .bottom-container {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
@@ -189,7 +189,7 @@ u {
 
 .footer-middle-container,
 .footer-contact {
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 .and-symbol {
   font-family: Arial, sans-serif;
@@ -245,7 +245,7 @@ u {
 .next-gen {
   display: block;
   margin-left: auto;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
 }
 .next-gen-content-container {
   display: flex;
@@ -293,7 +293,7 @@ u {
   background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -462,7 +462,7 @@ u {
   transform: scale(1.1);
 }
 .linkedIn-color {
-  color: '#0A66C2' !important;
+  color: "#0A66C2" !important;
 }
 .card-img {
   width: 150px;
@@ -504,7 +504,7 @@ u {
 }
 /* general styles */
 
-.scroller[data-animated='true'] .scroller__inner {
+.scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
@@ -514,19 +514,19 @@ u {
   mix-blend-mode: multiply;
 }
 
-.scroller[data-direction='right'] {
+.scroller[data-direction="right"] {
   --_animation-direction: reverse;
 }
 
-.scroller[data-direction='left'] {
+.scroller[data-direction="left"] {
   --_animation-direction: forwards;
 }
 
-.scroller[data-speed='fast'] {
+.scroller[data-speed="fast"] {
   --_animation-duration: 20s;
 }
 
-.scroller[data-speed='slow'] {
+.scroller[data-speed="slow"] {
   --_animation-duration: 50s;
 }
 .scroller {
@@ -539,6 +539,9 @@ u {
 }
 .custom-infyscroll-img {
   aspect-ratio: 3/2;
+}
+.close-icon {
+  display: none;
 }
 .review-header {
   color: #036198;
@@ -561,7 +564,7 @@ u {
 }
 .service-paras {
   font-size: 1.1rem;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Aref Ruqaa Ink";
   font-weight: 400;
   line-height: 30px;
   color: #4b494f;
@@ -572,12 +575,12 @@ u {
 }
 .custom-contact {
   margin-top: 5rem;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Aref Ruqaa Ink";
   color: #ffffff;
 }
 .custom-contact p {
   font-size: 1.5rem;
-  color: 'red';
+  color: "red";
 }
 .contact-heading {
   font-size: 2rem;
@@ -601,12 +604,19 @@ u {
 .text-area-contact {
   height: 150px;
   resize: none;
-  font-family: 'Aref Ruqaa Ink';
+  font-family: "Aref Ruqaa Ink";
   font-size: 1.5rem;
 }
 .icon-close-modal1 {
   color: #000000 !important;
   font-size: 27px;
+}
+.slideInRight {
+  animation: slideInRight 0.5s forwards;
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.5s forwards;
 }
 
 .contact-close {
@@ -706,7 +716,7 @@ u {
 }
 .custom-services {
   background-color: #f2f3f4;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 .custom-technologies {
   background-color: #eae9e9;
@@ -715,11 +725,13 @@ u {
 .carousel-btns {
   visibility: hidden;
 }
+
 .custom-img-slider {
   max-width: 600px;
   height: 390px;
   border-radius: 20px;
 }
+
 .custom-sliding-img {
   width: 300px;
   height: 300px;
@@ -742,6 +754,7 @@ u {
 
 .service-img {
   width: 31.25em;
+  height: 23em;
 }
 
 .custom-contact-main {
@@ -837,7 +850,9 @@ u {
 .quote-container p {
   color: #889198;
 }
-
+.service-page-container {
+  padding: 20px 0;
+}
 .choose-service-container:hover {
   background-position: 0 0;
   color: white;
@@ -900,7 +915,7 @@ u {
   color: white !important;
 }
 .custom-ouline-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -957,22 +972,32 @@ u {
 .service-modal-btn {
   background-color: transparent !important;
 }
-.project-type-container {
+/* .project-type-container {
   padding-bottom: 50px;
-}
+} */
 .custom-ouline-btn {
+}
+.card-body {
+  /* padding: 10px 20px !important; */
+  /* background-color: #8559b2 !important; */
+  border-radius: 10px;
+  /* font-weight: 600; */
 }
 @media only screen and (max-width: 600px) {
   .tech-header {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
+  .close-icon {
+    display: block;
+  }
   .logo2 {
     width: 60%;
     padding-top: 10px;
   }
   .card-body {
-    /* padding: 10px 20px !important; */
+    padding: 10px 20px !important;
+    /* background-color: #8bb231 !important; */
   }
   .custom-customer-form {
     gap: 7px !important;
@@ -999,16 +1024,16 @@ u {
   .custom-learnmore-btn img {
     height: 10px;
   }
-  .project-type-container {
+  /* .project-type-container {
     padding-bottom: 80px;
-  }
+  } */
 
   body {
     overflow-y: auto !important;
   }
   .exclamation-modal2,
   .exclamation-modal1 {
-    margin-top: 16em;
+    margin-top: 6em;
     margin-left: 2.2em;
   }
 
@@ -1289,6 +1314,7 @@ u {
   }
   .service-img {
     width: 300px;
+    height: 200px;
     margin-bottom: 20px;
     padding: 0 !important;
   }
@@ -1297,17 +1323,20 @@ u {
     flex-direction: column;
     text-align: left;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     margin-bottom: 2em;
     text-align: justify;
   }
-  .service-container img {
+  .quote-container p {
+    text-align: justify !important;
   }
+  /* .service-container img {
+  } */
   .custom-services {
     padding: 0 !important;
   }
   .nav-header {
-    font-size: 0.9em !important;
+    font-size: 0.9rem !important;
   }
   .custom-nav {
     justify-content: space-between;
@@ -1328,7 +1357,7 @@ u {
     line-height: 1;
     margin-top: 15px;
     p {
-      font-size: 0.4em;
+      font-size: 0.4rem;
       color: linear-gradient(to right, #f3831f, #43a4af, #007ab9) !important;
     }
   }

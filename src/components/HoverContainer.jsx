@@ -5,7 +5,7 @@ import { allData } from "./datas";
 import { useNavigate } from "react-router-dom";
 import arrowIcon from "../assets/images/arrow-icon.png";
 
-const HoverContainer = ({ title }) => {
+const HoverContainer = ({ title, direction }) => {
   const propsData = title.title;
   let propsValue = title.title.trim().toLowerCase().replace(/ +/g, "");
   const navigate = useNavigate();
@@ -24,14 +24,17 @@ const HoverContainer = ({ title }) => {
   };
   return (
     <section className="container-fluid pe-5 custom-service-home">
-      <motion.div
+      {/* <motion.div
         className="hover-info"
-        initial={{ y: "100%", opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        initial={
+          direction === "left"
+            ? { x: "100%", opacity: 0 }
+            : { x: "-100%", opacity: 0 }
+        }
+        animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
-
-        // style={{ width: "600px", height: "390px" }}
-      >
+      > */}
+      <div className="hover-info">
         <div className="service-headers text-black p-4"> {propsData}</div>
         <section className="">
           <div className="">
@@ -45,7 +48,8 @@ const HoverContainer = ({ title }) => {
             {/* <FaArrowRightLong color="white" /> */}
           </div>
         </section>
-      </motion.div>
+      </div>
+      {/* </motion.div> */}
     </section>
     // </motion.div>
   );

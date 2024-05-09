@@ -1,57 +1,57 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unexpected-multiline */
-import { useState, useEffect } from 'react'
-import { ClientData } from './datas'
+import { useState, useEffect } from "react";
+import { ClientData } from "./datas";
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
-} from 'react-icons/md'
-import { count } from './utils/globalState'
-import { useRecoilState } from 'recoil'
+} from "react-icons/md";
+import { count } from "./utils/globalState";
+import { useRecoilState } from "recoil";
 
 const CompanyReview = () => {
-  const [counts, setCounts] = useRecoilState(count)
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [direction, setDirection] = useState('right')
-  const [autoSlide, setAutoSlide] = useState(true)
+  const [counts, setCounts] = useRecoilState(count);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState("right");
+  const [autoSlide, setAutoSlide] = useState(true);
 
   const handlePrev = () => {
     const prevIndex =
-      activeIndex === 0 ? ClientData.length - 1 : activeIndex - 1
-    setDirection('left')
+      activeIndex === 0 ? ClientData.length - 1 : activeIndex - 1;
+    setDirection("left");
     setTimeout(() => {
-      setActiveIndex(prevIndex)
-    }, 50) // Adjust the delay as needed
-  }
+      setActiveIndex(prevIndex);
+    }, 50); // Adjust the delay as needed
+  };
 
   const handleNext = () => {
     const nextIndex =
-      activeIndex === ClientData.length - 1 ? 0 : activeIndex + 1
-    setDirection('right')
+      activeIndex === ClientData.length - 1 ? 0 : activeIndex + 1;
+    setDirection("right");
     setTimeout(() => {
-      setActiveIndex(nextIndex)
-    }, 50) // Adjust the delay as needed
-  }
+      setActiveIndex(nextIndex);
+    }, 50); // Adjust the delay as needed
+  };
 
   useEffect(() => {
-    let interval
+    let interval;
     if (autoSlide) {
       interval = setInterval(() => {
         setActiveIndex((prevIndex) =>
           prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
-        )
+        );
         setDirection((prevDirection) =>
-          prevDirection === 'right' ? 'left' : 'right'
-        )
-      }, 6000) // Change slide every 3 seconds
+          prevDirection === "right" ? "left" : "right"
+        );
+      }, 6000); // Change slide every 3 seconds
     }
 
     return () => {
-      clearInterval(interval)
-    }
-  }, [autoSlide])
+      clearInterval(interval);
+    };
+  }, [autoSlide]);
 
-  if (counts > 0) return null
+  if (counts > 0) return null;
 
   return (
     <div
@@ -65,7 +65,7 @@ const CompanyReview = () => {
           <div
             key={index}
             className={`carousel-items ${
-              index === activeIndex ? 'active' : ''
+              index === activeIndex ? "active" : ""
             }`}
           >
             <div className="card my-5">
@@ -107,7 +107,7 @@ const CompanyReview = () => {
         .carousel-items.active {
           display: block;
           animation: ${
-            direction === 'right' ? 'slideInRight' : 'slideInLeft'
+            direction === "right" ? "slideInRight" : "slideInLeft"
           } 0.5s forwards;
         }
 
@@ -115,7 +115,12 @@ const CompanyReview = () => {
         .card {
           width: 90%;
           margin: 0 auto;
-          height: 200px;
+          height: 230px;
+       border-radius:10px;
+         // background-color:#8bb231
+          // background-color:#a587cc;
+          // box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
         }
 
         /* Custom styles for the carousel arrows */
@@ -173,7 +178,7 @@ const CompanyReview = () => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default CompanyReview
+export default CompanyReview;
