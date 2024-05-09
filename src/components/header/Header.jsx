@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo2 from "../../assets/logo/yws-logo2.png";
+import logo2 from "../../assets/logo/logosvg.svg";
 import ContactInfo from "../ContactInfo";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";

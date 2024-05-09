@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { GrFacebookOption } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import logo2 from "../../assets/logo/yws-logo2.png";
+import logo2 from "../../assets/logo/logosvg.svg";
 const Footer = () => {
   return (
     <footer className="container-fluid footer mt-auto">
