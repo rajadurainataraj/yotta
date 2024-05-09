@@ -1343,6 +1343,7 @@ u {
     height: 200px;
     margin-bottom: 20px;
     padding: 0 !important;
+    object-fit: contain;
   }
   .service-container {
     display: flex;
