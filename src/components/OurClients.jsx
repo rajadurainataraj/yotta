@@ -36,8 +36,8 @@ const OurClients = () => {
 
   return (
     <section className="container-fluid custom-client-container">
-      <Container fluid className="py-5 ">
-        <h3 className="content-header text-center py-3">Our Clients</h3>
+      <Container fluid className="py-4 ">
+        <h3 className="content-header text-center pb-3 ">Our Clients</h3>
         <Row>
           <Col className="custom-scroll-infinity">
             <div className="scroller" data-direction="left" data-speed="medium">
@@ -56,7 +56,7 @@ const OurClients = () => {
           </Col>
         </Row>
         <div className="custom-clients d-flex justify-content-center align-items-center ">
-          <p className="h5 text-center pt-4 ">
+          <p className="h4 text-center pt-4 ">
             Many companies, startups love our <span>products and services</span>
           </p>
         </div>

@@ -984,6 +984,7 @@ u {
   /* padding: 10px 20px !important; */
   /* background-color: #8559b2 !important; */
   border-radius: 10px;
+  padding-left: 20px;
   /* font-weight: 600; */
 }
 @media only screen and (max-width: 600px) {

@@ -33,23 +33,23 @@ const CompanyReview = () => {
     }, 50); // Adjust the delay as needed
   };
 
-  useEffect(() => {
-    let interval;
-    if (autoSlide) {
-      interval = setInterval(() => {
-        setActiveIndex((prevIndex) =>
-          prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
-        );
-        setDirection((prevDirection) =>
-          prevDirection === "right" ? "left" : "right"
-        );
-      }, 6000); // Change slide every 3 seconds
-    }
+  // useEffect(() => {
+  //   let interval;
+  //   if (autoSlide) {
+  //     interval = setInterval(() => {
+  //       setActiveIndex((prevIndex) =>
+  //         prevIndex === ClientData.length - 1 ? 0 : prevIndex + 1
+  //       );
+  //       setDirection((prevDirection) =>
+  //         prevDirection === "right" ? "left" : "right"
+  //       );
+  //     }, 6000);
+  //   }
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [autoSlide]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [autoSlide]);
 
   if (counts > 0) return null;
 
@@ -117,10 +117,7 @@ const CompanyReview = () => {
           margin: 0 auto;
           height: 230px;
        border-radius:10px;
-         // background-color:#8bb231
-          // background-color:#a587cc;
-          // box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-
+         
         }
 
         /* Custom styles for the carousel arrows */
@@ -129,7 +126,7 @@ const CompanyReview = () => {
           font-size: 2em;
           margin-top: 50px;
           display: none;
-        
+        cursor:pointer
         }
         .carousel-control-prev:hover,
         .carousel-control-next:hover {

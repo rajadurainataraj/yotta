@@ -1,15 +1,15 @@
-import { FaLinkedinIn } from 'react-icons/fa'
-import { FaFacebookF } from 'react-icons/fa6'
-import { team } from './datas'
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
+import { team } from "./datas";
 
 const MeetOurTeam = () => {
   return (
-    <section className="py-5 container-fluid">
+    <section className="py-4 container-fluid">
       <h3 className="content-header text-center py-3">Meet Our Team</h3>
       <div className="scroll-container pt-5">
         <div
           className="d-flex custom-cards gap-5"
-          style={{ marginRight: '20px' }}
+          style={{ marginRight: "20px" }}
         >
           {team.map((profile) => (
             <div className="mx-2 custom-card text-center" key={profile?.name}>
@@ -42,7 +42,7 @@ const MeetOurTeam = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default MeetOurTeam
+export default MeetOurTeam;
