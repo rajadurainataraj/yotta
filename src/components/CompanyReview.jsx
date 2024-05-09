@@ -59,7 +59,7 @@ const CompanyReview = () => {
       className="carousel slide"
       data-ride="carousel"
     >
-      <div className="content-header h3 text-center mt-3">Reviews</div>
+      <div className="content-header h3 text-center mt-2">Reviews</div>
       <div className="carousel-inner">
         {ClientData.map((client, index) => (
           <div
@@ -68,7 +68,7 @@ const CompanyReview = () => {
               index === activeIndex ? "active" : ""
             }`}
           >
-            <div className="card my-5">
+            <div className="card my-4">
               <div className="card-body">
                 <h5 className="card-title">{client.title}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">
