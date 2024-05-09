@@ -1,7 +1,7 @@
 const Digital = () => {
   return (
     <>
-      <section className="container text-center content-container pb-5 pt-3">
+      <section className="container text-center content-container pb-5 pt-4">
         <div className="content-header h3">Experience the Digital Realm</div>
         <span className="h5">
           All the products have been customized as per the requirement with
@@ -21,7 +21,7 @@ const Digital = () => {
         </p>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Digital;
+export default Digital
