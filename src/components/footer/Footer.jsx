@@ -54,7 +54,7 @@ const Footer = () => {
           {/* <section className="d-sm-flex flex-column mx-5"> */}
           <section>
             <div className="footer-middle-container pb-2">
-              <div className="footer-company py-1">Company</div>
+              <div className="footer-company ">Company</div>
               <div className="footer-about">About Us</div>
               <div className="footer-blog">Blog</div>
             </div>
@@ -100,7 +100,7 @@ const Footer = () => {
                 </div>
               </a>
               <div className="mt-3">
-                <h6 className="f-5  fw-bold py-2">Find us on</h6>
+                <h6 className="f-5  fw-bold py-2  find-us-on">Find us on</h6>
                 <div>
                   <div
                     className="d-flex justify-content-around align-items-center"
