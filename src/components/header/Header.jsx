@@ -41,7 +41,7 @@ const Header = () => {
 
   const handleNavItemSelect = (item) => {
     setSelectedNavItem(item);
-    handleServicesClick();
+    // handleServicesClick();
   };
 
   const handleContactOpen = () => {

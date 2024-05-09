@@ -9,7 +9,7 @@ const Digital = () => {
         </span>
         {/* <p className="h5">cutting edge tech</p> */}
       </section>
-      <section className="container-fluid text-center content-container2 py-5 ">
+      <section className="container-fluid text-center content-container2 ">
         <h4 className="fw-bolder custom-build ">
           Built with Passion And Innovation
         </h4>

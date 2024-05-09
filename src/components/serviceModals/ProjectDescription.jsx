@@ -59,7 +59,7 @@ const ProjectDescription = () => {
       </section>
       <section className="satisfaction d-flex justify-content-between align-items-center px-3 mb-5">
         <p className="p mt-3">100% Satisfaction</p>
-        <p className="p mt-3">We’ll don’t sell your data</p>
+        <p className="p mt-3">We don’t sell your data</p>
         <p className="p mt-3">100% Custom made</p>
       </section>
       <section className="d-flex justify-content-center align-items-center ">
