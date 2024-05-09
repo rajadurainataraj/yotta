@@ -214,6 +214,7 @@ const Header = () => {
                 className={`nav-item mx-2 ${
                   selectedNavItem === "Careers" ? "active" : ""
                 }`}
+                onClick={handleServicesClick}
               >
                 <Link to={"/careers"}>
                   <a
