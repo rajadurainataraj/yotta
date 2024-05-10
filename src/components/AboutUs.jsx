@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="content-header text-center custom-about-header2">
         About Us
       </div>
-      <section className="d-flex custom-about justify-content-evenly align-items-center  gap-5 ">
+      <section className="d-flex custom-about justify-content-evenly mt-2 gap-5 ">
         <ImageSlider />
         <section>
           <div className="content-header text-center  d-sm-table d-md-none custom-about-header3">

@@ -194,6 +194,7 @@ u {
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
+  margin-top: 25px;
 }
 
 .footer-middle-container,
@@ -424,8 +425,8 @@ u {
   }
 }
 .about-container {
-  margin: 2em 0;
-
+  /* margin: 2em 0; */
+  margin-top: 3.5em;
   width: 90vw;
   font-family: Book Antiqua;
 }
