@@ -253,7 +253,7 @@ u {
 .next-gen {
   display: block;
   margin-left: auto;
-  font-family: "Epilogue", sans-serif;
+  /* font-family: "Epilogue", sans-serif; */
 }
 .next-gen-content-container {
   display: flex;
@@ -261,6 +261,7 @@ u {
   align-items: end;
   padding-right: 8em;
   min-height: 90vh;
+  font-family: "Epilogue", sans-serif !important;
   padding-bottom: 3em;
 }
 
@@ -302,7 +303,7 @@ u {
   background: linear-gradient(90deg, #f38320 0%, #58c1d0 50%, #0178be 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: "Epilogue", sans-serif;
+  /* font-family: "Epilogue", sans-serif; */
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
