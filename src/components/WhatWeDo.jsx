@@ -2,7 +2,7 @@ import CarouselContainer from "./CarouselContainer";
 
 const WhatWeDo = () => {
   return (
-    <section className="py-2 what-we-do-container">
+    <section className="py-2 what-we-do-container mt-3">
       <section className="text-center">
         <div className="content-header">What We Do</div>
         <p className="content-para">Everything you need for your success</p>
