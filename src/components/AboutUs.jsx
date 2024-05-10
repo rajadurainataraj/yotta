@@ -10,7 +10,7 @@ const AboutUs = () => {
       <section className="d-flex custom-about justify-content-evenly align-items-center  gap-5 ">
         <ImageSlider />
         <section>
-          <div className="content-header text-center  d-sm-table d-md-none  custom-about-header3">
+          <div className="content-header text-center  d-sm-table d-md-none custom-about-header3">
             About Us
           </div>
 

@@ -18,9 +18,9 @@ const Hero = () => {
       <div className="container-fluid next-gen-content-container">
         <div className="next-gen-content">
           <h2 className="white custom-font-75 fw-bold ">
-            The{" "}
+            The
             <span className="black fw-bold h1 custom-font-75 fw-bold ">
-              Next{" "}
+              Next
             </span>
             Gen
           </h2>
@@ -30,7 +30,7 @@ const Hero = () => {
             <span className="black fw-bold">form</span>
           </h2>
 
-          <span className=" p white custom-font-28">
+          <span className="p white custom-font-28">
             You will save a lot of time choosing us for
           </span>
           <p className="white custom-font-28">your services</p>

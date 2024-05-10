@@ -270,7 +270,7 @@ u {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  padding: 1.7em 3em;
+  padding: 2em 3em;
 
   border: 5px solid transparent;
   /* border-image: linear-gradient(
@@ -297,6 +297,7 @@ u {
   font-size: 2.8rem;
 }
 .custom-font-28 {
+  font-weight: 400 !important;
   font-size: 1.2rem;
 }
 .gradient-text {
@@ -416,7 +417,8 @@ u {
   }
 }
 .about-container {
-  margin-top: 2em;
+  margin: 2em 0;
+
   width: 90vw;
   font-family: Book Antiqua;
 }
