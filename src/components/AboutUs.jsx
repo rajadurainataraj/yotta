@@ -1,32 +1,23 @@
-import { useEffect } from 'react'
-import ImageSlider from './ImageSlider'
+import { useEffect } from "react";
+import ImageSlider from "./ImageSlider";
 
 const AboutUs = () => {
-  // useEffect(() => {
-  //   const hash = window.location.hash
-  //   if (hash === '#about-us-section') {
-  //     const aboutSection = document.getElementById('about-us-section')
-  //     if (aboutSection) {
-  //       aboutSection.scrollIntoView({ behavior: 'smooth' })
-  //     }
-  //   }
-  // }, [])
   return (
     <section
-      className="container-fluid about-container py-4 "
-      id="about-us-section"
+      className="container-fluid about-container"
+      id="about-us-section my-4"
     >
       <div className="content-header text-center custom-about-header2">
         About Us
       </div>
-      <section className="d-flex custom-about justify-content-evenly gap-5 ">
+      <section className="d-flex custom-about justify-content-evenly align-items-center  gap-5 ">
         <ImageSlider />
         <section>
-          <div className="content-header text-center mb-3 d-sm-table d-md-none  custom-about-header3">
+          <div className="content-header text-center  d-sm-table d-md-none  custom-about-header3">
             About Us
           </div>
 
-          <p className="about-p my-5  my-0">
+          <p className="about-p  my-0">
             Yotta Web Services was founded by <strong>Mrs.Renuka</strong> in the
             year <strong>2021</strong> with the goal to provide opportunities in
             developing web development projects. We are a team of talented
@@ -49,7 +40,7 @@ const AboutUs = () => {
         </section>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;
