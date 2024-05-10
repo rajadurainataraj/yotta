@@ -97,6 +97,7 @@ a {
   justify-content: space-between;
 }
 .nav-link {
+  font-weight: 500;
   color: #0a0909;
 }
 .nav-header {
