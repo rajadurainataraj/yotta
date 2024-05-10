@@ -3,10 +3,7 @@ import ImageSlider from "./ImageSlider";
 
 const AboutUs = () => {
   return (
-    <section
-      className="container-fluid about-container"
-      id="about-us-section my-4"
-    >
+    <section className="container-fluid about-container" id="about-us-section">
       <div className="content-header text-center custom-about-header2">
         About Us
       </div>
