@@ -103,7 +103,7 @@ const Footer = () => {
                 <h6 className="f-5  fw-bold py-2  find-us-on">Find us on</h6>
                 <div className="">
                   <div
-                    className="d-flex justify-content-around align-items-center"
+                    className="d-flex gap-3 align-items-center"
                     style={{ width: "200px" }}
                   >
                     <a
