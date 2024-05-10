@@ -1,8 +1,21 @@
-import ImageSlider from "./ImageSlider";
+import { useEffect } from 'react'
+import ImageSlider from './ImageSlider'
 
 const AboutUs = () => {
+  // useEffect(() => {
+  //   const hash = window.location.hash
+  //   if (hash === '#about-us-section') {
+  //     const aboutSection = document.getElementById('about-us-section')
+  //     if (aboutSection) {
+  //       aboutSection.scrollIntoView({ behavior: 'smooth' })
+  //     }
+  //   }
+  // }, [])
   return (
-    <section className="container-fluid about-container py-4">
+    <section
+      className="container-fluid about-container py-4 "
+      id="about-us-section"
+    >
       <div className="content-header text-center custom-about-header2">
         About Us
       </div>
@@ -36,7 +49,7 @@ const AboutUs = () => {
         </section>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs

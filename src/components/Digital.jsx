@@ -15,9 +15,15 @@ const Digital = () => {
         </h4>
         <p className="content-container-p py-2 text-white">
           We use the latest technologies and methodologies to ensure that your
-          app is secure, scalable, and user-friendly. We also offer a quick turn
-          around time, so you can get your app up and running as soon as
-          possible
+          app is secure,<br></br> scalable, and user-friendly. We also offer a
+          quick turn around time,<br></br> so you can get your app up and
+          running as soon as possible
+        </p>
+        <p className="content-container-p-mobile py-2 text-white">
+          We use the latest technologies and methodologies to ensure that your
+          app is secure,<br></br> scalable, and user-friendly. We also offer a
+          quick turn around time,<br></br> so you can get your app up and
+          running as soon as possible
         </p>
       </section>
     </>

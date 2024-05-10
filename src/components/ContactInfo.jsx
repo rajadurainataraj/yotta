@@ -1,55 +1,57 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-import { Formik, Form, Field, useFormikContext } from "formik";
-import * as Yup from "yup";
-// import { Alert, Button } from "react-bootstrap";
-import { useRecoilState } from "recoil";
-import { useNavigate } from "react-router-dom";
-import { count, modalOpen, serviceData } from "./utils/globalState";
-import { IoClose } from "react-icons/io5";
-import { motion } from "framer-motion";
-import CustomModal from "./CustomModal";
-import GetQuote from "./GetQuote";
-import { useState } from "react";
-import contactBg from "../assets/images/contactBg.png";
-import imgContact from "../assets/images/bg-contact.png";
-import Footer from "./footer/Footer";
-import { TiTickOutline } from "react-icons/ti";
+import React, { useEffect, useState } from 'react'
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
+import { useRecoilState } from 'recoil'
+import { count, modalOpen, serviceData } from './utils/globalState'
+import { IoClose } from 'react-icons/io5'
+import { motion } from 'framer-motion'
+import CustomModal from './CustomModal'
+import GetQuote from './GetQuote'
+import contactBg from '../assets/images/contactBg.png'
+import imgContact from '../assets/images/bg-contact.png'
+import Footer from './footer/Footer'
+import { TiTickOutline } from 'react-icons/ti'
+
 const contactSchema = Yup.object().shape({
   firstName: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
-  email: Yup.string().email("Invalid email").required("Required"),
-  requirement: Yup.string().required("Required"),
-  contactNumber: Yup.number().required("Required"),
-});
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  requirement: Yup.string().required('Required'),
+  contactNumber: Yup.number().required('Required'),
+})
 
 const ContactInfo = ({ onClose }) => {
-  const [counts, setCounts] = useRecoilState(count);
-  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData);
-  const [isModalOpen, setIsModalOpen] = useRecoilState(modalOpen);
-  const navigate = useNavigate();
-  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [counts, setCounts] = useRecoilState(count)
+  const [serviceDatas, setServiceDatas] = useRecoilState(serviceData)
+  const [isModalOpen, setIsModalOpen] = useRecoilState(modalOpen)
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false)
+  const [showCloseButton, setShowCloseButton] = useState(false) // State for controlling the visibility of the close button
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setShowCloseButton(true) // Show the close button after 2 seconds
+    }, 1000)
+
+    return () => clearTimeout(timeoutId) // Clear the timeout on component unmount
+  }, [])
 
   const openModal = () => {
-    setIsModalOpen(true);
-    setCounts(1);
-  };
+    setIsModalOpen(true)
+    setCounts(1)
+  }
 
   const closeModal = () => {
-    setCounts(0);
-    setServiceDatas([]);
-
-    setIsModalOpen(false);
-  };
+    setCounts(0)
+    setServiceDatas([])
+    setIsModalOpen(false)
+  }
 
   const containerVariants = {
-    hidden: { opacity: 0, y: "-100vh" },
+    hidden: { opacity: 0, y: '-100vh' },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-  };
+  }
 
   return (
     <motion.section
@@ -64,11 +66,12 @@ const ContactInfo = ({ onClose }) => {
           className="custom-contact-info d-flex justify-content-around p-3"
           style={{ backgroundImage: `url(${contactBg})` }}
         >
-          {counts === 0 && (
+          {counts === 0 && showCloseButton && (
             <div className="contact-close" onClick={() => onClose()}>
               <IoClose className="icon-close-modal1" />
             </div>
           )}
+
           <section className="contact-info-subDiv">
             <h3 className="h3 fw-bold text-light">
               We'd <span className="h3 love-text fw-bolder">love</span> to hear
@@ -81,21 +84,21 @@ const ContactInfo = ({ onClose }) => {
             <div>
               <Formik
                 initialValues={{
-                  firstName: "",
-                  email: "",
-                  requirement: "",
-                  contactNumber: "",
+                  firstName: '',
+                  email: '',
+                  requirement: '',
+                  contactNumber: '',
                 }}
                 validationSchema={contactSchema}
                 onSubmit={(values, { setSubmitting, setStatus, resetForm }) => {
-                  setShowSuccessAlert(true);
-                  setStatus({ success: true });
+                  setShowSuccessAlert(true)
+                  setStatus({ success: true })
                   setTimeout(() => {
                     // setShowSuccessAlert(false);
-                    setStatus({ success: false });
-                    resetForm();
+                    setStatus({ success: false })
+                    resetForm()
                     // setSubmitting(false);
-                  }, 2000);
+                  }, 2000)
                   //console.log(values);
                 }}
               >
@@ -160,9 +163,9 @@ const ContactInfo = ({ onClose }) => {
                         type="submit"
                         className={`my-1 border-0 ${
                           status?.success
-                            ? "custom-contact-info-success"
-                            : "custom-btn-contactinfo"
-                        } text-light ${isSubmitting ? "disabled" : ""}`}
+                            ? 'custom-contact-info-success'
+                            : 'custom-btn-contactinfo'
+                        } text-light ${isSubmitting ? 'disabled' : ''}`}
                         disabled={isSubmitting}
                       >
                         {status?.success ? (
@@ -170,21 +173,9 @@ const ContactInfo = ({ onClose }) => {
                             Success <TiTickOutline color="white" />
                           </>
                         ) : (
-                          "Send Message"
+                          'Send Message'
                         )}
                       </button>
-                      {/* {showSuccessAlert && (
-                        <div className="text-center">
-                          <Alert
-                            variant="success"
-                            className="fade"
-                            id="alert-success"
-                            onClose={() => setShowSuccessAlert(false)}
-                          >
-                            We wil get back you soon
-                          </Alert>
-                        </div>
-                      )} */}
                     </div>
                   </Form>
                 )}
@@ -205,7 +196,7 @@ const ContactInfo = ({ onClose }) => {
       </>
       <Footer />
     </motion.section>
-  );
-};
+  )
+}
 
-export default ContactInfo;
+export default ContactInfo

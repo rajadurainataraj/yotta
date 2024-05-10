@@ -1,5 +1,5 @@
 // import tech from '../assets/images/tech-img.jpg'
-import hero from "../assets/images/hero.png";
+import hero from '../assets/images/hero.png'
 
 const Hero = () => {
   return (
@@ -7,9 +7,12 @@ const Hero = () => {
       className="container-fluid tech-container element-with-border "
       style={{
         backgroundImage: `url(${hero})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        // backgroundSize: 'contain',
+        // backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        position: 'relative',
+        backgroundSize: '100% 100%',
       }}
     >
       <div className="container-fluid next-gen-content-container">
@@ -18,20 +21,20 @@ const Hero = () => {
             The <span className="black fw-bold h1 custom-font-75">Next</span>
             Gen
           </h2>
-          <h2 className="custom-font-60">
+          <h2 className="custom-font-60 mb-3">
             <span className="gradient-text">Designer </span>
             <span className="white">Plat</span>
             <span className="black">form</span>
           </h2>
 
-          <span className="white custom-font-28">
+          <span className=" p white custom-font-28">
             You will save a lot of time choosing us for
           </span>
           <p className="white custom-font-28">your services</p>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

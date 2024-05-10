@@ -11,6 +11,7 @@ body {
 }
 #btn-service {
   color: #0f5c94;
+  background-color: transparent;
 }
 /* .logo2 {
   width: 80%;
@@ -234,7 +235,7 @@ u {
   color: blue;
 }
 .tech-container {
-  height: 85vh;
+  height: 90vh;
 }
 .tech-title {
   font-size: 1.2rem;
@@ -258,9 +259,9 @@ u {
   display: flex;
   justify-content: end;
   align-items: end;
-  padding-right: 9em;
-  min-height: 82vh;
-  padding-bottom: 4.5em;
+  padding-right: 8em;
+  min-height: 90vh;
+  padding-bottom: 3em;
 }
 
 .next-gen-content {
@@ -268,7 +269,8 @@ u {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  padding: 0.4em 4em;
+  padding: 1.7em 3em;
+
   border: 5px solid transparent;
   /* border-image: linear-gradient(
       to right,
@@ -369,9 +371,11 @@ u {
   /* border-radius: 10px; */
   width: 100% !important;
 }
+.custom-contact-div-mobile {
+  display: none;
+}
 
 .content-container-p {
-  max-width: 38vw;
   font-size: 1.1rem;
   text-align: center;
   color: white;
@@ -628,7 +632,13 @@ u {
 .slideInLeft {
   animation: slideInLeft 0.5s forwards;
 }
+.slide-carousel.slideInRight {
+  transform: translateX(-100%); /* Slide in from the right */
+}
 
+.slide-carousel.slideInLeft {
+  transform: translateX(100%); /* Slide in from the left */
+}
 .contact-close {
   position: fixed;
   top: 0;
@@ -644,7 +654,27 @@ u {
   font-weight: bold;
   cursor: pointer;
   border-radius: 50%;
+  /* Remove any transitions or animations */
+  transition: none !important;
+  animation: none !important;
 }
+
+/* .contact-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 3px solid #000000;
+  margin-right: 50px;
+  margin-top: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+} */
 .custom-contact button {
   font-size: 1.4rem;
 }
@@ -996,7 +1026,32 @@ u {
   text-align: left;
   padding-left: 10px;
 }
+.content-container-p-mobile {
+  display: none;
+}
+.custom-contact-mobile {
+  display: none;
+}
 @media only screen and (max-width: 600px) {
+  .custom-contact-div {
+    display: none;
+  }
+  .custom-contact-mobile {
+    display: block;
+    max-width: 90vw;
+  }
+  .content-container-p {
+    display: none;
+  }
+  .content-container-p-mobile {
+    max-width: 95vw;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+    line-height: 1.4;
+    color: #2a2a2c;
+    margin: 0 auto;
+  }
   .tech-header {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -1148,9 +1203,9 @@ u {
   .what-we-do-container {
     padding: 0 !important;
   }
-  .custom-contact-div {
+  /* .custom-contact-div {
     width: 90vw !important;
-  }
+  } */
 
   .thanks-container {
     height: 50vh;
@@ -1191,9 +1246,7 @@ u {
     width: 90vw;
     /* text-align: center; */
   }
-  .content-container-p {
-    max-width: 95vw;
-  }
+
   .content-container {
     margin-top: 1em !important;
   }
