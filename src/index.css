@@ -97,7 +97,7 @@ a {
   justify-content: space-between;
 }
 .nav-link {
-  font-weight: 510 !important;
+  font-weight: 500 !important;
   color: #0a0909;
 }
 .nav-header {
@@ -243,7 +243,7 @@ u {
   color: #e58931 !important;
   font-family: Montserrat;
   margin: 20px 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 .custom-tech2 img {
   width: 20px;

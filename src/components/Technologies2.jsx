@@ -61,7 +61,7 @@ const Technologies2 = () => {
         </section>
 
         <section className="flex-column">
-          <div className="tech-title  text-center fw-semibold ">UI/UX</div>
+          <div className="tech-title  text-center ">UI/UX</div>
           <div className="custom-tech2-container d-flex flex-column gap-3 box-tech">
             {uiux.map((tech) => (
               <div className="d-flex gap-3" key={tech.title}>
