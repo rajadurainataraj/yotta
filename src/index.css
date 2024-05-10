@@ -305,7 +305,7 @@ u {
   background-clip: text;
   /* font-family: "Epilogue", sans-serif; */
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  font-weight: 700;
 }
 .custom-nav {
   position: fixed;
@@ -318,6 +318,7 @@ u {
 .custom-build {
   font-size: 1.5rem;
   color: white;
+  letter-spacing: 1px;
 }
 .custom-clients p {
   width: 100vw;
@@ -1045,14 +1046,17 @@ u {
     display: none;
   }
   .content-container-p-mobile {
+    display: block;
     max-width: 95vw;
     font-size: 1.1rem;
+    font-weight: 400;
     text-align: center;
-    color: white;
+    color: #ffffff;
     line-height: 1.4;
     color: #2a2a2c;
     margin: 0 auto;
   }
+
   .tech-header {
     margin-top: 0 !important;
     margin-bottom: 0 !important;

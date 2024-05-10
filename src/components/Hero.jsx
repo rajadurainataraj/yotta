@@ -17,14 +17,17 @@ const Hero = () => {
     >
       <div className="container-fluid next-gen-content-container">
         <div className="next-gen-content">
-          <h2 className="white custom-font-75">
-            The <span className="black fw-bold h1 custom-font-75">Next </span>
+          <h2 className="white custom-font-75 fw-bold ">
+            The{" "}
+            <span className="black fw-bold h1 custom-font-75 fw-bold ">
+              Next{" "}
+            </span>
             Gen
           </h2>
           <h2 className="custom-font-60 mb-3">
             <span className="gradient-text">Designer </span>
-            <span className="white">Plat</span>
-            <span className="black">form</span>
+            <span className="white fw-bold">Plat</span>
+            <span className="black fw-bold">form</span>
           </h2>
 
           <span className=" p white custom-font-28">

@@ -10,24 +10,24 @@ const Digital = () => {
         {/* <p className="h5">cutting edge tech</p> */}
       </section>
       <section className="container-fluid text-center content-container2 ">
-        <h4 className="fw-bolder custom-build ">
+        <h4 className="fw-bolder custom-build mont">
           Built with Passion And Innovation
         </h4>
-        <p className="content-container-p py-2 text-white">
+        <p className="content-container-p py-2 text-white lato">
           We use the latest technologies and methodologies to ensure that your
           app is secure,<br></br> scalable, and user-friendly. We also offer a
           quick turn around time,<br></br> so you can get your app up and
           running as soon as possible
         </p>
-        <p className="content-container-p-mobile py-2 text-white">
+        <p className="content-container-p-mobile py-2 text-white lato">
           We use the latest technologies and methodologies to ensure that your
-          app is secure,<br></br> scalable, and user-friendly. We also offer a
-          quick turn around time,<br></br> so you can get your app up and
-          running as soon as possible
+          app is secure,scalable, and user-friendly. We also offer a quick turn
+          around time, so you can get your app up and running as soon as
+          possible
         </p>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Digital
+export default Digital;
