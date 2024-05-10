@@ -46,7 +46,7 @@ const Header = () => {
 
   const handleContactOpen = () => {
     setIsContactOpen(true);
-    handleServicesClick();
+    // handleServicesClick();
   };
 
   const handleContactClose = () => {
