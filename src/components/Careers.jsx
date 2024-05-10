@@ -1,5 +1,10 @@
+import { useEffect } from "react";
+
 /* eslint-disable react/no-unescaped-entities */
 const Careers = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when component mounts
+  }, []);
   return (
     <div className="careers-main-wrapper">
       <div className="content-header text-center my-3 mt-5">Careers</div>

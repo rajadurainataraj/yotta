@@ -56,7 +56,7 @@ const OurClients = () => {
           </Col>
         </Row>
         <div className="custom-clients d-flex justify-content-center align-items-center ">
-          <p className="h4 text-center pt-4 ">
+          <p className="h4 text-center pt-4">
             Many companies, startups love our <span>products and services</span>
           </p>
         </div>

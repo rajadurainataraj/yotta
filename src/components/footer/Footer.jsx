@@ -99,9 +99,9 @@ const Footer = () => {
                   <span className="hover-color">+91 99444 58897</span>
                 </div>
               </a>
-              <div className="mt-3">
+              <div className="mt-3 mb-4">
                 <h6 className="f-5  fw-bold py-2  find-us-on">Find us on</h6>
-                <div>
+                <div className="">
                   <div
                     className="d-flex justify-content-around align-items-center"
                     style={{ width: "200px" }}

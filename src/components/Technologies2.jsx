@@ -8,7 +8,7 @@ const Technologies2 = () => {
       </div>
       <section className="d-flex custom-tech2 justify-content-evenly my-4">
         <section className="flex-column  ">
-          <div className="tech-title text-center fw-semibold">FRONT-END</div>
+          <div className="tech-title text-center ">FRONT-END</div>
           <div className="custom-tech2-container d-flex flex-column gap-3 box-tech">
             {frontEnd.map((tech) => (
               <div className="d-flex gap-3 " key={tech.title}>
@@ -18,7 +18,7 @@ const Technologies2 = () => {
           </div>
         </section>
         <section className="flex-column">
-          <div className="tech-title text-center fw-semibold">BACK-END</div>
+          <div className="tech-title text-center ">BACK-END</div>
           <div className="custom-tech2-container d-flex flex-column gap-3 box-tech">
             {backend.map((tech) => (
               <div className="d-flex gap-3" key={tech.title}>
@@ -29,7 +29,7 @@ const Technologies2 = () => {
         </section>
 
         <section className="flex-column ">
-          <div className="tech-title  text-center fw-semibold">DATABASES</div>
+          <div className="tech-title  text-center ">DATABASES</div>
           <div className="custom-tech2-container d-flex flex-column gap-3 box-tech">
             {databases.map((tech) => (
               <div className="d-flex gap-3" key={tech.title}>
@@ -39,7 +39,7 @@ const Technologies2 = () => {
           </div>
         </section>
         <section className="flex-column">
-          <div className="tech-title  text-center fw-semibold ">DEPLOYMENT</div>
+          <div className="tech-title  text-center ">DEPLOYMENT</div>
           <div className="custom-tech2-container d-flex flex-column gap-3 box-tech">
             {deployment.map((tech) => (
               <div className="d-flex gap-3" key={tech.title}>
@@ -50,7 +50,7 @@ const Technologies2 = () => {
         </section>
 
         <section className="flex-column">
-          <div className="tech-title  text-center fw-semibold ">CMS</div>
+          <div className="tech-title  text-center">CMS</div>
           <div className="custom-tech2-container d-flex flex-column gap-3 box-tech">
             {cms.map((tech) => (
               <div className="d-flex gap-3" key={tech.title}>

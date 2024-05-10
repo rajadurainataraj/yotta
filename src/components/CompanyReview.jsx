@@ -146,6 +146,7 @@ const CompanyReview = () => {
         /* Custom styles for the cards */
         .card {
           width: 90%;
+          
           margin: 0 auto;
           height: 230px;
        border-radius:10px;

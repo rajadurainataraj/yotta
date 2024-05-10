@@ -242,6 +242,7 @@ u {
   color: #e58931 !important;
   font-family: Montserrat;
   margin: 20px 0;
+  font-weight: 500;
 }
 .custom-tech2 img {
   width: 20px;
@@ -340,10 +341,12 @@ u {
 }
 .custom-clients p {
   color: #036198;
+  font-weight: 600;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .custom-clients span {
   color: #f38320;
+  font-weight: 600;
   font-family: Montserrat;
 
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -368,6 +371,9 @@ u {
 .content-para {
   font-family: Lato;
   color: #2a2a2c;
+}
+.what-we-do-container .content-para {
+  font-size: 1.2rem;
 }
 .content-container2 {
   background: linear-gradient(to bottom, #3d1478, #850c90);
@@ -423,6 +429,8 @@ u {
   font-family: Book Antiqua;
 }
 .custom-carousel-heading {
+  text-align: left !important;
+  margin-left: 1em !important;
   font-family: Lato;
 }
 .about-p {
@@ -756,8 +764,11 @@ u {
   text-align: left;
 }
 .custom-service-home {
-  max-width: 700px;
-  border-radius: 9px;
+  /* max-width: 700px; */
+  width: 600px;
+  height: 390px;
+  box-sizing: border-box;
+  border-radius: 20px;
   background-color: #e5edf1;
 }
 .custom-services {
@@ -773,7 +784,7 @@ u {
 }
 
 .custom-img-slider {
-  max-width: 600px;
+  width: 600px;
   height: 390px;
   border-radius: 20px;
 }
@@ -783,8 +794,10 @@ u {
   height: 300px;
 }
 .custom-carousel-nothover {
-  width: 469px;
-  height: 297px;
+  width: 600px;
+  height: 390px;
+  /* width: 469px;
+  height: 297px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1016,16 +1029,17 @@ u {
   font-weight: 700;
 }
 
-/* .project-type-container {
-  padding-bottom: 50px;
-} */
+.project-type-container {
+  padding-bottom: 60px;
+}
 .custom-ouline-btn {
 }
 .card-body {
   /* padding: 10px 20px !important; */
   /* background-color: #8559b2 !important; */
   border-radius: 10px;
-  padding-left: 20px;
+  padding-top: 30px;
+  padding-left: 30px;
   /* font-weight: 600; */
 }
 .find-us-on {

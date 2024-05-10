@@ -23,17 +23,7 @@ const HoverContainer = ({ title, direction }) => {
     navigate("/services/" + propsValue);
   };
   return (
-    <section className="container-fluid pe-5 custom-service-home">
-      {/* <motion.div
-        className="hover-info"
-        initial={
-          direction === "left"
-            ? { x: "100%", opacity: 0 }
-            : { x: "-100%", opacity: 0 }
-        }
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
-      > */}
+    <section className="container-fluid custom-service-home">
       <div className="hover-info">
         <div className="service-headers text-black p-4"> {propsData}</div>
         <section className="">
@@ -49,9 +39,7 @@ const HoverContainer = ({ title, direction }) => {
           </div>
         </section>
       </div>
-      {/* </motion.div> */}
     </section>
-    // </motion.div>
   );
 };
 

@@ -1,21 +1,21 @@
 /* eslint-disable no-unused-vars */
-import { serviceData } from './datas'
-import { useNavigate, useParams } from 'react-router-dom'
-import { useEffect } from 'react'
-import { count } from './utils/globalState'
-import { useRecoilState } from 'recoil'
+import { serviceData } from "./datas";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { count } from "./utils/globalState";
+import { useRecoilState } from "recoil";
 
 const Services = () => {
-  const [counts, setCounts] = useRecoilState(count)
-  const { id } = useParams()
-  const navigate = useNavigate()
-  const data = serviceData.find((item) => item.id === id)
+  const [counts, setCounts] = useRecoilState(count);
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const data = serviceData.find((item) => item.id === id);
 
-  const { heading, imgUrl, content, secondContent, secondHeading } = data
+  const { heading, imgUrl, content, secondContent, secondHeading } = data;
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, [id]);
   // counts > 0 && navigate("/");
   return (
     <div className="service-page-container">
@@ -55,7 +55,7 @@ const Services = () => {
       </div>
       {/* ))} */}
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
