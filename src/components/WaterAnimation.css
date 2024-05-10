@@ -37,7 +37,7 @@
 
 .waves-btn .waves .wave:before {
   animation: wave 0.5s linear infinite;
-  background-image: url("wave.png");
+  background-image: url("wave.jpg");
   background-size: cover;
   content: "";
   height: 22px;
