@@ -37,9 +37,9 @@
 
 .waves-btn .waves .wave:before {
   animation: wave 0.5s linear infinite;
-  background-image: url("wave.png");
+  background-image: url('wave.png');
   background-size: cover;
-  content: "";
+  content: '';
   height: 22px;
   left: 0;
   position: absolute;
@@ -48,7 +48,8 @@
 }
 
 .waves-btn .waves .wave {
-  background-color: #00aeff;
+  /* background-color: #00aeff; */
+  background-image: linear-gradient(to right, #017abe, #044b75);
   height: 100%;
   left: 0;
   position: absolute;

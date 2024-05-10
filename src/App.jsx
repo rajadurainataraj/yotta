@@ -22,7 +22,8 @@ const App = () => {
   // console.log(counts);
   return (
     <BrowserRouter>
-      {counts > 0 && currentPath === '/' ? null : <Header />}
+      {/* {counts > 0 && currentPath === '/' ? null : <Header />} */}
+      <Header />
 
       <Routes>
         <Route path="/" element={<Body />} />
