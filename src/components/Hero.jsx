@@ -1,5 +1,5 @@
 // import tech from '../assets/images/tech-img.jpg'
-import hero from '../assets/images/hero.png'
+import hero from "../assets/images/hero.png";
 
 const Hero = () => {
   return (
@@ -8,11 +8,11 @@ const Hero = () => {
       style={{
         backgroundImage: `url(${hero})`,
         // backgroundSize: 'contain',
-        // backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        position: 'relative',
-        backgroundSize: '100% 100%',
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        position: "relative",
+        // backgroundSize: '100% 100%',
       }}
     >
       <div className="container-fluid next-gen-content-container">
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
