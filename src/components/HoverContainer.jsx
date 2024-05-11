@@ -4,7 +4,7 @@ import { allData } from './datas'
 import { useNavigate } from 'react-router-dom'
 import arrowIcon from '../assets/images/arrow-icon.png'
 
-const HoverContainer = ({ title, direction }) => {
+const HoverContainer = ({ title }) => {
   const propsData = title.title
   let propsValue = title.title.trim().toLowerCase().replace(/ +/g, '')
   const navigate = useNavigate()
@@ -30,7 +30,7 @@ const HoverContainer = ({ title, direction }) => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="hover-info">
-        <div className="service-headers text-black p-4"> {propsData}</div>
+        <div className="service-headers text-black p-4">{propsData}</div>
         <section className="">
           <div className="">
             <p className="service-paras-home p px-4">{data?.content}</p>

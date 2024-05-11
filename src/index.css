@@ -835,6 +835,8 @@ u {
 .custom-service-home {
   /* max-width: 700px; */
   width: 600px;
+  padding-left: 1.2em;
+  padding-top: 1.2em;
   height: 390px;
   box-sizing: border-box;
   border-radius: 20px;

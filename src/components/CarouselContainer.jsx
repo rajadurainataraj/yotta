@@ -81,10 +81,6 @@ const CarouselContainer = () => {
     setIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     )
-    setShowCursor(false)
-    setTimeout(() => {
-      setShowCursor(true)
-    }, 2000)
   }
 
   return (
@@ -162,6 +158,18 @@ const CarouselContainer = () => {
           >
             {!isHovering && images[index].title}
           </h3>
+        </div>
+        <div className="col-9 d-flex align-items-center justify-content-center">
+          {!isHovering && (
+            <Carousel
+              activeIndex={index}
+              onSelect={() => {}}
+              interval={false}
+              controls={false}
+              indicators={false}
+              className="custom-carousel-nothover"
+            ></Carousel>
+          )}
         </div>
       </div>
       <button
