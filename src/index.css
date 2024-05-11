@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,6 +6,7 @@
 body {
   background-color: rgba(240, 240, 240, 1);
 }
+
 .bg-light {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
@@ -16,6 +17,70 @@ body {
 /* .logo2 {
   width: 80%;
 } */
+.round-phone {
+  height: 50px;
+  width: 50px;
+}
+
+.number-container div {
+  color: rgba(2, 120, 189, 1);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.reach-us-heading {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.career-tech {
+  font-weight: 700;
+}
+.loation-career {
+  font-size: 0.9rem;
+}
+.number-container span {
+  font-size: 13px;
+  margin-top: -4px;
+  color: rgba(42, 42, 44, 1);
+}
+.career-img {
+  height: 250px;
+}
+.careers-main-wrapper {
+  font-family: Lato;
+}
+.career-heading {
+  /* background-image: linear-gradient(
+    to right,
+    rgba(1, 120, 190, 1),
+    rgba(3, 76, 119, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+}
+.career-para {
+  font-size: 1rem;
+  color: rgba(42, 42, 44, 1);
+}
+.icon-tech-career {
+  height: 50px;
+}
+.career-reach-us {
+  margin-top: 4em !important;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(61, 20, 120, 1),
+    rgba(133, 12, 144, 1)
+  );
+  border-radius: 25px;
+  /* height: 10em; */
+  color: rgba(255, 255, 255, 1);
+}
+.contact-career {
+  font-size: 1.1rem;
+}
 .content-header {
   padding-bottom: 10px;
 }
@@ -143,7 +208,7 @@ a {
 
 .nav-header-container,
 .footer-container {
-  font-family: "Song Myung";
+  font-family: 'Song Myung';
   font-weight: 400;
   display: flex;
   text-align: end;
@@ -174,7 +239,7 @@ u {
   }
 }
 .footer-company {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 700;
 }
 .footer-about,
@@ -183,14 +248,14 @@ u {
   font-size: 1rem;
 }
 .border-color-custom {
-  font-family: "Inknut Antiqua";
+  font-family: 'Inknut Antiqua';
   border: 2px solid #0178be;
   width: 30px;
   height: 30px;
   color: #0178be !important;
 }
 .bottom-container {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 400;
   background-color: #eae9e9;
   padding: 25px;
@@ -199,7 +264,7 @@ u {
 
 .footer-middle-container,
 .footer-contact {
-  font-family: "Lato";
+  font-family: 'Lato';
 }
 .and-symbol {
   font-family: Arial, sans-serif;
@@ -228,6 +293,7 @@ u {
 .careers-main-wrapper {
   width: 90vw;
   margin: 100px auto;
+  margin-bottom: 60px;
   font-size: 1.1rem;
   font-family: Lato;
   color: #2a2a2c;
@@ -264,7 +330,7 @@ u {
   align-items: end;
   padding-right: 8em;
   min-height: 90vh;
-  font-family: "Epilogue", sans-serif !important;
+  font-family: 'Epilogue', sans-serif !important;
   padding-bottom: 3em;
 }
 
@@ -433,7 +499,7 @@ u {
 }
 .custom-carousel-heading {
   text-align: left !important;
-  margin-left: 1em !important;
+  /* margin-left: 1em !important; */
   font-family: Lato;
 }
 .about-p {
@@ -493,7 +559,7 @@ u {
   transform: scale(1.1);
 }
 .linkedIn-color {
-  color: "#0A66C2" !important;
+  color: '#0A66C2' !important;
 }
 .card-img {
   width: 150px;
@@ -535,7 +601,7 @@ u {
 }
 /* general styles */
 
-.scroller[data-animated="true"] .scroller__inner {
+.scroller[data-animated='true'] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
@@ -545,19 +611,19 @@ u {
   mix-blend-mode: multiply;
 }
 
-.scroller[data-direction="right"] {
+.scroller[data-direction='right'] {
   --_animation-direction: reverse;
 }
 
-.scroller[data-direction="left"] {
+.scroller[data-direction='left'] {
   --_animation-direction: forwards;
 }
 
-.scroller[data-speed="fast"] {
+.scroller[data-speed='fast'] {
   --_animation-duration: 20s;
 }
 
-.scroller[data-speed="slow"] {
+.scroller[data-speed='slow'] {
   --_animation-duration: 50s;
 }
 .scroller {
@@ -606,12 +672,12 @@ u {
 }
 .custom-contact {
   margin-top: 5rem;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   color: #ffffff;
 }
 .custom-contact p {
   font-size: 1.5rem;
-  color: "red";
+  color: 'red';
 }
 .contact-heading {
   font-size: 2rem;
@@ -635,7 +701,7 @@ u {
 .text-area-contact {
   height: 150px;
   resize: none;
-  font-family: "Aref Ruqaa Ink";
+  font-family: 'Aref Ruqaa Ink';
   font-size: 1.5rem;
 }
 .icon-close-modal1 {
@@ -977,7 +1043,7 @@ u {
   color: white !important;
 }
 .custom-ouline-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1068,6 +1134,22 @@ u {
   margin-top: 3.3em !important;
 }
 @media only screen and (max-width: 600px) {
+  .career-img {
+    display: none;
+  }
+  .tech-container-career {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .custom-tech-container {
+    margin-top: 0 !important;
+  }
+  .what-we-do-container {
+    margin-top: 0 !important;
+  }
+  .content-container {
+    margin-top: 0 !important;
+  }
   .custom-contact-div {
     display: none;
   }
@@ -1268,6 +1350,7 @@ u {
   }
   .custom-about-header2 {
     display: block;
+    margin: 20px 0;
     margin-left: 0 !important;
   }
   .custom-main-div {

@@ -1,29 +1,34 @@
 /* eslint-disable react/prop-types */
-import { motion } from "framer-motion";
-// import { FaArrowRightLong } from "react-icons/fa6";
-import { allData } from "./datas";
-import { useNavigate } from "react-router-dom";
-import arrowIcon from "../assets/images/arrow-icon.png";
+import { motion } from 'framer-motion'
+import { allData } from './datas'
+import { useNavigate } from 'react-router-dom'
+import arrowIcon from '../assets/images/arrow-icon.png'
 
 const HoverContainer = ({ title, direction }) => {
-  const propsData = title.title;
-  let propsValue = title.title.trim().toLowerCase().replace(/ +/g, "");
-  const navigate = useNavigate();
+  const propsData = title.title
+  let propsValue = title.title.trim().toLowerCase().replace(/ +/g, '')
+  const navigate = useNavigate()
 
-  const data = allData.find((item) => item.id === propsValue);
+  const data = allData.find((item) => item.id === propsValue)
   const moreContent = () => {
-    propsValue === "training&internships"
-      ? (propsValue = "trainingandinternships")
-      : propsValue === "ui/ux"
-      ? (propsValue = "uiuxdesign")
-      : propsValue === "websites"
-      ? (propsValue = "website")
-      : "";
+    propsValue === 'training&internships'
+      ? (propsValue = 'trainingandinternships')
+      : propsValue === 'ui/ux'
+      ? (propsValue = 'uiuxdesign')
+      : propsValue === 'websites'
+      ? (propsValue = 'website')
+      : ''
 
-    navigate("/services/" + propsValue);
-  };
+    navigate('/services/' + propsValue)
+  }
+
   return (
-    <section className="container-fluid custom-service-home">
+    <motion.section
+      className="container-fluid custom-service-home"
+      initial={{ y: '70%' }} // Initial position at the bottom
+      animate={{ y: 0 }} // Final position at the top
+      transition={{ duration: 0.5, delay: 0.2 }}
+    >
       <div className="hover-info">
         <div className="service-headers text-black p-4"> {propsData}</div>
         <section className="">
@@ -35,12 +40,11 @@ const HoverContainer = ({ title, direction }) => {
             onClick={() => moreContent()}
           >
             <span>Learn More</span> <img src={arrowIcon} alt="" />
-            {/* <FaArrowRightLong color="white" /> */}
           </div>
         </section>
       </div>
-    </section>
-  );
-};
+    </motion.section>
+  )
+}
 
-export default HoverContainer;
+export default HoverContainer
