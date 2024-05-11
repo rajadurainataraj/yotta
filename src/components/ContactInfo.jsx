@@ -22,7 +22,16 @@ const contactSchema = Yup.object().shape({
     .required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
   requirement: Yup.string().required("Required"),
-  contactNumber: Yup.number().required("Required"),
+  contactNumber: Yup.number()
+    .typeError("Mobile number must be a number")
+    .positive("Mobile number must be positive")
+    .integer("Mobile number must be an integer")
+    .required("Mobile number is required")
+    .test(
+      "len",
+      "Mobile number must be exactly 10 digits",
+      (val) => val.toString().length === 10
+    ),
 });
 
 const ContactInfo = ({ onClose }) => {

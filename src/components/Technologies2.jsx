@@ -6,9 +6,9 @@ const Technologies2 = () => {
       <div className="content-header h3 text-center pb-2 mt-4">
         Technologies We Use
       </div>
-      <section className="d-flex custom-tech2 justify-content-evenly my-4">
+      <section className="d-flex gap-4 custom-tech2 justify-content-evenly my-4">
         <section className="flex-column  ">
-          <div className="tech-title text-center fw-medium">FRONT-END</div>
+          <div className="tech-title text-center ">FRONT-END</div>
           <div className="custom-tech2-container d-flex flex-column gap-3 box-tech">
             {frontEnd.map((tech) => (
               <div className="d-flex gap-3 " key={tech.title}>

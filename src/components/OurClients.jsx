@@ -7,8 +7,9 @@ import c3 from "../assets/images/c3.png";
 import c4 from "../assets/images/c4.png";
 import c5 from "../assets/images/c5.png";
 // import c6 from "../assets/images/rainbow.png";
+import c7 from "../assets/images/hashigo.png";
 
-const images = [c1, c2, c3, c4, c5];
+const images = [c1, c2, c3, c4, c5, c7];
 
 const OurClients = () => {
   useEffect(() => {

@@ -1,50 +1,48 @@
 /* eslint-disable react/prop-types */
-import { motion } from 'framer-motion'
-import { allData } from './datas'
-import { useNavigate } from 'react-router-dom'
-import arrowIcon from '../assets/images/arrow-icon.png'
+import { motion } from "framer-motion";
+import { allData } from "./datas";
+import { useNavigate } from "react-router-dom";
+import arrowIcon from "../assets/images/arrow-icon.png";
 
 const HoverContainer = ({ title }) => {
-  const propsData = title.title
-  let propsValue = title.title.trim().toLowerCase().replace(/ +/g, '')
-  const navigate = useNavigate()
+  const propsData = title.title;
+  let propsValue = title.title.trim().toLowerCase().replace(/ +/g, "");
+  const navigate = useNavigate();
 
-  const data = allData.find((item) => item.id === propsValue)
+  const data = allData.find((item) => item.id === propsValue);
   const moreContent = () => {
-    propsValue === 'training&internships'
-      ? (propsValue = 'trainingandinternships')
-      : propsValue === 'ui/ux'
-      ? (propsValue = 'uiuxdesign')
-      : propsValue === 'websites'
-      ? (propsValue = 'website')
-      : ''
+    propsValue === "training&internships"
+      ? (propsValue = "trainingandinternships")
+      : propsValue === "ui/ux"
+      ? (propsValue = "uiuxdesign")
+      : propsValue === "websites"
+      ? (propsValue = "website")
+      : "";
 
-    navigate('/services/' + propsValue)
-  }
+    navigate("/services/" + propsValue);
+  };
 
   return (
-    <motion.section
-      className="container-fluid custom-service-home"
-      initial={{ y: '70%' }} // Initial position at the bottom
-      animate={{ y: 0 }} // Final position at the top
-      transition={{ duration: 0.5, delay: 0.2 }}
+    <motion.div
+      className="hover-info custom-service-home"
+      initial={{ opacity: 0, y: 1000 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <div className="hover-info">
-        <div className="service-headers text-black p-4">{propsData}</div>
-        <section className="">
-          <div className="">
-            <p className="service-paras-home p px-4">{data?.content}</p>
-          </div>
-          <div
-            className="text-white custom-learnmore-btn my-5 ms-4 cursor-pointer gap-3  "
-            onClick={() => moreContent()}
-          >
-            <span>Learn More</span> <img src={arrowIcon} alt="" />
-          </div>
-        </section>
-      </div>
-    </motion.section>
-  )
-}
+      <div className="service-headers text-black p-4">{propsData}</div>
+      <section className="">
+        <div className="">
+          <p className="service-paras-home p px-4">{data?.content}</p>
+        </div>
+        <div
+          className="text-white custom-learnmore-btn my-5 ms-4 cursor-pointer gap-3"
+          onClick={() => moreContent()}
+        >
+          <span>Learn More</span> <img src={arrowIcon} alt="" />
+        </div>
+      </section>
+    </motion.div>
+  );
+};
 
-export default HoverContainer
+export default HoverContainer;

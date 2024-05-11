@@ -31,7 +31,7 @@ const ProjectType = () => {
     if (isMobile) {
       setModalPosition({ x: 0, y: window.innerHeight - 580 });
     } else {
-      setModalPosition({ x: rect.left + rect.width, y: rect.top });
+      setModalPosition({ x: rect.left + rect.width, y: rect.top - 50 });
     }
   };
 
