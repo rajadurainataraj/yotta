@@ -6,6 +6,9 @@ import { IoLocation } from 'react-icons/io5'
 import { FaClock } from 'react-icons/fa'
 import { FaMobileScreenButton } from 'react-icons/fa6'
 import { MdMailOutline } from 'react-icons/md'
+import { AiOutlineClockCircle } from 'react-icons/ai'
+import { IoLocationOutline } from 'react-icons/io5'
+
 import phoneicon from '../assets/images/phone-icon-career.png'
 
 const Careers = () => {
@@ -24,9 +27,9 @@ const Careers = () => {
                 <FaPhone color="white" />
               </div> */}
               <img src={phoneicon} alt="phone" className="round-phone" />
-              <div className="d-flex flex-column number-container">
+              <div className="d-flex flex-column number-container lato">
                 <div>+91 994 445 8897</div>
-                <span>Call for any Questions</span>
+                <span className="lato">Call for any Questions</span>
               </div>
             </div>
           </div>
@@ -44,11 +47,11 @@ const Careers = () => {
             <div className="career-tech">{item.tech}</div>
             <div className="d-flex gap-2  ">
               <div className="d-flex gap-1 align-items-center">
-                <IoLocation color="rgba(255, 74, 0, 1)" />
+                <IoLocationOutline color="rgba(255, 74, 0, 1)" />
                 <span className="loation-career">Coimbatore,india</span>
               </div>
               <div className="d-flex gap-1 align-items-center">
-                <FaClock color="rgba(255, 74, 0, 1)" />
+                <AiOutlineClockCircle color="rgba(255, 74, 0, 1)" />
                 <span className="loation-career ">Full-time</span>
               </div>
             </div>

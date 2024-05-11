@@ -163,33 +163,6 @@ const CarouselContainer = () => {
             {!isHovering && images[index].title}
           </h3>
         </div>
-        <div className="col-9 d-flex align-items-center justify-content-center">
-          {!isHovering && (
-            <Carousel
-              activeIndex={index}
-              onSelect={() => {}}
-              interval={false}
-              controls={false}
-              indicators={false}
-              className="custom-carousel-nothover"
-            >
-              {images.map((image, idx) => (
-                <Carousel.Item key={idx}>
-                  {/* <div className="d-flex justify-content-center align-items-center">
-              <img
-                className="d-block w-100 custom-sliding-img"
-                src={image.src}
-                alt={`Slide ${idx}`}
-                style={{
-                  objectFit: 'contain',
-                }}
-              />
-            </div> */}
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          )}
-        </div>
       </div>
       <button
         className={`custom-corousel-btn carousel-btn-right text-center ${
