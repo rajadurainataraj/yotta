@@ -6,6 +6,59 @@
 body {
   background-color: rgba(240, 240, 240, 1);
 }
+.c-main-wrapper {
+  display: block; /* Change display to block */
+  position: relative; /* Add position relative */
+}
+.c-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  /* overflow: hidden; */
+  width: 100%;
+  overflow: hidden !important;
+  height: 0;
+  border-radius: 20px;
+  background-color: #e5edf1 !important;
+  transition: height 0.5s ease-in;
+}
+.custom-img-slider:hover .c-overlay {
+  height: 100%;
+  overflow: hidden !important;
+  background-color: #e5edf1;
+  transition-delay: 0.5s;
+}
+
+/* .c-main-container:hover .c-overlay {
+  height: 100%;
+} */
+
+.c-main-container {
+  position: absolute;
+  width: 100%;
+  height: 390px; /* Adjust the height as needed */
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0); /* Start at the center */
+}
+
+.c-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: height 0.9s ease;
+}
+
+.c-main-container:hover .c-overlay {
+  height: 100%;
+}
 
 .bg-light {
   background-color: rgba(0, 0, 0, 0.5) !important;
@@ -581,10 +634,12 @@ u {
   border: none;
   color: white;
   display: flex;
-
   justify-content: center;
   align-items: center;
   background: #757879b0;
+}
+.ponit-none {
+  pointer-events: none;
 }
 /* general styles */
 
@@ -703,10 +758,12 @@ u {
   animation: slideInLeft 0.5s forwards;
 }
 .slide-carousel.slideInRight {
+  overflow-x: hidden !important;
   transform: translateX(-100%); /* Slide in from the right */
 }
 
 .slide-carousel.slideInLeft {
+  overflow-x: hidden;
   transform: translateX(100%); /* Slide in from the left */
 }
 .contact-close {
@@ -824,7 +881,7 @@ u {
   width: 600px;
   padding-left: 1.2em;
   padding-top: 1.2em;
-  height: 390px;
+  /* height: 390px; */
   box-sizing: border-box;
   border-radius: 20px;
   background-color: #e5edf1;
@@ -840,11 +897,6 @@ u {
 .carousel-btns {
   visibility: hidden;
 }
-.custom-img-slider {
-  transition: height 0.5s ease;
-  height: 0; /* Initial height */
-  overflow: hidden;
-}
 
 .hovering {
   height: 100px; /* Set to the desired height */
@@ -852,7 +904,7 @@ u {
 .custom-img-slider {
   width: 600px;
   height: 390px;
-  border-radius: 20px;
+  border-radius: 24px;
 }
 
 .custom-sliding-img {
@@ -1029,7 +1081,7 @@ u {
   border: 1px solid black !important;
   color: black !important;
   width: 150px !important;
-  transition: background-color 0.9s;
+  transition: background-color 9s;
   position: relative !important;
   overflow: hidden;
 }
@@ -1523,8 +1575,6 @@ u {
   }
   .custom-img-slider {
     border-radius: 10px;
-    /* justify-content: center;
-    align-items: center; */
   }
   .custom-service-home {
     border-radius: 8px;

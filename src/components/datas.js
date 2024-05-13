@@ -319,7 +319,7 @@ export const allData = [
     link: '',
   },
   {
-    id: 'training&internships',
+    id: 'trainingandinternships',
     content: `Yotta intern get work into dynamic Projects that ranges from
       application development to Customized software development and
       mainly into Web Application Software's with new technologies like
@@ -338,7 +338,7 @@ export const allData = [
       presence`,
   },
   {
-    id: 'ui/ux',
+    id: 'uiuxdesign',
     content: `Customised software is also known as tailor-made software and that
       is specially developed for some specific organization or other
       user.The process of designing, creating, deploying and maintaining
