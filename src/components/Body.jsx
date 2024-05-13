@@ -23,7 +23,7 @@ const Body = () => {
     <div className={`custom-main-div ${counts !== 0 && 'bg-light'}`}>
       <Hero />
       <AboutUs />
-      {/* <WhatWeDo /> */}
+      <WhatWeDo />
       <Digital />
       <MeetOurTeam />
       <OurClients />

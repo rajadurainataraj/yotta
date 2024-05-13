@@ -1184,6 +1184,10 @@ u {
   margin-top: 50px;
 } */
 @media only screen and (max-width: 600px) {
+  .c-overlay {
+    border-radius: 10px;
+    transition: none !important;
+  }
   .career-header1 {
     margin-top: 0 !important;
   }
@@ -1483,6 +1487,7 @@ u {
     justify-content: center;
     align-items: center;
     width: 60vw;
+
     height: 12.5em;
   }
   .custom-carousel-heading {
@@ -1573,9 +1578,9 @@ u {
     margin: 0px 0;
     /* padding: 2.5em; */
   }
-  .custom-img-slider {
+  /* .custom-img-slider {
     border-radius: 10px;
-  }
+  } */
   .custom-service-home {
     border-radius: 8px;
     display: flex;

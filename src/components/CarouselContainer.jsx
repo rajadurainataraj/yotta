@@ -4,7 +4,7 @@ import { Carousel } from 'react-bootstrap'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import arrowIcon from '../assets/images/arrow-icon.png'
 
-import HoverContainer from './HoverContainer'
+// import HoverContainer from './HoverContainer'
 import customSoftware from '../assets/images/custom-software.png'
 import digital from '../assets/images/digital-marketing.png'
 import mobile from '../assets/images/mobile-application.png'
