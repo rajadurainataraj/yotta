@@ -62,7 +62,6 @@ const Header = () => {
     setIsContactOpen(false)
     getCourseInputs('')
   }
-
   const handleNavItemSelects = (item) => {
     setSelectedNavItem(item)
     handleServicesClick()
@@ -72,11 +71,16 @@ const Header = () => {
       setTimeout(() => {
         const aboutSection = document.getElementById('about-us-section')
         if (aboutSection) {
-          aboutSection.scrollIntoView({
-            block: 'end',
-            behavior: 'smooth',
-            inline: 'nearest',
-          })
+          const scrollOptions = { behavior: 'smooth' }
+          // Check if it's a mobile device
+          if (/Mobi|Android/i.test(navigator.userAgent)) {
+            // For mobile, use the top alignment instead of end
+            scrollOptions.block = 'nearest'
+          } else {
+            // For desktop, use the end alignment
+            scrollOptions.block = 'center'
+          }
+          aboutSection.scrollIntoView(scrollOptions)
         }
       }, 100) // Adjust the delay as needed
     }

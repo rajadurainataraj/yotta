@@ -699,6 +699,7 @@ u {
   text-align: left;
   font-family: Montserrat;
   font-weight: 600;
+  /* padding: 0 !important; */
   font-size: 1.5rem;
 }
 .service-paras {
@@ -1341,6 +1342,7 @@ u {
     margin-bottom: 1.5em !important;
   }
   .satisfaction {
+    text-align: start !important;
     gap: 25px;
   }
   .content-header {
@@ -1359,7 +1361,7 @@ u {
     width: 95vw !important;
     padding: 30px 10px;
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow-y: auto !important;
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: #333333 #f1f1f1; /* For Firefox */
     -webkit-scrollbar {
@@ -1514,8 +1516,8 @@ u {
   }
   .service-headers {
     font-size: 0.8rem;
-    /* padding-left: 0 !important; */
-    padding-bottom: 20px !important;
+    padding-left: 0 !important;
+    padding-bottom: 10px !important;
   }
   .service-headers1 {
     text-align: center;
@@ -1624,7 +1626,10 @@ u {
     text-align: justify;
   }
   .quote-container p {
-    text-align: justify !important;
+    text-align: justify;
+  }
+  .satisfaction p {
+    text-align: start !important;
   }
   /* .service-container img {
   } */

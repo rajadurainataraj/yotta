@@ -1,17 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
-import { FaPhone } from "react-icons/fa6";
-import careerImg from "../assets/images/career-img.png";
-import { careerOpenings } from "./datas";
-import { IoLocation } from "react-icons/io5";
-import { FaClock } from "react-icons/fa";
-import { FaMobileScreenButton } from "react-icons/fa6";
-import { MdMailOutline } from "react-icons/md";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { IoLocationOutline } from "react-icons/io5";
+import { FaPhone } from 'react-icons/fa6'
+import careerImg from '../assets/images/career-img.png'
+import { careerOpenings } from './datas'
+import { IoLocation } from 'react-icons/io5'
+import { FaClock } from 'react-icons/fa'
+import { FaMobileScreenButton } from 'react-icons/fa6'
+import { MdMailOutline } from 'react-icons/md'
+import { AiOutlineClockCircle } from 'react-icons/ai'
+import { IoLocationOutline } from 'react-icons/io5'
 
-import phoneicon from "../assets/images/phone-icon-career.png";
+import phoneicon from '../assets/images/phone-icon-career.png'
+import { useEffect } from 'react'
 
 const Careers = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <section className="careers-main-wrapper">
       <section className="d-flex">
@@ -89,6 +93,6 @@ const Careers = () => {
         </section>
       </section>
     </section>
-  );
-};
-export default Careers;
+  )
+}
+export default Careers
