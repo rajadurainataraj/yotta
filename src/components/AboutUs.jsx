@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import ImageSlider from "./ImageSlider";
+import ImageSlider from './ImageSlider'
 
 const AboutUs = () => {
   return (
@@ -37,7 +36,7 @@ const AboutUs = () => {
         </section>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs
