@@ -905,6 +905,7 @@ u {
 .custom-img-slider {
   width: 600px;
   height: 390px;
+  background-size: cover;
   border-radius: 24px;
 }
 
@@ -1303,9 +1304,6 @@ u {
   .custom-learnmore-btn img {
     height: 10px;
   }
-  /* .project-type-container {
-    padding-bottom: 80px;
-  } */
 
   body {
     overflow-y: auto !important;
@@ -1354,9 +1352,7 @@ u {
   .meet-our-team {
     padding: 0 !important;
   }
-  .custom-input-customer {
-    /* width: 16rem; */
-  }
+
   .custom-modal {
     width: 95vw !important;
     padding: 30px 10px;
@@ -1486,12 +1482,13 @@ u {
   }
   .custom-img-slider {
     display: flex;
+    background-size: 'contain' !important;
     justify-content: center;
     align-items: center;
     width: 60vw;
-
     height: 12.5em;
   }
+
   .custom-carousel-heading {
     font-size: 0.7rem;
   }

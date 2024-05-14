@@ -133,7 +133,7 @@ const CarouselContainer = () => {
         style={{
           // transition: 'transform 0.5s ease',
           backgroundImage: `url(${images[index].bgImg})`,
-          backgroundSize: 'contain',
+          // backgroundSize: 'contain',
           backgroundPosition: 'center',
           position: 'relative',
           backgroundRepeat: 'no-repeat',
