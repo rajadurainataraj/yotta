@@ -112,7 +112,11 @@ const Header = () => {
 
   return (
     <div className="nav-container-main">
-      <nav className="navbar navbar-expand-lg px-4 custom-nav container-fluid">
+      <nav
+        className={`navbar navbar-expand-lg px-4 container-fluid ${
+          counts === 0 ? 'custom-nav' : 'custom-nav2'
+        }`}
+      >
         <div className="d-flex">
           <Link to="/">
             <img src={logo2} alt="" className="logo2" />

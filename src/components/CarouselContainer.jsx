@@ -133,7 +133,7 @@ const CarouselContainer = () => {
         style={{
           // transition: 'transform 0.5s ease',
           backgroundImage: `url(${images[index].bgImg})`,
-          // backgroundSize: 'contain',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           position: 'relative',
           backgroundRepeat: 'no-repeat',
@@ -142,7 +142,7 @@ const CarouselContainer = () => {
         // onMouseEnter={() => !isSettling && setIsHovering(true)}
         // onMouseLeave={() => !isSettling && setIsHovering(false)}
       >
-        <div className="col-3 d-flex align-items-center">
+        <div className="col-3 d-flex align-items-center ">
           <h3
             className={`text-start custom-carousel-heading fw-bolder ${
               index === images.length - 1 && 'text-white'

@@ -14,6 +14,7 @@ import Footer from './components/footer/Footer'
 import { useRecoilState } from 'recoil'
 import { count } from './components/utils/globalState'
 import Careers from './components/Careers'
+import ContactInfo from './components/ContactInfo'
 
 const App = () => {
   const [counts, setCounts] = useRecoilState(count)
@@ -22,13 +23,11 @@ const App = () => {
   // console.log(counts);
   return (
     <BrowserRouter>
-      {counts > 0 && currentPath === '/' ? null : <Header />}
-      {/* <Header /> */}
+      <Header />
 
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/careers" element={<Careers />} />
-
         <Route path="/services/:id" element={<Services />} />
       </Routes>
       <Footer />
