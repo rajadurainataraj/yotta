@@ -54,7 +54,7 @@ const ThankYou = ({ onClose }) => {
     <section className="d-flex flex-column justify-content-center  align-items-center thanks-container container-fluid ">
       <img src={thankyou} alt="thankyou" />
       <h3 className="h2 mb-2 mt-3 mont fw-bold"> Thank you!</h3>
-      <p className="p lato fs-3 fw-bold text-dark fw-bolder">
+      <p className="p lato fs-4 fw-bold text-dark fw-bolder get-back-txt">
         Will get back to you soon.
       </p>
       <button

@@ -75,7 +75,7 @@ const ContactInfo = ({ onClose }) => {
       <CustomModal isOpen={isModalOpen} onClose={closeModal} />
       <>
         <section
-          className="custom-contact-info d-flex justify-content-around p-3"
+          className="custom-contact-info d-flex justify-content-between pb-5"
           style={{ backgroundImage: `url(${contactBg})` }}
         >
           {counts === 0 && showCloseButton && (
@@ -89,7 +89,10 @@ const ContactInfo = ({ onClose }) => {
               We'd <span className="h3 love-text fw-bolder">love</span> to hear
               from you!!
             </h3>
-            <p className="p lato text-light">
+            <p
+              className="p lato "
+              style={{ color: "#FFFFFF", fontWeight: "300" }}
+            >
               Brief us your requirements below, and let's connect.
             </p>
 
@@ -195,7 +198,7 @@ const ContactInfo = ({ onClose }) => {
             </div>
           </section>
 
-          <section className="customImg d-flex justify-content-center align-items-center">
+          <section className="customImg d-flex justify-content-center align-items-center ">
             <img
               src={imgContact}
               className="contact-custom-img"

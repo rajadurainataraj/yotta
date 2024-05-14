@@ -61,7 +61,7 @@ const ChooseServices = () => {
       {serviceOptions.map((item) => (
         <section
           key={item}
-          className={`d-flex choose-service-container  fw-bolder fs-5 d-flex align-items-center justify-content-center p-2 px-5 lato my-3 ${
+          className={`d-flex choose-service-container  fw-bolder  d-flex align-items-center justify-content-center p-2 px-5 lato my-3 ${
             selectedServices.includes(item) ? "selected" : ""
           }`}
           onClick={() => toggleService(item)}

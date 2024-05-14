@@ -87,7 +87,7 @@ const CustomerDetails = () => {
                   : null}
               </div>
             </div>
-            <div className="d-flex flex-column   gap-1 fs-5 ">
+            <div className="d-flex flex-column gap-1 fs-5 ">
               <div className="d-flex custom-customer-info align-items-center gap-3 fs-5 ">
                 <div className="fw-bold">Reach me at</div>
                 <Field

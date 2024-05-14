@@ -29,24 +29,27 @@ const Footer = () => {
               </li>
             </ul>
           </div> */}
-          <div className="d-flex">
-            <Link to="/">
+          <div className="d-flex justify-content-center align-items-center">
+            <Link
+              to="/"
+              className="d-flex justify-content-center align-items-center"
+            >
               <img src={logo2} alt="" className="me-1 logo2" />
             </Link>
-            <ul className="navbar-nav mb-2 mb-lg-0">
+            {/* <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item nav-header-container d-sm-block d-xl-block ">
                 <a
                   className="nav-link fs-4 nav-header text-dark fw-bolder"
                   href="/"
                 >
-                  {/* Yotta Web Services */}
+                 
                 </a>
-                {/* <p className="sub-logo-title">Enlighten the Dark Data</p> */}
+               
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="footer-content mt-5">
-            <div className="fs-4 lato">Thank you for your support!</div>
+            <div className="fs-4  lato">Thank you for your support!</div>
             <span className="fs-6">We deliver the best web products</span>
           </div>
         </section>
@@ -74,19 +77,19 @@ const Footer = () => {
             </div>
           </section>
           <section className="d-b-px-5">
-            <div className="footer-company py-1">Contact Us</div>
-            <div className="d-flex flex-column align-items-start py-3 footer-contact">
-              <a href="mailto:example@example.com">
+            <div className="footer-company pb-1">Contact Us</div>
+            <div className="d-flex flex-column align-items-start py-2 footer-contact">
+              <a href="mailto:hr@yottawebservices.in">
                 <div className="d-flex align-items-center justify-content-center text-center">
                   <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2 icon-zoom">
-                    <TfiEmail size={15} color="#0178BE" />
+                    <TfiEmail size={12} color="#0178BE" />
                   </div>
                   <span className="hover-color">hr@yottawebservices.in</span>
                 </div>
               </a>
-              <div className="d-flex align-items-center justify-content-center text-center py-3">
+              <div className="d-flex align-items-center justify-content-center text-center py-2">
                 <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2 icon-zoom">
-                  <TbWorld size={15} color="#0178BE" />
+                  <TbWorld size={14} color="#0178BE" />
                 </div>
                 <span className="hover-color">yottawebservices.in</span>
               </div>
@@ -94,7 +97,7 @@ const Footer = () => {
               <a href="tel:+919944458897">
                 <div className="d-flex align-items-center justify-content-center text-center ">
                   <div className="rounded-circle text-#0178BE d-flex justify-content-center align-items-center border-color-custom me-2 icon-zoom">
-                    <FaPhone size={15} color="#0178BE" />
+                    <FaPhone size={12} color="#0178BE" />
                   </div>
                   <span className="hover-color">+91 99444 58897</span>
                 </div>
@@ -120,7 +123,7 @@ const Footer = () => {
                     >
                       <div
                         className="rounded-circle icon-zoom  facebook-footer d-inline-flex justify-content-center align-items-center icon-zoom"
-                        style={{ width: "35px", height: "35px" }}
+                        style={{ width: "30px", height: "30px" }}
                       >
                         <GrFacebookOption
                           color="#fff"
@@ -131,7 +134,7 @@ const Footer = () => {
                     </a>
                     <div
                       className="rounded-circle bg-dark d-inline-flex justify-content-center align-items-center icon-zoom"
-                      style={{ width: "35px", height: "35px" }}
+                      style={{ width: "30px", height: "30px" }}
                     >
                       <FaXTwitter
                         color="#fff"
@@ -145,7 +148,7 @@ const Footer = () => {
                     >
                       <div
                         className="rounded-circle linkedin-footer d-inline-flex justify-content-center align-items-center icon-zoom"
-                        style={{ width: "35px", height: "35px" }}
+                        style={{ width: "30px", height: "30px" }}
                       >
                         <FaLinkedin
                           color="#fff"

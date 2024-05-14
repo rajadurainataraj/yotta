@@ -29,7 +29,7 @@ const ProjectType = () => {
     const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
-      setModalPosition({ x: 0, y: window.innerHeight - 580 });
+      setModalPosition({ x: 0, y: window.innerHeight - 470 });
     } else {
       setModalPosition({ x: rect.left + rect.width, y: rect.top - 50 });
     }
@@ -77,7 +77,7 @@ const ProjectType = () => {
           >
             <section
               key={item}
-              className={`d-flex choose-service-container fw-bolder fs-5 d-flex container-fluid w-100 align-items-center justify-content-center p-2 px-5 lato my-3 ${
+              className={`d-flex choose-service-container fw-bolder  d-flex container-fluid w-100 align-items-center justify-content-center p-2 px-5 lato my-3 ${
                 selectedServices.includes(item) ? "selected" : ""
               }`}
               onClick={() =>
@@ -101,7 +101,7 @@ const ProjectType = () => {
                 onMouseLeave={() => handleCloseModal()}
               />
             </div>
-            <div className="exclamation-modal1-container">
+            <div className="exclamation-modal1-container lato">
               <div
                 className={`exclamation-modal1 ${
                   selectedModal === "modal1" ? "show" : ""

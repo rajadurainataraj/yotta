@@ -1,9 +1,9 @@
 const Digital = () => {
   return (
     <>
-      <section className="container text-center content-container pb-5 pt-4">
+      <section className="container text-center content-container pb-5 pt-4 custom-experice-div">
         <div className="content-header h3">Experience the Digital Realm</div>
-        <span className="h5">
+        <span className="">
           All the products have been customized as per the requirement with
           cutting edge tech
         </span>

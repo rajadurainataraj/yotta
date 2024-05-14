@@ -2,8 +2,8 @@ import { frontEnd, backend, databases, deployment, cms, uiux } from "./datas";
 
 const Technologies2 = () => {
   return (
-    <section className="container-fluid custom-tech-container mb-5">
-      <div className="content-header h3 text-center pb-2 mt-4">
+    <section className="container-fluid custom-tech-container mb-5 ">
+      <div className="content-header h3 text-center tech-header pb-2 mt-4">
         Technologies We Use
       </div>
       <section className="d-flex gap-4 custom-tech2 justify-content-evenly my-4">

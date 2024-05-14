@@ -1,30 +1,31 @@
 /* eslint-disable react/no-unescaped-entities */
-import { FaPhone } from 'react-icons/fa6'
-import careerImg from '../assets/images/career-img.png'
-import { careerOpenings } from './datas'
-import { IoLocation } from 'react-icons/io5'
-import { FaClock } from 'react-icons/fa'
-import { FaMobileScreenButton } from 'react-icons/fa6'
-import { MdMailOutline } from 'react-icons/md'
-import { AiOutlineClockCircle } from 'react-icons/ai'
-import { IoLocationOutline } from 'react-icons/io5'
+import { FaPhone } from "react-icons/fa6";
+import careerImg from "../assets/images/career-img.png";
+import { careerOpenings } from "./datas";
+import { IoLocation } from "react-icons/io5";
+import { FaClock } from "react-icons/fa";
+import { FaMobileScreenButton } from "react-icons/fa6";
+import { MdMailOutline } from "react-icons/md";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import { IoLocationOutline } from "react-icons/io5";
 
-import phoneicon from '../assets/images/phone-icon-career.png'
-import { useEffect } from 'react'
+import phoneicon from "../assets/images/phone-icon-career.png";
+import { useEffect } from "react";
 
 const Careers = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <section className="careers-main-wrapper">
-      <section className="d-flex">
-        <section className="d-flex flex-column  justify-content-start sub-career-main">
-          <div className="content-header mont career-header1">
+    <section className="careers-main-wrapper ">
+      <section className="d-flex align-items-center sub-careers-wrapper ">
+        <section className="d-flex flex-column   sub-career-main">
+          <div className="careers-header mont career-header1">
             Careers @ YWS
           </div>
           <div className="career-para lato">
-            Ready to take the leap! Reach us and be the first to know about
+            Ready to take the leap! Reach us and be the first to know about{" "}
+            <br></br>
             future opportunities and what's happening at Yotta Web Services.
           </div>
           <div className="lato">
@@ -66,7 +67,7 @@ const Careers = () => {
         ))}
       </section>
       <section className="career-reach-us px-4 pt-3 lato">
-        <section className="py-3 reach-wrapper">
+        <section className="py-4 reach-wrapper">
           <div className="reach-us-heading">
             Wish to become a part of our fun-loving teams? Reach us now!
           </div>
@@ -84,8 +85,8 @@ const Careers = () => {
               </a>
             </div>
             <div className="d-flex flex-column gap-2 align-items-center reachout">
-              <MdMailOutline />
-              <a href="mailto:example@example.com" className="text-white">
+              <MdMailOutline size={22} />
+              <a href="mailto:hr@yottawebservices.in" className="text-white">
                 <div className="contact-career">hr@yottawebservices.in</div>
               </a>
             </div>
@@ -93,6 +94,6 @@ const Careers = () => {
         </section>
       </section>
     </section>
-  )
-}
-export default Careers
+  );
+};
+export default Careers;
